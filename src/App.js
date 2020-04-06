@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Header from './components/layout/Header';
 import Experience from './components/experience/Experience';
@@ -9,12 +10,14 @@ import './App.css';
 
 const App = () => {
   return (
-    <>
+    <Router>
       <Header />
-      {/* <Experience /> */}
-      <Timeline />
+      <Switch>
+          <Route exact path="/" component={Experience} />
+          <Route exact path="/timeline" component={Timeline} />
+        </Switch>
       <Footer />
-    </>
+    </Router>
   );
 }
 

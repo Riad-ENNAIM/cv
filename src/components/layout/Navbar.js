@@ -1,17 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <nav id="navbar">
       <ul>
-        <li><a href="#search" class="search"><i class="fas fa-search"></i></a></li>
-        <li><a class="active" href="#experience">Expérience</a></li>
-        <li><a href="#timeline">Chronologie</a></li>
-        <li><a href="#skill">Compétence</a></li>
-        <li><a href="#freelance">Projets Personnels &amp; Freelance</a></li>
-        <li><a href="#projects">Projets Académiques</a></li>
-        <li><a href="#training">Formation</a></li>
-        <li><a href="#infos">Infos</a></li>
+        <li><Link to="/search" class="search"><i class="fas fa-search"></i></Link></li>
+        <li><Link class="active" to="/">Expérience</Link></li>
+        <li><Link to="/timeline">Chronologie</Link></li>
+        <li><Link to="/skill">Compétence</Link></li>
+        <li><Link to="/freelance">Projets Personnels &amp; Freelance</Link></li>
+        <li><Link to="/projects">Projets Académiques</Link></li>
+        <li><Link to="/training">Formation</Link></li>
+        <li><Link to="/infos">Infos</Link></li>
       </ul>
     </nav>
   );
