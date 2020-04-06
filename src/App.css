@@ -119,7 +119,55 @@ a {
   background: #21618C
 }
 
+/* Experience */
+.experience {
+  padding: 30px 10%;
+}
 
+.experience .job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 10px 0 0 ;
+  color: #21618C;
+  cursor: pointer;
+}
+
+.experience .job-header:hover {
+  background: #fcfcfc;
+}
+
+.experience .job-header .job-title {
+  font-size: 1.5em;
+}
+
+.experience .job-description {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.experience .job-description i {
+  margin-right: 10px;
+}
+
+.experience .job-description .job-company,
+.experience .job-description .job-date,
+.experience .job-description .job-location {
+  font-size: 1.5em;
+}
+
+.experience .tasks .task {
+  display: flex;
+  align-items: baseline;
+}
+
+.experience .tasks .task i {
+  margin-right: 17px;
+}
+
+.experience .tasks .task p {
+  text-align: justify;
+}
 
 
 
