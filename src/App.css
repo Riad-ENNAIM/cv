@@ -27,6 +27,14 @@ a {
   text-decoration: none;
 }
 
+/* Utils */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
 /* Header */
 #main-header {
   display: flex;
@@ -156,6 +164,10 @@ a {
   font-size: 1.5em;
 }
 
+.experience .tasks {
+  flex: 2;
+}
+
 .experience .tasks .task {
   display: flex;
   align-items: baseline;
@@ -167,6 +179,96 @@ a {
 
 .experience .tasks .task p {
   text-align: justify;
+}
+
+/* Timeline */
+ul.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+ul.timeline::before {
+  content: '';
+  width: 0;
+  height: 100%;
+  border: 1px dashed #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+ul.timeline li {
+  margin: 40px 30px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 14px;
+  border-radius: 6px;
+  width: 500px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .12), 0 2px 2px rgba(0, 0, 0, .08)
+}
+
+ul.timeline li > span {
+  width: 0;
+  height: 100%;
+  border: 1px solid #333;
+  position: absolute;
+  top: 0;
+  left: -30px;
+}
+
+ul.timeline li > span::before, ul.timeline li > span::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #fc9a80;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: -6px;
+}
+
+ul.timeline li > span::before {
+  top: -5px;
+}
+
+ul.timeline li > span::after {
+  top:calc(100% - 5px);
+}
+
+ul.timeline li > div {
+  margin-left: 10px;  
+}
+
+div .title, div .type {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+div .info {
+  font-weight: 300;
+}
+
+span.number {
+  height: 100%;
+}
+
+span.number span {
+  position: absolute;
+  font-size: 10px;
+  left: -120px;
+  width: 110px;
+  font-weight: bold;
+  text-align: end;
+}
+
+span.number span:first-child {
+  top: -12px;
+}
+
+span.number span:last-child {
+  top: calc(100% - 12px);
 }
 
 

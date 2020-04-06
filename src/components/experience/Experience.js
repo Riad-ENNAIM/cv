@@ -18,8 +18,12 @@ const Experience = () => {
         </h5>
       </div>
 
-      <div class="tasks">
-        <Task />
+      <div class="container"> 
+        <div class="tasks">
+          <Task />
+          <Task />
+          <Task />
+        </div>
       </div>
     </div>
   );
