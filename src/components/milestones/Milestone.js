@@ -1,9 +1,8 @@
 import React from 'react';
 
-const Timeline = () => {
+const Milestone = () => {
   return (
-    <div className="container">
-      <ul className="timeline">
+    <ul className="milestone">
         <li>
           <span></span>
           <div>
@@ -17,8 +16,7 @@ const Timeline = () => {
           </span>
         </li>
       </ul>
-    </div>
   );
 }
 
-export default Timeline;
+export default Milestone;

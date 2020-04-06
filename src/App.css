@@ -35,6 +35,14 @@ a {
   margin: 10px;
 }
 
+.container-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
 /* Header */
 #main-header {
   display: flex;
@@ -181,15 +189,15 @@ a {
   text-align: justify;
 }
 
-/* Timeline */
-ul.timeline {
+/* Milestone */
+ul.milestone {
   list-style: none;
   margin: 0;
   padding: 0;
   position: relative;
 }
 
-ul.timeline::before {
+ul.milestone::before {
   content: '';
   width: 0;
   height: 100%;
@@ -199,8 +207,8 @@ ul.timeline::before {
   left: 0;
 }
 
-ul.timeline li {
-  margin: 40px 30px;
+ul.milestone li {
+  margin: 20px 30px;
   position: relative;
   background-color: rgba(255, 255, 255, 0.2);
   padding: 14px;
@@ -209,7 +217,7 @@ ul.timeline li {
   box-shadow: 0 0 4px rgba(0, 0, 0, .12), 0 2px 2px rgba(0, 0, 0, .08)
 }
 
-ul.timeline li > span {
+ul.milestone li > span {
   width: 0;
   height: 100%;
   border: 1px solid #333;
@@ -218,7 +226,7 @@ ul.timeline li > span {
   left: -30px;
 }
 
-ul.timeline li > span::before, ul.timeline li > span::after {
+ul.milestone li > span::before, ul.milestone li > span::after {
   content: '';
   width: 10px;
   height: 10px;
@@ -229,15 +237,15 @@ ul.timeline li > span::before, ul.timeline li > span::after {
   left: -6px;
 }
 
-ul.timeline li > span::before {
+ul.milestone li > span::before {
   top: -5px;
 }
 
-ul.timeline li > span::after {
+ul.milestone li > span::after {
   top:calc(100% - 5px);
 }
 
-ul.timeline li > div {
+ul.milestone li > div {
   margin-left: 10px;  
 }
 
@@ -271,6 +279,22 @@ span.number span:last-child {
   top: calc(100% - 12px);
 }
 
+/* Search */
+#searchInput {
+  width: 70%;
+  height: 50px;
+  font-size: medium;
+  padding: 20px;
+  border-style: solid;
+  border-color: #21618C;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+#searchResult {
+  min-height: 250px;
+}
+
 
 
 
@@ -281,14 +305,15 @@ span.number span:last-child {
 
 
 #wisdom {
-  background: #F4F6F7;
+  background: #21618C;
+  color: #999;
   font-size: 30px;
   padding: 20px;
   text-align: center;
 }
 
 #wisdom span {
-  color: #E67E22;
+  color: #fff;
   font-weight: 900;
 }
 
