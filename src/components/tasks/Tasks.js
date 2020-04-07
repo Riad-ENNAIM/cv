@@ -5,7 +5,7 @@ const Tasks = () => {
   return (
     <div class="container"> 
     <div class="tasks">
-      <Task />
+      <Task text="Développement d'une application de demande des prestations"/>
       <Task />
       <Task />
       <Task />
