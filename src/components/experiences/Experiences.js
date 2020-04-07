@@ -3,7 +3,7 @@ import Experience from './Experience';
 
 const Experiences = () => {
   return (
-    <>
+    <div class="container-column">
       <Experience 
         title="Développeur Full-Stack JavaScript"
         company="Université Mohammed VI Polytechnique (AgriEdge – OCP)"
@@ -13,7 +13,7 @@ const Experiences = () => {
       <Experience />
       <Experience />
       <Experience />
-    </>
+    </div>
   );
 }
 

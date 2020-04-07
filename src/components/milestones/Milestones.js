@@ -3,7 +3,7 @@ import Milestone from './Milestone';
 
 const Milestones = () => {
   return (
-    <div className="container-column">
+    <div className="container-column justify-content-center align-items-center">
     <Milestone
       title="Université Mohammed VI Polytechnique (AgriEdge – OCP)"
       info="Développeur Full-Stack JavaScript"
