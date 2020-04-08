@@ -67,18 +67,18 @@ a {
 /* Header */
 #main-header {
   display: flex;
-  margin: 30px 10px;
+  margin: 20px 0;
 }
 
 #main-header .main-title {
   flex: 1;
-  padding: 10px 50px;
+  padding: 0 50px;
   text-align: center;
 }
 
 #main-header .main-title img {
-  width: 130px;
-  height: 130px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   margin-bottom: 20px;
 }
@@ -119,11 +119,12 @@ a {
   border-bottom: #bbb solid 0.3px;
   border-top: #bbb solid 0.3px;
   padding: 20px;
-  margin: 0 5px;
+  margin: 0;
 }
 
 #navbar ul {
   display: flex;
+  justify-content: center;
   align-items: center;
   list-style: none;
 }
@@ -154,6 +155,21 @@ a {
 #navbar ul li a:hover::before,
 #navbar ul li a.active::before {
   background: #21618C
+}
+
+/* Search Link */
+#navbar ul li a.search:hover,
+#navbar ul li a.search.active {
+  border: #21618C solid 2px;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 0 23px;
+  color: #21618C;
+  background: #EBF5FB;
+}
+
+#navbar ul li a.search::before {
+  content: none;
 }
 
 /* Experience */
@@ -327,7 +343,7 @@ span.number span:last-child {
 
 #wisdom {
   background: #21618C;
-  color: #999;
+  color: #5DADE2;
   font-size: 30px;
   padding: 20px;
   text-align: center;
@@ -349,6 +365,6 @@ span.number span:last-child {
   color: #999
 }
 
-#main-footer .footer-copyright span {
+#main-footer .footer-copyright .owner {
   color: #21618C
 }

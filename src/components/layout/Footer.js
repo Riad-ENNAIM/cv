@@ -9,7 +9,7 @@ export const Footer = () => {
 
       <div id="main-footer">
         <span class="footer-logo">Mon CV</span>
-        <p class="footer-copyright">Copyright &copy; 2020, <span>Riad ENNAIM</span>, All Rights Reserved</p>
+        <p class="footer-copyright">Copyright &copy; 2020, <a href="https://www.linkedin.com/in/riad-ennaim" target="_blank" rel="noopener noreferrer" className="owner">Riad ENNAIM</a>, All Rights Reserved</p>
         <span class="footer-lang"><i class="fas fa-globe-africa"></i> Français</span>
       </div>
     </>
