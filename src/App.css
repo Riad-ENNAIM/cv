@@ -39,6 +39,10 @@ a {
   margin: 20px;
 }
 
+.wrapper {
+  flex-wrap: wrap;
+}
+
 .justify-content-center {
   justify-content: center;
 }
@@ -63,6 +67,13 @@ a {
   align-items: flex-end;
 }
 
+.tag {
+  background: #EBF5FB;
+  padding: 5px;
+  border: #5DADE2 solid 0.5px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
 
 /* Header */
 #main-header {
@@ -105,10 +116,6 @@ a {
 #main-header .main-info .info-group i {
   margin-right: 10px;
 }
-
-/* #main-header .main-info .info-group p {
-  
-} */
 
 /* Navbar */
 #navbar {
@@ -194,23 +201,21 @@ a {
   font-size: 1.5em;
 }
 
-.experience .job-description {
-  display: flex;
-  justify-content: flex-start;
-}
-
 .experience .job-description i {
   margin-right: 10px;
 }
 
-.experience .job-description .job-company,
+.experience .job-description .job-company {
+  font-size: 1.1em;
+}
+
 .experience .job-description .job-date,
 .experience .job-description .job-location {
-  font-size: 1.5em;
+  font-size: 0.8em;
 }
 
 .experience .tasks {
-  flex: 2;
+  margin: 10px;
 }
 
 .experience .tasks .task {
@@ -332,6 +337,56 @@ span.number span:last-child {
   min-height: 250px;
 }
 
+/* Skills */
+.skill {
+  position: relative;
+  width: 400px;
+  padding: 20px;
+  border: #bbb solid 1px;
+  margin: 20px;
+}
+
+.skill::before {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background: #21618C;
+}
+
+.skill .skill-header {
+  margin: 0;
+  justify-content: space-between;
+}
+
+.skill .skill-header .skill-title {
+  font-size: 1.5em;
+  color: #21618C;
+}
+
+.skill .skill-header .skill-stars {
+  color: gold;
+}
+
+.skill .skill-content {
+  justify-content: space-between;
+}
+
+.skill .skill-content .skill-item {
+  display: flex;
+  width: 40%;
+  align-items: baseline;
+}
+
+.skill .skill-content .skill-item i {
+  margin-right: 17px;
+}
+
+.skill .skill-content .skill-item p {
+  text-align: justify;
+}
 
 
 

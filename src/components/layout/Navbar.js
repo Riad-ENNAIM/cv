@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <nav id="navbar">
       <ul>
-        <li><Link to="/search" className={`search ${tab === 'search' ? 'active' : ''}`}><i class="fas fa-search"></i></Link></li>
+        <li><Link to="/search" className={`search ${tab === 'search' ? 'active' : ''}`}><i className="fas fa-search"></i></Link></li>
         <li><Link to="/" className={tab === null || tab === 'experiences' ? 'active' : ''}>Expérience</Link></li>
         <li><Link to="/timeline" className={tab === 'timeline' ? 'active' : ''}>Chronologie</Link></li>
         <li><Link to="/skills" className={tab === 'skills' ? 'active' : ''}>Compétence</Link></li>

@@ -8,6 +8,7 @@ import Timeline from './components/pages/Timeline';
 import SkillsPage from './components/pages/SkillsPage';
 import FreelancePage from './components/pages/FreelancePage';
 import AcademicPage from './components/pages/AcademicPage';
+import TrainingPage from './components/pages/TrainingPage';
 import Footer from './components/layout/Footer';
 
 import NavbarState from './context/navbar/NavbarState';
@@ -26,6 +27,7 @@ const App = () => {
           <Route exact path="/skills" component={SkillsPage} />
           <Route exact path="/freelance" component={FreelancePage} />
           <Route exact path="/projects" component={AcademicPage} />
+          <Route exact path="/training" component={TrainingPage} />
         </Switch>
         <Footer />
       </Router>

@@ -1,11 +1,15 @@
 import React from 'react';
-import Experience from '../experiences/Experience';
+import Skill from './Skill';
 
 const Skills = () => {
   return (
-    <>
-      <Experience />
-    </>
+    <div className="container wrapper justify-content-center">
+      <Skill />
+      <Skill />
+      <Skill />
+      <Skill />
+      <Skill />
+    </div>
   );
 }
 

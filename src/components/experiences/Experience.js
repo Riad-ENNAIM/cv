@@ -4,18 +4,17 @@ import Tasks from '../tasks/Tasks';
 
 const Experience = ({ title, company, date, location }) => {
   return (
-    <div class="experience">
-      <div class="job-header">
-        <h3 class="job-title">{title}</h3>
-        <i class="fas fa-chevron-down"></i>
+    <div className="experience">
+      <div className="job-header">
+        <h3 className="job-title">{title}</h3>
+        <i className="fas fa-chevron-down"></i>
       </div>
 
-      <div class="job-description">
-        <h5>
-          <span class="job-company">{company} | </span>
-          <span class="job-date">{date} | </span>
-          <span class="job-location">{location}</span>
-        </h5>
+      <div className="job-description">
+          <span className="job-company">{company}</span>
+          <br />
+          <span className="job-date tag">{date}</span>
+          <span className="job-location tag">{location}</span>
       </div>
 
       <Tasks />

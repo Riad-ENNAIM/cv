@@ -3,14 +3,12 @@ import Task from './Task';
 
 const Tasks = () => {
   return (
-    <div class="container"> 
-    <div class="tasks">
+    <div className="tasks">
       <Task text="Développement d'une application de demande des prestations"/>
       <Task />
       <Task />
       <Task />
     </div>
-  </div>
   );
 }
 
