@@ -1,12 +1,8 @@
 import React from 'react';
-import Experience from '../experiences/Experience';
+import Experiences from '../experiences/Experiences';
 
 const FreelanceProjects = () => {
-  return (
-    <div className="container-column">
-      <Experience />
-    </div>
-  );
+  return <Experiences />;
 }
 
 export default FreelanceProjects;

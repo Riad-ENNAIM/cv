@@ -11,7 +11,11 @@ const Home = () => {
     // eslint-disable-next-line
   }, []);
 
-  return <Experiences />
+  return (
+    <div className="page container-column">
+      <Experiences />
+    </div>
+  );
 }
 
 export default Home;

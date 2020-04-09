@@ -20,6 +20,7 @@ const App = () => {
     <NavbarState>
       <Router>
         <Header />
+        
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/search" component={SearchPage} />
@@ -29,6 +30,7 @@ const App = () => {
           <Route exact path="/projects" component={AcademicPage} />
           <Route exact path="/training" component={TrainingPage} />
         </Switch>
+        
         <Footer />
       </Router>
     </NavbarState>

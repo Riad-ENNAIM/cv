@@ -28,19 +28,22 @@ a {
 }
 
 /* Utils */
+.page {
+  margin: 10px 300px;
+}
+
 .container {
   display: flex;
-  margin: 10px;
 }
 
 .container-column {
   display: flex;
   flex-direction: column;
-  margin: 20px;
 }
 
 .wrapper {
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .justify-content-center {
@@ -180,9 +183,9 @@ a {
 }
 
 /* Experience */
-.experience {
+/* .experience {
   padding: 10px 10% 0 10%;
-}
+} */
 
 .experience .job-header {
   display: flex;
@@ -343,7 +346,7 @@ span.number span:last-child {
   width: 400px;
   padding: 20px;
   border: #bbb solid 1px;
-  margin: 20px;
+  margin-bottom: 20px;
 }
 
 .skill::before {

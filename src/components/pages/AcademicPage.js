@@ -11,7 +11,11 @@ const AcademicPage = () => {
     // eslint-disable-next-line
   }, []);
 
-  return <AcademicProjects />
+  return (
+    <div className="page container-column">
+      <AcademicProjects />
+    </div>
+  );
 }
 
 export default AcademicPage;

@@ -11,7 +11,11 @@ const Timeline = () => {
     // eslint-disable-next-line
   }, []);
 
-  return <Milestones />
+  return (
+    <div className="page container-column justify-content-center align-items-center">
+      <Milestones />
+    </div>
+  );
 }
 
 export default Timeline;

@@ -11,6 +11,10 @@ const SearchPage = () => {
     // eslint-disable-next-line
   }, []);
 
-  return <Search />
+  return (
+    <div className="page container-column justify-content-center align-items-center">
+      <Search />
+    </div>
+  );
 }
 export default SearchPage;

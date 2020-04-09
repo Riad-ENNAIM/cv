@@ -11,7 +11,12 @@ const SkillsPage = () => {
     // eslint-disable-next-line
   }, []);
 
-  return <Skills />
+  return (
+    <div className="page container wrapper">
+      <Skills />
+    </div>
+  );
+
 }
 
 export default SkillsPage;

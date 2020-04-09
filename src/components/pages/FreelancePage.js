@@ -11,7 +11,11 @@ const FreelancePage = () => {
     // eslint-disable-next-line
   }, []);
 
-  return <FreelanceProjects />
+  return (
+    <div className="page container-column">
+      <FreelanceProjects />
+    </div>
+  );
 }
 
 export default FreelancePage;
