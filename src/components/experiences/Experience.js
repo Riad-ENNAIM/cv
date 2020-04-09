@@ -7,17 +7,18 @@ const Experience = ({ title, company, date, location }) => {
     <div className="experience">
       <div className="job-header">
         <h3 className="job-title">{title}</h3>
-        <i className="fas fa-chevron-down"></i>
+        {/* <i className="fas fa-chevron-down"></i> */}
       </div>
 
       <div className="job-description">
-          <span className="job-company">{company}</span>
-          <br />
-          <span className="job-date tag">{date}</span>
-          <span className="job-location tag">{location}</span>
+        <span className="job-company">{company}</span>
+        <br />
+        <span className="job-date tag">{date}</span>
+        <span className="job-location tag">{location}</span>
+      
+        <Tasks />
       </div>
 
-      <Tasks />
     </div>
   );
 }

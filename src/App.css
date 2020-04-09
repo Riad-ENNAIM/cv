@@ -29,7 +29,7 @@ a {
 
 /* Utils */
 .page {
-  margin: 10px 300px;
+  margin: 20px 300px;
 }
 
 .container {
@@ -183,11 +183,8 @@ a {
 }
 
 /* Experience */
-/* .experience {
-  padding: 10px 10% 0 10%;
-} */
-
 .experience .job-header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -204,6 +201,21 @@ a {
   font-size: 1.5em;
 }
 
+.experience .job-description {
+  position: relative;
+  padding-right: 20px;
+}
+
+.experience .job-description::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 4px;
+  background: #21618C;
+}
+
 .experience .job-description i {
   margin-right: 10px;
 }
@@ -217,20 +229,20 @@ a {
   font-size: 0.8em;
 }
 
-.experience .tasks {
+.experience .job-description .tasks {
   margin: 10px;
 }
 
-.experience .tasks .task {
+.experience .job-description .tasks .task {
   display: flex;
   align-items: baseline;
 }
 
-.experience .tasks .task i {
+.experience .job-description .tasks .task i {
   margin-right: 17px;
 }
 
-.experience .tasks .task p {
+.experience .job-description .tasks .task p {
   text-align: justify;
 }
 

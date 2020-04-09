@@ -4,7 +4,7 @@ import Task from './Task';
 const Tasks = () => {
   return (
     <div className="tasks">
-      <Task text="Développement d'une application de demande des prestations"/>
+      <Task text="Développement d'une application de demande des prestations Développement d'une application de demande des prestations Développement d'une application de demande des prestations Développement d'une application de demande des prestations Développement d'une application de demande des prestations"/>
       <Task />
       <Task />
       <Task />
