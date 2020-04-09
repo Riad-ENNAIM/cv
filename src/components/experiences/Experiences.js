@@ -4,14 +4,25 @@ import Experience from './Experience';
 const Experiences = () => {
   return (
     <>
+      <Experience
+        title="Développeur Full-Stack JavaScript"
+        company="Université Mohammed VI Polytechnique (AgriEdge – OCP)"
+        start="mars 2019"
+        location="Ben Guerir - Maroc"
+      />
       <Experience 
         title="Développeur Full-Stack JavaScript"
         company="Université Mohammed VI Polytechnique (AgriEdge – OCP)"
-        date="Depuis octobre 2019"
+        start="octobre 2019"
+        end="mars 2020"
         location="Ben Guerir - Maroc"
       />
-      <Experience />
-      <Experience />
+      <Experience
+        title="Développeur Full-Stack JavaScript"
+        company="Université Mohammed VI Polytechnique (AgriEdge – OCP)"
+        end="octobre 2019"
+        location="Ben Guerir - Maroc"
+      />
       <Experience />
     </>
   );
