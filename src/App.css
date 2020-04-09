@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-/* Reset */
+/* ---------- Reset ---------- */
 * {
   margin: 0;
   padding:0;
   box-sizing: border-box;
 }
 
-/* Main Styling */
+/* ---------- Main Styling ---------- */
 html,body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.7em;
@@ -27,7 +27,7 @@ a {
   text-decoration: none;
 }
 
-/* Utils */
+/* ---------- Utils ---------- */
 .page {
   margin: 20px 300px;
 }
@@ -78,7 +78,7 @@ a {
   margin-right: 5px;
 }
 
-/* Header */
+/* ---------- Header ---------- */
 #main-header {
   display: flex;
   margin: 20px 0;
@@ -120,7 +120,7 @@ a {
   margin-right: 10px;
 }
 
-/* Navbar */
+/* ---------- Navbar ---------- */
 #navbar {
   display: flex;
   background: #fff;
@@ -167,7 +167,7 @@ a {
   background: #21618C
 }
 
-/* Search Link */
+/* ---------- Search Link ---------- */
 #navbar ul li a.search:hover,
 #navbar ul li a.search.active {
   border: #21618C solid 2px;
@@ -182,7 +182,7 @@ a {
   content: none;
 }
 
-/* Experience */
+/* ---------- Experience ---------- */
 .experience .job-header {
   position: relative;
   display: flex;
@@ -246,7 +246,7 @@ a {
   text-align: justify;
 }
 
-/* Milestone */
+/* ---------- Milestone ---------- */
 ul.milestone {
   list-style: none;
   margin: 0;
@@ -274,7 +274,26 @@ ul.milestone li {
   box-shadow: 0 0 4px rgba(0, 0, 0, .12), 0 2px 2px rgba(0, 0, 0, .08)
 }
 
-ul.milestone li > span {
+ul.milestone li > div {
+  margin-left: 10px;  
+}
+
+ul.milestone li > div .title,
+ul.milestone li > div .type {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+ul.milestone li > div .info {
+  font-weight: 300;
+}
+
+ul.milestone li span.number {
+  height: 100%;
+}
+
+/* ---------- Period ---------- */
+ul.milestone-period li > span {
   width: 0;
   height: 100%;
   border: 1px solid #333;
@@ -283,7 +302,8 @@ ul.milestone li > span {
   left: -30px;
 }
 
-ul.milestone li > span::before, ul.milestone li > span::after {
+ul.milestone-period li > span::before,
+ul.milestone-period li > span::after {
   content: '';
   width: 10px;
   height: 10px;
@@ -294,32 +314,15 @@ ul.milestone li > span::before, ul.milestone li > span::after {
   left: -6px;
 }
 
-ul.milestone li > span::before {
+ul.milestone-period li > span::before {
   top: -5px;
 }
 
-ul.milestone li > span::after {
+ul.milestone-period li > span::after {
   top:calc(100% - 5px);
 }
 
-ul.milestone li > div {
-  margin-left: 10px;  
-}
-
-div .title, div .type {
-  font-weight: 600;
-  font-size: 12px;
-}
-
-div .info {
-  font-weight: 300;
-}
-
-span.number {
-  height: 100%;
-}
-
-span.number span {
+ul.milestone-period li span.number span {
   position: absolute;
   font-size: 10px;
   left: -120px;
@@ -328,15 +331,39 @@ span.number span {
   text-align: end;
 }
 
-span.number span:first-child {
+ul.milestone-period li span.number span:first-child {
   top: -12px;
 }
 
-span.number span:last-child {
+ul.milestone-period li span.number span:last-child {
   top: calc(100% - 12px);
 }
 
-/* Search */
+/* ---------- Action ---------- */
+ul.milestone-action li span.point::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #fc9a80;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 45%;
+  left: -35px;
+}
+
+ul.milestone-action li span.number span {
+  position: absolute;
+  font-size: 10px;
+  left: -150px;
+  top: 41px;
+  width: 110px;
+  height: 30px;
+  font-weight: bold;
+  text-align: end;
+}
+
+/* ---------- Search ---------- */
 #searchInput {
   width: 70%;
   height: 50px;
@@ -352,13 +379,14 @@ span.number span:last-child {
   min-height: 250px;
 }
 
-/* Skills */
+/* ---------- Skills ---------- */
 .skill {
   position: relative;
   width: 400px;
   padding: 20px;
   border: #bbb solid 1px;
   margin-bottom: 20px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .12), 0 2px 2px rgba(0, 0, 0, .08)
 }
 
 .skill::before {

@@ -1,20 +1,21 @@
 import React from 'react';
-import Milestone from './Milestone';
+import MilestonePeriod from './MilestonePeriod';
+import MilestoneAction from './MilestoneAction';
 
 const Milestones = () => {
   return (
     <>
-      <Milestone
+      <MilestonePeriod
         title="Université Mohammed VI Polytechnique (AgriEdge – OCP)"
         info="Développeur Full-Stack JavaScript"
         type="6 Mois - CDI"
         start="Septembre 2019"
         end="Mars 2020"
       />
-      <Milestone />
-      <Milestone />
-      <Milestone />
-      <Milestone />
+      <MilestoneAction />
+      <MilestonePeriod />
+      <MilestonePeriod />
+      <MilestonePeriod />
     </>
   );
 }

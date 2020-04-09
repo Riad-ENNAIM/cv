@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Milestone = ({ title, info, type, start, end }) => {
+const MilestonePeriod = ({ title, info, type, start, end }) => {
   return (
-    <ul className="milestone">
+    <ul className="milestone milestone-period">
         <li>
           <span></span>
           <div>
@@ -20,7 +20,7 @@ const Milestone = ({ title, info, type, start, end }) => {
   );
 }
 
-Milestone.propTypes = {
+MilestonePeriod.propTypes = {
   title: PropTypes.string.isRequired,
   info: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
@@ -28,12 +28,12 @@ Milestone.propTypes = {
   end: PropTypes.string.isRequired
 };
 
-Milestone.defaultProps = {
+MilestonePeriod.defaultProps = {
   title: 'Titre',
   info: 'Expérience',
   type: 'Type',
   start: 'Debut',
-  end: 'Fin',
+  end: 'Fin'
 };
 
-export default Milestone;
+export default MilestonePeriod;
