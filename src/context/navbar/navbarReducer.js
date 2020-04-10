@@ -1,4 +1,7 @@
-import { SET_ACTIVE_TAB } from '../types';
+import { 
+  SET_ACTIVE_TAB,
+  TOGGLE_TIMELINE
+} from '../types';
 
 export default (state, action) => {
   switch (action.type) {
@@ -6,6 +9,12 @@ export default (state, action) => {
       return {
         ...state,
         activeTab: action.payload,
+      };
+
+    case TOGGLE_TIMELINE:
+      return {
+        ...state,
+        isTimeline: !state.isTimeline,
       };
   
     default:

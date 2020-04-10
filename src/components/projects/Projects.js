@@ -1,8 +1,8 @@
 import React from 'react';
 import Experiences from '../experiences/Experiences';
 
-const AcademicProjects = () => {
+const Projects = () => {
   return <Experiences />;
 }
 
-export default AcademicProjects;
+export default Projects;

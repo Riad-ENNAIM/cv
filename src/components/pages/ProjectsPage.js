@@ -1,15 +1,15 @@
 import React, { useContext, useEffect } from 'react';
-import Experiences from '../experiences/Experiences';
+import Projects from '../projects/Projects';
 import Milestones from '../milestones/Milestones';
 
 import NavbarContext from '../../context/navbar/navbarContext';
 
-const Home = () => {
+const ProjectsPage = () => {
   const navbarContext = useContext(NavbarContext);
   const { isTimeline, setActiveTab } = navbarContext;
 
   useEffect(() => {
-    setActiveTab('experiences');
+    setActiveTab('projects');
     // eslint-disable-next-line
   }, []);
 
@@ -23,10 +23,9 @@ const Home = () => {
 
   return (
     <div className="page container-column">
-      <Experiences />
+      <Projects />
     </div>
   );
 }
 
-export default Home;
-
+export default ProjectsPage;

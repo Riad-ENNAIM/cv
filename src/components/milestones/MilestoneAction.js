@@ -23,8 +23,7 @@ MilestoneAction.propTypes = {
   title: PropTypes.string.isRequired,
   info: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  start: PropTypes.string.isRequired,
-  end: PropTypes.string.isRequired
+  date: PropTypes.string.isRequired
 };
 
 MilestoneAction.defaultProps = {
