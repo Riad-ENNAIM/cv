@@ -9,7 +9,7 @@ import {
 const NavbarState = props => {
   const initialState = {
     activeTab: null,
-    isTimeline: true
+    isTimeline: JSON.parse(localStorage.getItem('isTimeline'))
   };
 
   const [state, dispatch] = useReducer(navbarReducer, initialState);

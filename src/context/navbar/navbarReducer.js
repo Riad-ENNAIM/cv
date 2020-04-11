@@ -12,6 +12,7 @@ export default (state, action) => {
       };
 
     case TOGGLE_TIMELINE:
+      localStorage.setItem('isTimeline', JSON.stringify(!state.isTimeline));
       return {
         ...state,
         isTimeline: !state.isTimeline,

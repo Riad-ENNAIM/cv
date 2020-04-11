@@ -9,7 +9,7 @@ const Navbar = () => {
 
   useEffect(() => {
     setTab(activeTab);
-  }, [navbarContext, activeTab, isTimeline]);
+  }, [navbarContext, activeTab]);
 
   const [tab, setTab] = useState(null);
 
