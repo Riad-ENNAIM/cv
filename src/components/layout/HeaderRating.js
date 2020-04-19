@@ -5,7 +5,7 @@ const HeaderRating = () => {
   return (
     <div className="main-rating">
       <h1>4.7</h1>
-      <Rating />
+      <Rating rating={4.7}/>
       <span>Évaluation</span>
     </div>
   );
