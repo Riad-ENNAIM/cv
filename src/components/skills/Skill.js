@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Rating from '../utils/Rating';
 
 export const Skill = ({ title, subSkills }) => {
   return (
@@ -7,13 +8,7 @@ export const Skill = ({ title, subSkills }) => {
       <div className="skill-header container">
         <h3 className="skill-title">{title}</h3>
 
-        <div className="rating">
-          <i className="fas fa-star"></i>
-          <i className="fas fa-star"></i>
-          <i className="fas fa-star-half-alt"></i>
-          <i className="far fa-star"></i>
-          <i className="far fa-star"></i>
-        </div>
+        <Rating />
       </div>
 
       <div className="skill-content container wrapper">

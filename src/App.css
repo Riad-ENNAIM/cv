@@ -134,8 +134,6 @@ a {
   justify-content: center;
   align-items: center;
   padding: 10px 50px;
-  /* border: #bbb solid 1px;
-  border-radius: 50%; */
 }
 
 #main-header .main-rating h1 {
@@ -144,6 +142,7 @@ a {
 
 #main-header .main-rating .rating {
   font-size: 1.4rem;
+  margin-bottom: 10px;
 }
 
 /* ---------- Navbar ---------- */
@@ -522,6 +521,52 @@ ul.milestone-action li span.number span {
 }
 
 .skill .skill-content .skill-item p {
+  text-align: justify;
+}
+
+/* Reviews */
+.review {
+  display: flex;
+  width: 100%;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.review::before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #bbb;
+}
+
+.review .review-header {
+  flex: 1;
+  display: flex;
+}
+
+.review .review-header img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 2px;
+}
+
+.review .review-header div {
+  padding: 0 10px;
+}
+
+.review .review-header div .review-date {
+  color: #999;
+  font-size: 0.7em;
+  display: block;
+}
+
+.review .review-content {
+  flex: 2;
   text-align: justify;
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import riad from '../../images/riad.jpg'
+import riad from '../../images/riad.jpg';
 
 const HeaderTitle = () => {
   return (

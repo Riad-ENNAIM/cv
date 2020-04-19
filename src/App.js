@@ -7,6 +7,7 @@ import SearchPage from './components/pages/SearchPage';
 import SkillsPage from './components/pages/SkillsPage';
 import ProjectsPage from './components/pages/ProjectsPage';
 import TrainingPage from './components/pages/TrainingPage';
+import ReviewsPage from './components/pages/ReviewsPage';
 import Footer from './components/layout/Footer';
 
 import NavbarState from './context/navbar/NavbarState';
@@ -25,6 +26,7 @@ const App = () => {
           <Route exact path="/skills" component={SkillsPage} />
           <Route exact path="/projects" component={ProjectsPage} />
           <Route exact path="/training" component={TrainingPage} />
+          <Route exact path="/reviews" component={ReviewsPage} />
         </Switch>
         
         <Footer />

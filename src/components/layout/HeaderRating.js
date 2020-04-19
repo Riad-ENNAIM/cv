@@ -1,16 +1,11 @@
 import React from 'react';
+import Rating from '../utils/Rating';
 
 const HeaderRating = () => {
   return (
     <div className="main-rating">
-      <h1>2.5</h1>
-      <div className="rating">
-        <i className="fas fa-star"></i>
-        <i className="fas fa-star"></i>
-        <i className="fas fa-star-half-alt"></i>
-        <i className="far fa-star"></i>
-        <i className="far fa-star"></i>
-      </div>
+      <h1>4.7</h1>
+      <Rating />
       <span>Évaluation</span>
     </div>
   );
