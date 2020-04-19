@@ -309,7 +309,7 @@ input:checked + .slider:before {
   bottom: 0;
   height: 100%;
   width: 4px;
-  background: #F1C40F;
+  background: #f4c150;
 }
 
 .experience .job-description i {
@@ -371,6 +371,10 @@ ul.milestone li {
   background: #f7fbfd;
 }
 
+ul.milestone li.current-milestone {
+  background: #f4c150;
+}
+
 ul.milestone li > div {
   margin-left: 10px;  
 }
@@ -390,7 +394,7 @@ ul.milestone li span.number {
 }
 
 /* ---------- Period ---------- */
-ul.milestone-period li > span {
+ul li.milestone-period > span {
   width: 0;
   height: 100%;
   border: 1px solid #333;
@@ -399,8 +403,8 @@ ul.milestone-period li > span {
   left: -30px;
 }
 
-ul.milestone-period li > span::before,
-ul.milestone-period li > span::after {
+ul li.milestone-period > span::before,
+ul li.milestone-period > span::after {
   content: '';
   width: 10px;
   height: 10px;
@@ -411,15 +415,15 @@ ul.milestone-period li > span::after {
   left: -6px;
 }
 
-ul.milestone-period li > span::before {
+ul li.milestone-period > span::before {
   top: -5px;
 }
 
-ul.milestone-period li > span::after {
+ul li.milestone-period > span::after {
   top:calc(100% - 5px);
 }
 
-ul.milestone-period li span.number span {
+ul li.milestone-period span.number span {
   position: absolute;
   font-size: 10px;
   left: -120px;
@@ -428,16 +432,16 @@ ul.milestone-period li span.number span {
   text-align: end;
 }
 
-ul.milestone-period li span.number span:first-child {
+ul li.milestone-period span.number span:first-child {
   top: -12px;
 }
 
-ul.milestone-period li span.number span:last-child {
+ul li.milestone-period span.number span:last-child {
   top: calc(100% - 12px);
 }
 
 /* ---------- Action ---------- */
-ul.milestone-action li span.point::before {
+ul li.milestone-action span.point::before {
   content: '';
   width: 10px;
   height: 10px;
@@ -449,7 +453,7 @@ ul.milestone-action li span.point::before {
   left: -35px;
 }
 
-ul.milestone-action li span.number span {
+ul li.milestone-action span.number span {
   position: absolute;
   font-size: 10px;
   left: -150px;
