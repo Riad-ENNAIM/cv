@@ -9,6 +9,7 @@ const Experiences = () => {
         company="Université Mohammed VI Polytechnique (AgriEdge – OCP)"
         start="mars 2019"
         location="Ben Guerir - Maroc"
+        isCurrent={true}
       />
       <Experience 
         title="Développeur Full-Stack JavaScript"
@@ -16,6 +17,7 @@ const Experiences = () => {
         start="octobre 2019"
         end="mars 2020"
         location="Ben Guerir - Maroc"
+        isCurrent={false}
       />
       <Experience
         title="Développeur Full-Stack JavaScript"

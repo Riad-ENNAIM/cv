@@ -21,14 +21,19 @@ const Navbar = () => {
         <li><Link to="/projects" className={tab === 'projects' ? 'active' : ''}>Projets</Link></li>
         <li><Link to="/skills" className={tab === 'skills' ? 'active' : ''}>Compétence</Link></li>
         <li><Link to="/training" className={tab === 'training' ? 'active' : ''}>Formation</Link></li>
-        <li><Link to="/infos" className={tab === 'infos' ? 'active' : ''}>Infos</Link></li>
-        <li>
-          Chronologie
-          <label className="switch">
-            <input type="checkbox" checked={isTimeline} onChange={() => toggleTimeline()}/>
-            <span className="slider"></span>
-          </label>
-        </li>
+        <li><Link to="/reviews" className={tab === 'reviews' ? 'active' : ''}>Commentaires</Link></li>
+        {
+          activeTab === 'experiences' || activeTab === 'projects' ?
+            <li className="timeline-switcher">
+              Chronologie
+              <label className="switch">
+                <input type="checkbox" checked={isTimeline} onChange={() => toggleTimeline()}/>
+                <span className="slider"></span>
+              </label>
+            </li>
+          :
+            null
+        }
       </ul>
     </nav>
   );

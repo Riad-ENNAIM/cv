@@ -7,7 +7,7 @@ export const Skill = ({ title, subSkills }) => {
       <div className="skill-header container">
         <h3 className="skill-title">{title}</h3>
 
-        <div className="skill-stars">
+        <div className="rating">
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i>
           <i className="fas fa-star-half-alt"></i>

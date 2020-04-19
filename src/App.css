@@ -78,14 +78,20 @@ a {
   margin-right: 5px;
 }
 
+.rating {
+  color: #f4c150;
+}
+
 /* ---------- Header ---------- */
 #main-header {
   display: flex;
-  margin: 20px 0;
+  padding: 20px 0;
+  background: #f7fbfd;
 }
 
+/* -- */
 #main-header .main-title {
-  flex: 1;
+  flex: 2;
   padding: 0 50px;
   text-align: center;
 }
@@ -97,13 +103,14 @@ a {
   margin-bottom: 20px;
 }
 
+/* -- */
 #main-header .main-info {
-  flex: 2;
+  flex: 3;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 10px 50px;
-  border-left: #bbb solid 0.3px;
+  /* border-left: #bbb solid 0.3px; */
 }
 
 #main-header .main-info .info-group {
@@ -118,6 +125,25 @@ a {
 
 #main-header .main-info .info-group i {
   margin-right: 10px;
+}
+/* -- */
+#main-header .main-rating {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 50px;
+  /* border: #bbb solid 1px;
+  border-radius: 50%; */
+}
+
+#main-header .main-rating h1 {
+  font-size: 4rem;
+}
+
+#main-header .main-rating .rating {
+  font-size: 1.4rem;
 }
 
 /* ---------- Navbar ---------- */
@@ -139,7 +165,7 @@ a {
   list-style: none;
 }
 
-#navbar ul li:last-child{
+#navbar ul li.timeline-switcher {
   position: absolute;
   top: calc(50% - 22px);
   right: 20px;
@@ -277,6 +303,16 @@ input:checked + .slider:before {
   background: #21618C;
 }
 
+.experience .job-description.current-job::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 4px;
+  background: #F1C40F;
+}
+
 .experience .job-description i {
   margin-right: 10px;
 }
@@ -332,7 +368,8 @@ ul.milestone li {
   padding: 14px;
   border-radius: 6px;
   width: 500px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, .12), 0 2px 2px rgba(0, 0, 0, .08)
+  box-shadow: 0 0 4px rgba(0, 0, 0, .12), 0 2px 2px rgba(0, 0, 0, .08);
+  background: #f7fbfd;
 }
 
 ul.milestone li > div {
@@ -468,10 +505,6 @@ ul.milestone-action li span.number span {
 .skill .skill-header .skill-title {
   font-size: 1.5em;
   color: #21618C;
-}
-
-.skill .skill-header .skill-stars {
-  color: gold;
 }
 
 .skill .skill-content {

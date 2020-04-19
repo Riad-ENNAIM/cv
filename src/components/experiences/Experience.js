@@ -2,15 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Tasks from '../tasks/Tasks';
 
-const Experience = ({ title, company, start, end, location }) => {
+const Experience = ({ title, company, start, end, location, isCurrent }) => {
   return (
     <div className="experience">
       <div className="job-header">
         <h3 className="job-title">{title}</h3>
-        {/* <i className="fas fa-chevron-down"></i> */}
+        {/* {
+          isCurrent ?
+          <span>En cours</span>
+          :
+            null
+        } */}
       </div>
 
-      <div className="job-description">
+      <div className={`job-description ${isCurrent ? 'current-job' : ''}`}>
         <span className="job-company">{company}</span>
         <br />
         {
