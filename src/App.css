@@ -582,11 +582,15 @@ ul li.milestone-action span.number span {
   display: flex;
 }
 
-.review .review-header img {
+.review .review-header span.review-avatar {
   height: 50px;
   width: 50px;
+  border: #bbb solid 1px;
   border-radius: 50%;
   margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .review .review-header div {
