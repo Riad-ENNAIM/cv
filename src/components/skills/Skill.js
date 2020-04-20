@@ -11,7 +11,7 @@ export const Skill = ({ title, subSkills }) => {
         <Rating />
       </div>
 
-      <div className="skill-content container wrapper">
+      <div className="skill-content wrapper">
         {
           subSkills.map(skill => (
             <div className="skill-item" key={skill.id}>
