@@ -28,7 +28,6 @@ const ReviewState = props => {
     {
       _id: 2,
       username: 'ENNAIM',
-      rating: 3.5,
       comment: 'bla bla bla',
       date: 'Maintenant'
     }

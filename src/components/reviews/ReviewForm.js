@@ -10,7 +10,7 @@ const ReviewForm = () => {
   const [review, setReview] = useState({
     username: '',
     comment: '',
-    rating: ''
+    rating: 0
   });
 
   const [avatar, setAvatar] = useState({
@@ -98,9 +98,9 @@ const ReviewForm = () => {
 
         <div className="review-content">
           <div className="container justify-content-space-between align-items-center">
-            <Rating />
+            <Rating isActive={true}  onClickStar={value => setReview({  ...review, rating: value + 1})} rating={review.rating} />
             <div className="toggle-form" onClick={closeForm}>
-              <i class="fas fa-times"></i>
+              <i className="fas fa-times"></i>
             </div>
           </div>
 

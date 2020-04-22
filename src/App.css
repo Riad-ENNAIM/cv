@@ -90,10 +90,7 @@ a {
   margin-right: 5px;
 }
 
-.rating {
-  color: #f4c150;
-}
-
+/* - Btn - */
 .btn {
   max-width: 200px;
   padding: 10px;
@@ -111,6 +108,15 @@ a {
 .btn-center {
   align-self: center;
   justify-self: center;
+}
+
+/* - Raiting - */
+.rating {
+  color: #f4c150;
+}
+
+.rating.active i:hover {
+  cursor: pointer;
 }
 
 /* ---------- Header ---------- */
