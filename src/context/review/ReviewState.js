@@ -3,12 +3,14 @@ import ReviewContext from './reviewContext';
 import reviewReducer from './reviewReducer';
 import {
   ADD_REVIEW,
-  GET_REVIEWS
+  GET_REVIEWS,
+  TOGGLE_FORM
 } from '../types';
 
 const ReviewState = props => {
   const initialState = {
-    reviews: null
+    reviews: null,
+    showForm: false
   };
 
   const [state, dispatch] = useReducer(reviewReducer, initialState);
@@ -46,13 +48,18 @@ const ReviewState = props => {
       payload: review
     });
   };
+
+  // Toggle Review Form
+  const toggleForm = () => dispatch({ type: TOGGLE_FORM });
   
   return (
     <ReviewContext.Provider
       value={{
         reviews: state.reviews,
+        showForm: state.showForm,
         getReviews,
-        addReview
+        addReview,
+        toggleForm
       }}
     >
       {props.children}

@@ -5,6 +5,7 @@ import ReviewContext from '../../context/review/reviewContext';
 
 const ReviewForm = () => {
   const reviewContext = useContext(ReviewContext);
+  const { addReview, toggleForm } = reviewContext;
 
   const [review, setReview] = useState({
     username: '',
@@ -64,12 +65,13 @@ const ReviewForm = () => {
 
   const onSubmit = e => {
     e.preventDefault();
-    reviewContext.addReview(review);
+    addReview(review);
 
-    setReview({
-      comment: '',
-      rating: ''
-    });
+    toggleForm();
+  };
+
+  const closeForm = () => {
+    toggleForm()
   };
 
   return (
@@ -95,7 +97,13 @@ const ReviewForm = () => {
         </div>
 
         <div className="review-content">
-          <Rating />
+          <div className="container justify-content-space-between align-items-center">
+            <Rating />
+            <div className="toggle-form" onClick={closeForm}>
+              <i class="fas fa-times"></i>
+            </div>
+          </div>
+
           <textarea
             name="comment"
             value={review.comment}
