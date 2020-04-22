@@ -21,13 +21,21 @@ const ReviewState = props => {
     {
       _id: 1,
       username: 'Riad ENNAIM',
-      rating: 4.5,
+      rating: 4,
       comment: 'bla bla bla',
       date: 'Maintenant'
     },
     {
       _id: 2,
       username: 'ENNAIM',
+      rating: 3,
+      comment: 'bla bla bla',
+      date: 'Maintenant'
+    },
+    {
+      _id: 3,
+      username: 'ENNAIM',
+      rating: 2,
       comment: 'bla bla bla',
       date: 'Maintenant'
     }

@@ -5,7 +5,7 @@ const Rating = ({ rating, isActive, onClickStar }) => {
   useEffect(() => {
     getStars();
     // eslint-disable-next-line
-  }, [])
+  }, [rating])
 
   const [stars, setStars] = useState(null);
 
