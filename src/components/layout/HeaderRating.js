@@ -26,7 +26,7 @@ const HeaderRating = () => {
       }, 0);
       
       const note = sum / reviews.length <= 5 ? sum / reviews.length : 5;
-      setGlobalRating(note.toFixed(1));
+      setGlobalRating(+note.toFixed(1));
     }
   }
   return (
