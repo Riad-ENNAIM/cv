@@ -62,10 +62,10 @@ const Review = ({ review }) => {
       </div>
 
       <div className="review-content">
-        <Rating rating={rating}/>
-        <p>
-          {comment}
-        </p>
+        <Rating rating={rating} />
+        <p dangerouslySetInnerHTML={{__html: comment}} />
+          {/* {comment} */}
+        {/* </p> */}
       </div>
     </div>
   );

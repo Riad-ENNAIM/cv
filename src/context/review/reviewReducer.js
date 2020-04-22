@@ -14,7 +14,7 @@ export default (state, action) => {
 
     case ADD_REVIEW:
       const review = action.payload;
-      review._id = state.reviews.lenght + 1;
+      review._id = state.reviews.length + 1;
       return {
         ...state,
         reviews: [...state.reviews, review]

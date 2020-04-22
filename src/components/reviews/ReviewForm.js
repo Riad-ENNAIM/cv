@@ -18,7 +18,7 @@ const ReviewForm = () => {
     background: '#ffffff'
   });
 
-  const onChange = e => setReview({  ...review, [e.target.name]: e.target.value});
+  const onChange = e => setReview({...review, [e.target.name]: e.target.value});
 
   const onBlur = e => updateAvatar();
 
@@ -65,8 +65,11 @@ const ReviewForm = () => {
 
   const onSubmit = e => {
     e.preventDefault();
-    addReview(review);
-
+    addReview({
+      ...review,
+      username: review.username.replace(/\s+/g, " ").trim(), // Remove extrat white spaces
+      comment: review.comment.replace(/\n\r?/g, '<br />') // Add line breaks
+    });
     toggleForm();
   };
 
@@ -83,12 +86,15 @@ const ReviewForm = () => {
             <span className="review-date">Maintenant</span>
             <span className="review-username">
               <input
+                id="username"
                 type="text"
                 placeholder="Entrer votre nom"
                 name="username"
                 value={review.username}
                 onChange={onChange}
                 onBlur={onBlur}
+                pattern="[A-Z a-z]+"
+                title="Entrer un nom valide, juste des lettres !"
                 autoFocus
                 required
               />
@@ -105,6 +111,7 @@ const ReviewForm = () => {
           </div>
 
           <textarea
+            id="comment"
             name="comment"
             value={review.comment}
             rows="7"

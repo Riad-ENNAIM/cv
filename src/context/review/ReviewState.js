@@ -22,8 +22,8 @@ const ReviewState = props => {
       _id: 1,
       username: 'Riad ENNAIM',
       rating: 4,
-      comment: 'bla bla bla',
-      date: 'Maintenant'
+      comment: 'bla <br /> bla bla',
+      date: '2 semaines'
     },
     {
       _id: 2,
@@ -39,7 +39,7 @@ const ReviewState = props => {
       comment: 'bla bla bla',
       date: 'Maintenant'
     }
-  ]
+  ];
 
     dispatch({
       type: GET_REVIEWS,
