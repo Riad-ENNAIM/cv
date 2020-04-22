@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Review from './Review';
 
 const Reviews = () => {
+  const [showForm, setShowForm] = useState(false);
+
   return (
     <>
       <Review username="Adil Jalal" />
@@ -9,6 +11,13 @@ const Reviews = () => {
         le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée."
       />
       <Review username="Mohamed Ennaim" />
+
+      {
+        !showForm ?
+          <button className="btn btn-primary btn-center" onClick={() => setShowForm(!showForm)}>Commenter</button>
+        :
+          null
+      }
     </>
   );
 }

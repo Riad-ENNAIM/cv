@@ -94,6 +94,25 @@ a {
   color: #f4c150;
 }
 
+.btn {
+  max-width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #21618C;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.btn-center {
+  align-self: center;
+  justify-self: center;
+}
+
 /* ---------- Header ---------- */
 #main-header {
   display: flex;
@@ -618,8 +637,8 @@ ul li.milestone-action span.number span {
 
 
 #wisdom {
-  background: #21618C;
-  color: #5DADE2;
+  background: #16A085;
+  color: #ABEBC6;
   font-size: 30px;
   padding: 20px;
   text-align: center;

@@ -37,18 +37,22 @@ const Review = ({ username, date, comment, rating }) => {
     const firstLetter = name[0].slice(0,1);
     const lastLetter = name[1].slice(0,1);
     const colorNumber = '#'+ letterColors[firstLetter.toLowerCase()] + letterColors[lastLetter.toLowerCase()];
-    
-    setAvatar(firstLetter + lastLetter);
-    setAvatarColor(colorNumber)
+
+    setAvatar({
+      name: firstLetter + lastLetter,
+      background: colorNumber
+    });
   }, [username]);
 
-  const [avatar, setAvatar] = useState(null);
-  const [avatarColor, setAvatarColor] = useState(null);
+  const [avatar, setAvatar] = useState({
+    name: '',
+    background: ''
+  });
 
   return (
     <div className="review">
       <div className="review-header">
-        <span className="review-avatar" style={{background: avatarColor}}>{avatar}</span>
+        <span className="review-avatar" style={{background: avatar.background}}>{avatar.name}</span>
         <div>
           <span className="review-date">{date}</span>
           <span className="review-username">{username}</span>
