@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Rating from '../utils/Rating';
 
-const Review = ({ username, date, comment, rating }) => {
+const Review = ({ review }) => {
+  const { username, comment, rating, date } = review;
+
   useEffect(() => {
     const letterColors = {
       a: 'F23',
@@ -70,19 +72,7 @@ const Review = ({ username, date, comment, rating }) => {
 }
 
 Review.propTypes = {
-  username: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  rating: PropTypes.number.isRequired,
-  comment: PropTypes.string.isRequired,
-};
-
-Review.defaultProps = {
-  username: 'Riad ENNAIM',
-  date: '01-01-1900',
-  rating: 5,
-  comment: `Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page,
-  le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin,
-  le Lorem ipsum ou Lipsum.`
+  review: PropTypes.object.isRequired
 };
 
 export default Review;

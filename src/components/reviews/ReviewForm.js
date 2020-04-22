@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Rating from '../utils/Rating';
 
+import ReviewContext from '../../context/review/reviewContext';
+
 const ReviewForm = () => {
+  const reviewContext = useContext(ReviewContext);
+
   const [review, setReview] = useState({
     username: '',
     comment: '',
@@ -60,35 +64,52 @@ const ReviewForm = () => {
 
   const onSubmit = e => {
     e.preventDefault();
-    // addReview();
+    reviewContext.addReview(review);
+
+    setReview({
+      comment: '',
+      rating: ''
+    });
   };
 
   return (
-    <form onSubmit={onSubmit} className="review">
-      <div className="review-header">
-        <span className="review-avatar" style={{background: avatar.background}}>{avatar.name}</span>
-        <div>
-          <span className="review-date">Maintenant</span>
-          <span className="review-username">
-            <input
-              type="text"
-              placeholder="Entrer votre nom"
-              name="username"
-              value={review.username}
-              autoFocus
-              onChange={onChange}
-              onBlur={onBlur} />
-          </span>
+    <form onSubmit={onSubmit}>
+      <div className="review">
+        <div className="review-header">
+          <span className="review-avatar" style={{background: avatar.background}}>{avatar.name}</span>
+          <div>
+            <span className="review-date">Maintenant</span>
+            <span className="review-username">
+              <input
+                type="text"
+                placeholder="Entrer votre nom"
+                name="username"
+                value={review.username}
+                onChange={onChange}
+                onBlur={onBlur}
+                autoFocus
+                required
+              />
+            </span>
+          </div>
+        </div>
+
+        <div className="review-content">
+          <Rating />
+          <textarea
+            name="comment"
+            value={review.comment}
+            rows="7"
+            onChange={onChange} />
         </div>
       </div>
 
-      <div className="review-content">
-        <Rating />
-        <textarea
-          name="comment"
-          value={review.comment}
-          rows="7"
-          onChange={onChange} />
+      <div className="container justify-content-center align-items-center">
+        <input
+          type="submit"
+          value="Commenter"
+          className="btn btn-primary btn-center"
+        />
       </div>
     </form>
   );

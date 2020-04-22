@@ -1,17 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Review from './Review';
 import ReviewForm from './ReviewForm';
 
+import ReviewContext from '../../context/review/reviewContext';
+
 const Reviews = () => {
+  const reviewContext = useContext(ReviewContext);
+  const { reviews, getReviews } = reviewContext;
+
+  useEffect(() => {
+    getReviews();
+    // eslint-disable-next-line
+  }, [])
+
   const [showForm, setShowForm] = useState(false);
+
+  if(reviews === null){
+    return <h3>Aucun Commentaire</h3>
+  }
 
   return (
     <>
-      <Review username="Ennaim" />
-      <Review comment="Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page,
-        le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée."
-      />
-      <Review username="Mohamed Ennaim" />
+      {
+        reviews.map(review => <Review key={review._id} review={review} />)
+      }
 
       {
         !showForm ?
