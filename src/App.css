@@ -149,11 +149,12 @@ a {
 }
 
 #main-header .main-info .links a {
-  color: #333;
+  color: #21618C;
+  font-size: 1.7em;
 }
 
 #main-header .main-info .links a:hover {
-  color: #000;
+  transform: scale(1.2);
 }
 
 /* -- */
