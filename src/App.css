@@ -578,7 +578,7 @@ ul li.milestone-action span.number span {
   text-align: justify;
 }
 
-/* Reviews */
+/* ---------- Reviews ---------- */
 .review {
   display: flex;
   width: 100%;
@@ -628,8 +628,16 @@ ul li.milestone-action span.number span {
   text-align: justify;
 }
 
+/* ---------- Review Form ---------- */
+.review .review-header div .review-username input {
+  padding: 5px;
+}
 
-
+.review .review-content textarea {
+  width: 100%;
+  font-size: 1em;
+  padding: 10px;
+}
 
 
 

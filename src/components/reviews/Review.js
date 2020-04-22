@@ -35,7 +35,7 @@ const Review = ({ username, date, comment, rating }) => {
     
     const name = username.split(' ');
     const firstLetter = name[0].slice(0,1);
-    const lastLetter = name[1].slice(0,1);
+    const lastLetter = name.length > 1 ? name[1].slice(0,1) : name[0].slice(name[0].length - 1);
     const colorNumber = '#'+ letterColors[firstLetter.toLowerCase()] + letterColors[lastLetter.toLowerCase()];
 
     setAvatar({
