@@ -11,7 +11,7 @@ const Reviews = () => {
   useEffect(() => {
     getReviews();
     // eslint-disable-next-line
-  }, [])
+  }, []);
 
   if(reviews === null){
     return <h3>Aucun Commentaire</h3>

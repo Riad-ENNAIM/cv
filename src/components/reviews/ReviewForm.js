@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect, useRef } from 'react';
 import Rating from '../utils/Rating';
 
 import ReviewContext from '../../context/review/reviewContext';
@@ -6,6 +6,12 @@ import ReviewContext from '../../context/review/reviewContext';
 const ReviewForm = () => {
   const reviewContext = useContext(ReviewContext);
   const { addReview, toggleForm } = reviewContext;
+
+  const formRef = useRef(null);
+
+  useEffect(() => {
+    formRef.current.scrollIntoView({ behavior: 'smooth' });
+  }, []);
 
   const [review, setReview] = useState({
     username: '',
@@ -78,7 +84,7 @@ const ReviewForm = () => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} ref={formRef}>
       <div className="review">
         <div className="review-header">
           <span className="review-avatar" style={{background: avatar.background}}>{avatar.name}</span>

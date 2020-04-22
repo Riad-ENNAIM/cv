@@ -136,6 +136,7 @@ a {
 #main-header .main-title img {
   width: 140px;
   height: 140px;
+  object-fit: cover;
   border-radius: 50%;
   margin-bottom: 20px;
 }
