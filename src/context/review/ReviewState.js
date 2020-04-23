@@ -19,30 +19,30 @@ const ReviewState = props => {
 
   // Get Reviews
   const getReviews = () => {
-    dispatch({ ype: LOADING });
+    dispatch({ type: LOADING });
 
     const res = [
-      {
-        _id: 1,
-        username: 'Riad ENNAIM',
-        rating: 4,
-        comment: 'bla <br /> bla bla',
-        date: '2 semaines'
-      },
-      {
-        _id: 2,
-        username: 'ENNAIM',
-        rating: 3,
-        comment: 'bla bla bla',
-        date: 'Maintenant'
-      },
-      {
-        _id: 3,
-        username: 'ENNAIM',
-        rating: 2,
-        comment: 'bla bla bla',
-        date: 'Maintenant'
-      }
+      // {
+      //   _id: 1,
+      //   username: 'Riad ENNAIM',
+      //   rating: 4,
+      //   comment: 'bla <br /> bla bla',
+      //   date: '2 semaines'
+      // },
+      // {
+      //   _id: 2,
+      //   username: 'ENNAIM',
+      //   rating: 3,
+      //   comment: 'bla bla bla',
+      //   date: 'Maintenant'
+      // },
+      // {
+      //   _id: 3,
+      //   username: 'ENNAIM',
+      //   rating: 2,
+      //   comment: 'bla bla bla',
+      //   date: 'Maintenant'
+      // }
     ];
 
     dispatch({

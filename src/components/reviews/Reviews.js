@@ -24,18 +24,13 @@ const Reviews = () => {
 
   return (
     <>
-      {
-        reviews.length === 0 ?
-          <h3 style={{alignSelf: 'center'}}>Aucun Commentaire</h3>
-        :
-          reviews.map(review => <Review key={review._id} review={review} />)
-      }
+      { reviews.map(review => <Review key={review._id} review={review} />) }
 
       {
-        !showForm ?
-          <button className="btn btn-primary btn-center" onClick={() => toggleForm()}>Commenter</button>
-        :
+        showForm ?
           <ReviewForm />
+        :
+          <button className="btn btn-primary btn-center" onClick={() => toggleForm()}>Commenter</button>
       }
     </>
   );

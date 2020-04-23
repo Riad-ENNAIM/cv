@@ -11,6 +11,7 @@ export default (state, action) => {
       return {
         ...state,
         reviews: action.payload,
+        showForm: action.payload.length === 0,
         isLoading: false
       };
 
