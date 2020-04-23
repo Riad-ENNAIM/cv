@@ -7,14 +7,14 @@ import ReviewContext from '../../context/review/reviewContext';
 
 const Reviews = () => {
   const reviewContext = useContext(ReviewContext);
-  const { reviews, showForm, getReviews, toggleForm } = reviewContext;
+  const { reviews, showForm, getReviews, toggleForm, isLoading } = reviewContext;
 
   useEffect(() => {
     getReviews();
     // eslint-disable-next-line
   }, []);
 
-  if(reviews === null){
+  if(reviews === null || isLoading){
     return (
       <div style={{alignSelf: 'center'}}>
         <Loader />

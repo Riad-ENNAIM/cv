@@ -4,42 +4,46 @@ import reviewReducer from './reviewReducer';
 import {
   ADD_REVIEW,
   GET_REVIEWS,
-  TOGGLE_FORM
+  TOGGLE_FORM,
+  LOADING
 } from '../types';
 
 const ReviewState = props => {
   const initialState = {
     reviews: null,
-    showForm: false
+    showForm: false,
+    isLoading: false
   };
 
   const [state, dispatch] = useReducer(reviewReducer, initialState);
 
   // Get Reviews
   const getReviews = () => {
+    dispatch({ ype: LOADING });
+
     const res = [
-    {
-      _id: 1,
-      username: 'Riad ENNAIM',
-      rating: 4,
-      comment: 'bla <br /> bla bla',
-      date: '2 semaines'
-    },
-    {
-      _id: 2,
-      username: 'ENNAIM',
-      rating: 3,
-      comment: 'bla bla bla',
-      date: 'Maintenant'
-    },
-    {
-      _id: 3,
-      username: 'ENNAIM',
-      rating: 2,
-      comment: 'bla bla bla',
-      date: 'Maintenant'
-    }
-  ];
+      {
+        _id: 1,
+        username: 'Riad ENNAIM',
+        rating: 4,
+        comment: 'bla <br /> bla bla',
+        date: '2 semaines'
+      },
+      {
+        _id: 2,
+        username: 'ENNAIM',
+        rating: 3,
+        comment: 'bla bla bla',
+        date: 'Maintenant'
+      },
+      {
+        _id: 3,
+        username: 'ENNAIM',
+        rating: 2,
+        comment: 'bla bla bla',
+        date: 'Maintenant'
+      }
+    ];
 
     dispatch({
       type: GET_REVIEWS,
@@ -64,6 +68,7 @@ const ReviewState = props => {
       value={{
         reviews: state.reviews,
         showForm: state.showForm,
+        isLoading: state.isLoading,
         getReviews,
         addReview,
         toggleForm

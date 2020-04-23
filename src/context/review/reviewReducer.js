@@ -1,7 +1,8 @@
 import {
   ADD_REVIEW,
   GET_REVIEWS,
-  TOGGLE_FORM
+  TOGGLE_FORM,
+  LOADING
 } from '../types';
 
 export default (state, action) => {
@@ -9,7 +10,8 @@ export default (state, action) => {
     case GET_REVIEWS:
       return {
         ...state,
-        reviews: action.payload
+        reviews: action.payload,
+        isLoading: false
       };
 
     case ADD_REVIEW:
@@ -24,6 +26,12 @@ export default (state, action) => {
       return {
         ...state,
         showForm: !state.showForm
+      };
+
+    case LOADING:
+      return {
+        ...state,
+        isLoading: true
       };
   
     default:
