@@ -1,6 +1,7 @@
 import React, { useEffect, useContext } from 'react';
 import Review from './Review';
 import ReviewForm from './ReviewForm';
+import Loader from '../utils/Loader';
 
 import ReviewContext from '../../context/review/reviewContext';
 
@@ -14,13 +15,20 @@ const Reviews = () => {
   }, []);
 
   if(reviews === null){
-    return <h3>Aucun Commentaire</h3>
+    return (
+      <div style={{alignSelf: 'center'}}>
+        <Loader />
+      </div>
+    );
   }
 
   return (
     <>
       {
-        reviews.map(review => <Review key={review._id} review={review} />)
+        reviews.length === 0 ?
+          <h3 style={{alignSelf: 'center'}}>Aucun Commentaire</h3>
+        :
+          reviews.map(review => <Review key={review._id} review={review} />)
       }
 
       {
