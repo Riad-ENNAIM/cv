@@ -55,10 +55,10 @@ const ReviewForm = () => {
       w: 'CD5',
       x: 'AB6',
       y: 'ABC',
-      z: '678',
+      z: '678'
     }
     
-    const name = review.username.split(' ');
+    const name = review.username.replace(/[^A-Za-z]/g, '').split(' ');
     const firstLetter = name[0].slice(0,1);
     const lastLetter = name.length > 1 ? name[1].slice(0,1) : name[0].slice(name[0].length - 1);
     const colorNumber = '#'+ letterColors[firstLetter.toLowerCase()] + letterColors[lastLetter.toLowerCase()];
@@ -99,7 +99,6 @@ const ReviewForm = () => {
                 value={review.username}
                 onChange={onChange}
                 onBlur={onBlur}
-                pattern="[A-Z a-z]+"
                 title="Entrer un nom valide, juste des lettres !"
                 autoFocus
                 required
