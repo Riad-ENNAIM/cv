@@ -50,14 +50,13 @@ const Review = ({ review }) => {
       y: 'ABC',
       z: '678',
     };
-    const name = username.replace(/[^A-Za-z]/g, '').split(' ');
+    const name = username.replace(/[^A-Z a-z]/g, '').replace(/\s+/g, " ").trim().split(' ');
     const firstLetter = name[0].slice(0,1);
     const lastLetter = name.length > 1 ? name[1].slice(0,1) : name[0].slice(name[0].length - 1);
-    const colorNumber = '#'+ letterColors[firstLetter.toLowerCase()] + letterColors[lastLetter.toLowerCase()];
 
     setAvatar({
-      name: firstLetter + lastLetter,
-      background: colorNumber
+      name: name.length > 1 ? (firstLetter + lastLetter).toUpperCase() : firstLetter.toUpperCase(),
+      background: '#'+ letterColors[firstLetter.toLowerCase()] + letterColors[lastLetter.toLowerCase()]
     });
   }
 

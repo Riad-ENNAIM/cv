@@ -668,6 +668,8 @@ ul li.milestone-action span.number span {
 /* ---------- Review Form ---------- */
 .review .review-header div .review-username input {
   padding: 5px;
+  border: none;
+  border-bottom: #999 solid 1px;
 }
 
 .review .review-content .toggle-form {
@@ -684,6 +686,7 @@ ul li.milestone-action span.number span {
   width: 100%;
   font-size: 1em;
   padding: 10px;
+  resize: vertical;
 }
 
 

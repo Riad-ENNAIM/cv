@@ -59,14 +59,13 @@ const ReviewForm = () => {
       z: '678'
     }
     
-    const name = review.username.replace(/[^A-Za-z]/g, '').split(' ');
+    const name = review.username.replace(/[^A-Z a-z]/g, '').replace(/\s+/g, " ").trim().split(' ');
     const firstLetter = name[0].slice(0,1);
     const lastLetter = name.length > 1 ? name[1].slice(0,1) : name[0].slice(name[0].length - 1);
-    const colorNumber = '#'+ letterColors[firstLetter.toLowerCase()] + letterColors[lastLetter.toLowerCase()];
 
     setAvatar({
-      name: firstLetter + lastLetter,
-      background: colorNumber
+      name: name.length > 1 ? (firstLetter + lastLetter).toUpperCase() : firstLetter.toUpperCase(),
+      background: '#'+ letterColors[firstLetter.toLowerCase()] + letterColors[lastLetter.toLowerCase()]
     });
   }
 
@@ -112,7 +111,7 @@ const ReviewForm = () => {
           <div className="container justify-content-space-between align-items-center">
             <Rating
               isActive={true}
-              onClickStar={value => setReview({  ...review, rating: value + 1})} rating={review.rating}
+              onClickStar={value => setReview({ ...review, rating: value + 1 })} rating={review.rating}
             />
 
             <div className="toggle-form" onClick={closeForm}>
