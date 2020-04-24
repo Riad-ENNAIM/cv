@@ -22,27 +22,27 @@ const ReviewState = props => {
     dispatch({ type: LOADING });
 
     const res = [
-      // {
-      //   _id: 1,
-      //   username: 'Riad ENNAIM',
-      //   rating: 4,
-      //   comment: 'bla <br /> bla bla',
-      //   date: '2 semaines'
-      // },
-      // {
-      //   _id: 2,
-      //   username: 'ENNAIM',
-      //   rating: 3,
-      //   comment: 'bla bla bla',
-      //   date: 'Maintenant'
-      // },
-      // {
-      //   _id: 3,
-      //   username: 'ENNAIM',
-      //   rating: 2,
-      //   comment: 'bla bla bla',
-      //   date: 'Maintenant'
-      // }
+      {
+        _id: 1,
+        username: 'Riad ENNAIM',
+        rating: 4,
+        comment: 'bla <br /> bla bla',
+        date: '2020-04-24T01:55:01.041+00:00'
+      },
+      {
+        _id: 2,
+        username: 'ENNAIM',
+        rating: 3,
+        comment: 'bla bla bla',
+        date: '2019-12-29T15:03:01.041+00:00'
+      },
+      {
+        _id: 3,
+        username: 'ENNAIM r',
+        rating: 2,
+        comment: 'bla bla bla',
+        date: '2020-04-23T15:53:01.041+00:00'
+      }
     ];
 
     dispatch({

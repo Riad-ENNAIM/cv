@@ -1,3 +1,3 @@
 import React from 'react'
 
-export default () => <div class="loader"></div>;
+export default () => <div className="loader"></div>;

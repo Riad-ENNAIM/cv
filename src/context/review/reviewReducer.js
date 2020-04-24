@@ -18,6 +18,7 @@ export default (state, action) => {
     case ADD_REVIEW:
       const review = action.payload;
       review._id = state.reviews.length + 1;
+      review.date = new Date();
       return {
         ...state,
         reviews: [...state.reviews, review]
