@@ -13,9 +13,9 @@ const Milestones = () => {
         end="Mars 2020"
         isCurrent={true}
       />
+      <MilestoneAction isCurrent={true} />
+      <MilestonePeriod />
       <MilestoneAction />
-      <MilestonePeriod />
-      <MilestonePeriod />
       <MilestonePeriod />
     </ul>
   );

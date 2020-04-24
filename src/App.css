@@ -14,11 +14,11 @@ html,body {
   background: #fff;
 }
 
-h1, h2 {
-  padding-bottom: 20px;
+h1 {
+  padding-bottom: 15px;
 }
 
-h3, h4 {
+h2, h3, h4 {
   padding-bottom: 10px;
 }
 
@@ -171,6 +171,16 @@ a {
   margin-bottom: 20px;
 }
 
+#main-header .main-title .links a {
+  color: #21618C;
+  font-size: 1.2em;
+  margin: 0 10px;
+}
+
+#main-header .main-title .links a:hover {
+  transform: scale(1.2);
+}
+
 /* -- */
 #main-header .main-info {
   flex: 3;
@@ -196,21 +206,6 @@ a {
 
 #main-header .main-info .info-group p.description {
   text-align: justify;
-}
-
-#main-header .main-info .links {
-  padding: 5px 0;
-  border: #333 solid 1px;
-  border-radius: 8px;
-}
-
-#main-header .main-info .links a {
-  color: #21618C;
-  font-size: 1.7em;
-}
-
-#main-header .main-info .links a:hover {
-  transform: scale(1.2);
 }
 
 /* -- */
@@ -459,8 +454,10 @@ ul.milestone li {
 }
 
 ul.milestone li.current-milestone {
-  background: #f4c150;
+  background: #21618C;
+  color: #fff;
 }
+
 
 ul.milestone li > div {
   margin-left: 10px;  
