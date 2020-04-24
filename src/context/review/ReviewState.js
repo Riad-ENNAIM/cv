@@ -4,23 +4,20 @@ import reviewReducer from './reviewReducer';
 import {
   ADD_REVIEW,
   GET_REVIEWS,
-  TOGGLE_FORM,
-  LOADING
+  TOGGLE_FORM
 } from '../types';
 
 const ReviewState = props => {
   const initialState = {
     reviews: null,
     showForm: false,
-    isLoading: false
+    isLoading: true
   };
 
   const [state, dispatch] = useReducer(reviewReducer, initialState);
 
   // Get Reviews
   const getReviews = () => {
-    dispatch({ type: LOADING });
-
     const res = [
       {
         _id: 1,
