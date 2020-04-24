@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect, useRef } from 'react';
 import Rating from '../utils/Rating';
+import typingSpinner from '../../images/typing.gif';
 
 import ReviewContext from '../../context/review/reviewContext';
 
@@ -24,9 +25,9 @@ const ReviewForm = () => {
     background: '#ffffff'
   });
 
-  const onChange = e => setReview({...review, [e.target.name]: e.target.value});
+  const [isTypingComment, setIsTypingComment] = useState(true);
 
-  const onBlur = e => updateAvatar();
+  const onChange = e => setReview({...review, [e.target.name]: e.target.value});
 
   const updateAvatar = () => {
     const letterColors = {
@@ -79,9 +80,9 @@ const ReviewForm = () => {
     toggleForm();
   };
 
-  const closeForm = () => {
-    toggleForm()
-  };
+  const closeForm = () => toggleForm();
+
+  const toggleTypingSpinner = () => setIsTypingComment(!isTypingComment);
 
   return (
     <form onSubmit={onSubmit} ref={formRef}>
@@ -98,7 +99,7 @@ const ReviewForm = () => {
                 name="username"
                 value={review.username}
                 onChange={onChange}
-                onBlur={onBlur}
+                onBlur={updateAvatar}
                 title="Entrer un nom valide, juste des lettres !"
                 autoFocus
                 required
@@ -109,7 +110,11 @@ const ReviewForm = () => {
 
         <div className="review-content">
           <div className="container justify-content-space-between align-items-center">
-            <Rating isActive={true}  onClickStar={value => setReview({  ...review, rating: value + 1})} rating={review.rating} />
+            <Rating
+              isActive={true}
+              onClickStar={value => setReview({  ...review, rating: value + 1})} rating={review.rating}
+            />
+
             <div className="toggle-form" onClick={closeForm}>
               <i className="fas fa-times"></i>
             </div>
@@ -120,7 +125,11 @@ const ReviewForm = () => {
             name="comment"
             value={review.comment}
             rows="7"
-            onChange={onChange} />
+            style={isTypingComment && review.comment === '' ? {background: typingSpinner} : null}
+            onChange={onChange}
+            onFocus={toggleTypingSpinner}
+            onBlur={toggleTypingSpinner}
+          />
         </div>
       </div>
 
