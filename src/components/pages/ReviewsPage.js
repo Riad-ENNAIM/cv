@@ -13,7 +13,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="page container-column">
+    <div className="container-column">
       <Reviews />
     </div>
   );

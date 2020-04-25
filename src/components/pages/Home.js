@@ -14,15 +14,11 @@ const Home = () => {
   }, []);
 
   if(isTimeline) {
-    return (
-      <div className="page container-column justify-content-center align-items-center">
-        <Milestones />
-      </div>
-    );
+    return <Milestones />;
   }
 
   return (
-    <div className="page container-column">
+    <div className="container-column">
       <Experiences />
     </div>
   );

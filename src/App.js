@@ -21,16 +21,16 @@ const App = () => {
       <ReviewState>
         <Router>
           <Header />
-          
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/search" component={SearchPage} />
-            <Route exact path="/skills" component={SkillsPage} />
-            <Route exact path="/projects" component={ProjectsPage} />
-            <Route exact path="/training" component={TrainingPage} />
-            <Route exact path="/reviews" component={ReviewsPage} />
-          </Switch>
-          
+          <div className="page">
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/search" component={SearchPage} />
+              <Route exact path="/skills" component={SkillsPage} />
+              <Route exact path="/projects" component={ProjectsPage} />
+              <Route exact path="/training" component={TrainingPage} />
+              <Route exact path="/reviews" component={ReviewsPage} />
+            </Switch>
+          </div>
           <Footer />
         </Router>
       </ReviewState>

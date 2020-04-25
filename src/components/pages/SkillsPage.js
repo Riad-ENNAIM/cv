@@ -12,7 +12,7 @@ const SkillsPage = () => {
   }, []);
 
   return (
-    <div className="page wrapper justify-content-space-between">
+    <div className="wrapper justify-content-space-between">
       <Skills />
     </div>
   );

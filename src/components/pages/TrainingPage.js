@@ -11,11 +11,7 @@ const Timeline = () => {
     // eslint-disable-next-line
   }, []);
 
-  return (
-    <div className="page container-column justify-content-center align-items-center">
-      <Training />
-    </div>
-  );
+  return <Training />;
 }
 
 export default Timeline;

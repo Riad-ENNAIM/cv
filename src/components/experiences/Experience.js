@@ -28,7 +28,6 @@ const Experience = ({ title, company, start, end, location, isCurrent }) => {
       
         <Tasks />
       </div>
-
     </div>
   );
 }

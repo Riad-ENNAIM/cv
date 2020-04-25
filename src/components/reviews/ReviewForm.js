@@ -86,7 +86,7 @@ const ReviewForm = () => {
   return (
     <form onSubmit={onSubmit} ref={formRef}>
       <div className="review">
-        <div className="review-header">
+        <div className="review-title">
           <span className="review-avatar" style={{background: avatar.background}}>{avatar.name}</span>
           <div>
             <span className="review-date">Maintenant</span>

@@ -26,12 +26,12 @@ const HeaderRating = () => {
       }, 0);
       
       const note = sum / reviews.length <= 5 ? sum / reviews.length : 5;
-      setGlobalRating(+note.toFixed(1));
+      setGlobalRating(note);
     }
   }
   return (
     <div className="main-rating">
-      <h1>{globalRating}</h1>
+      <h1>{globalRating.toFixed(1)}</h1>
       <Rating rating={globalRating}/>
       <span>Évaluation</span>
     </div>

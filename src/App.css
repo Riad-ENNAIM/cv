@@ -29,16 +29,22 @@ a {
 
 /* ---------- Utils ---------- */
 .page {
-  margin: 20px 300px;
+  display: flex;
+  width: 100%;
+  min-height: 60vh;
+  padding: 20px 20%;
+  justify-content: center;
 }
 
 .container {
   display: flex;
+  width: 100%;
 }
 
 .container-column {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .wrapper {
@@ -266,7 +272,6 @@ a {
   border-bottom: #bbb solid 0.3px;
   border-top: #bbb solid 0.3px;
   padding: 20px;
-  margin: 0;
 }
 
 #navbar ul {
@@ -381,6 +386,10 @@ input:checked + .slider:before {
 }
 
 /* ---------- Experience ---------- */
+.experience {
+  margin-bottom: 5px;
+}
+
 .experience .job-header {
   position: relative;
   display: flex;
@@ -477,9 +486,7 @@ ul.milestone li.current-milestone > div.tag-flash {
   position: absolute;
   top: 40%;
   right: -100px;
-
 }
-
 
 ul.milestone li > div {
   margin-left: 10px;  
@@ -582,10 +589,6 @@ ul li.milestone-action span.number span {
   margin: 10px;
 }
 
-#searchResult {
-  min-height: 250px;
-}
-
 /* ---------- Skills ---------- */
 .skill {
   position: relative;
@@ -640,25 +643,15 @@ ul li.milestone-action span.number span {
   width: 100%;
   padding-bottom: 10px;
   margin-bottom: 20px;
-  position: relative;
+  border-bottom: #bbb solid 1px;
 }
 
-.review::before {
-  content: '';
-  width: 100%;
-  height: 1px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: #bbb;
-}
-
-.review .review-header {
+.review .review-title {
   flex: 1;
   display: flex;
 }
 
-.review .review-header span.review-avatar {
+.review .review-title span.review-avatar {
   height: 50px;
   width: 50px;
   border: #bbb solid 1px;
@@ -669,11 +662,11 @@ ul li.milestone-action span.number span {
   align-items: center;
 }
 
-.review .review-header div {
+.review .review-title div {
   padding: 0 10px;
 }
 
-.review .review-header div .review-date {
+.review .review-title div .review-date {
   color: #999;
   font-size: 0.7em;
   display: block;
@@ -685,7 +678,7 @@ ul li.milestone-action span.number span {
 }
 
 /* ---------- Review Form ---------- */
-.review .review-header div .review-username input {
+.review .review-title div .review-username input {
   padding: 5px;
   border: none;
   border-bottom: #999 solid 1px;
