@@ -7,15 +7,15 @@ const Experience = ({ title, company, start, end, location, isCurrent }) => {
     <div className="experience">
       <div className="job-header">
         <h3 className="job-title">{title}</h3>
-        {/* {
+        {
           isCurrent ?
-          <span>En cours</span>
+            <span className="tag-flash">En cours</span>
           :
             null
-        } */}
+        }
       </div>
 
-      <div className={`job-description ${isCurrent ? 'current-job' : ''}`}>
+      <div className="job-description">
         <span className="job-company">{company}</span>
         <br />
         {

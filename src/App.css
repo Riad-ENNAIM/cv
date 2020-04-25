@@ -81,13 +81,43 @@ a {
 .align-items-end {
   align-items: flex-end;
 }
-
+/* Tag */
 .tag {
   background: #EBF5FB;
   padding: 5px;
   border: #5DADE2 solid 0.5px;
   border-radius: 5px;
   margin-right: 5px;
+}
+
+.tag-flash {
+  color: #999;
+  border: #f4c150 solid 1px;
+  border-radius: 5px;
+  padding: 0 5px;
+  -webkit-background-clip: padding-box; /* for Safari */
+	background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+  -webkit-animation: flachBorder 1s infinite;
+  -moz-animation:    flachBorder 1s infinite;
+  -o-animation:      flachBorder 1s infinite;
+  animation:         flachBorder 1s infinite;
+}
+
+@-webkit-keyframes flachBorder {
+  0%   { border: #f4c150 solid 2px; }
+  100% { border: #E74C3C solid 2px; }
+}
+@-moz-keyframes flachBorder {
+  0%   { border: #f4c150 solid 2px; }
+  100% { border: #E74C3C solid 2px; }
+}
+@-o-keyframes flachBorder {
+  0%   { border: #f4c150 solid 2px; }
+  100% { border: #E74C3C solid 2px; }
+}
+@keyframes flachBorder {
+  0%   { border: #f4c150 solid 2px; }
+  100% { border: #E74C3C solid 2px; }
 }
 
 /* - Btn - */
@@ -384,16 +414,6 @@ input:checked + .slider:before {
   background: #21618C;
 }
 
-.experience .job-description.current-job::before {
-  content: '';
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 4px;
-  background: #f4c150;
-}
-
 .experience .job-description i {
   margin-right: 10px;
 }
@@ -453,9 +473,11 @@ ul.milestone li {
   background: #f7fbfd;
 }
 
-ul.milestone li.current-milestone {
-  background: #21618C;
-  color: #fff;
+ul.milestone li.current-milestone > div.tag-flash {
+  position: absolute;
+  top: 40%;
+  right: -100px;
+
 }
 
 

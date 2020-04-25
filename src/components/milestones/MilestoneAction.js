@@ -13,6 +13,13 @@ const MilestoneAction = ({ title, info, type, date, isCurrent }) => {
       <span className="number">
         <span>{date}</span>
       </span>
+
+      {
+        isCurrent ?
+          <div className="tag-flash">En cours</div>
+        :
+          null
+      }
     </li>
   );
 }

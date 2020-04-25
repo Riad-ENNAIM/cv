@@ -14,6 +14,13 @@ const MilestonePeriod = ({ title, info, type, start, end, isCurrent }) => {
         <span>{end}</span>
         <span>{start}</span>
       </span>
+
+      {
+        isCurrent ?
+          <div className="tag-flash">En cours</div>
+        :
+          null
+      }
     </li>
   );
 }
