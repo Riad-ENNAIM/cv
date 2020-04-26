@@ -1,35 +1,36 @@
 {
   "name": "cv",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1"
-  },
+  "version": "1.0.0",
+  "description": "My CV",
+  "main": "server.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Riad-ENNAIM/cv.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Riad-ENNAIM/cv/issues"
+  },
+  "homepage": "https://github.com/Riad-ENNAIM/cv#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.10"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.3"
   }
 }
