@@ -124,7 +124,7 @@ const ReviewForm = () => {
             name="comment"
             value={review.comment}
             rows="7"
-            style={isTypingComment && review.comment === '' ? {background: typingSpinner} : null}
+            className={isTypingComment && review.comment === '' ? 'bg-typing-spinner' : ''}
             onChange={onChange}
             onFocus={toggleTypingSpinner}
             onBlur={toggleTypingSpinner}

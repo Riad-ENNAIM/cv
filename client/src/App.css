@@ -182,6 +182,11 @@ cursor: wait;
   }
 }
 
+.bg-typing-spinner {
+  background: url('./images/typing.gif') no-repeat;
+  background-size: 50px;
+}
+
 /* - Raiting - */
 .rating {
   color: #f4c150;
