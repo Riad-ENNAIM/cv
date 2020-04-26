@@ -1,9 +1,11 @@
 import React, { useReducer } from 'react';
+import axios from 'axios';
 import ReviewContext from './reviewContext';
 import reviewReducer from './reviewReducer';
 import {
   ADD_REVIEW,
   GET_REVIEWS,
+  REVIEW_ERROR,
   TOGGLE_FORM
 } from '../types';
 
@@ -17,44 +19,44 @@ const ReviewState = props => {
   const [state, dispatch] = useReducer(reviewReducer, initialState);
 
   // Get Reviews
-  const getReviews = () => {
-    const res = [
-      {
-        _id: 1,
-        username: 'Riad ENNAIM',
-        rating: 4,
-        comment: 'bla <br /> bla bla',
-        date: '2020-04-24T01:55:01.041+00:00'
-      },
-      {
-        _id: 2,
-        username: 'ENNAIM',
-        rating: 3,
-        comment: 'bla bla bla',
-        date: '2019-12-29T15:03:01.041+00:00'
-      },
-      {
-        _id: 3,
-        username: 'ENNAIM r',
-        rating: 2,
-        comment: 'bla bla bla',
-        date: '2020-04-23T15:53:01.041+00:00'
-      }
-    ];
+  const getReviews = async () => {
+    try {
+      const res = await axios.get('/api/reviews');
 
-    dispatch({
-      type: GET_REVIEWS,
-      payload: res
-    });
+      dispatch({
+        type: GET_REVIEWS,
+        payload: res.data
+      });
+    } catch (err) {
+      dispatch({
+        type: REVIEW_ERROR,
+        payload: err.response.msg
+      });
+    }
   };
 
 
   // Add Review
-  const addReview = review => {
-    dispatch({
-      type: ADD_REVIEW,
-      payload: review
-    });
+  const addReview = async review => {
+    const config = {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    };
+
+    try {
+      const res = await axios.post('/api/reviews', review, config);
+
+      dispatch({
+        type: ADD_REVIEW,
+        payload: res.data
+      });
+    } catch (err) {
+      dispatch({
+        type: REVIEW_ERROR,
+        payload: err.response.msg
+      });
+    }
   };
 
   // Toggle Review Form

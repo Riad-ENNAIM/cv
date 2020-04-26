@@ -1,6 +1,7 @@
 import {
   ADD_REVIEW,
   GET_REVIEWS,
+  REVIEW_ERROR,
   TOGGLE_FORM
 } from '../types';
 
@@ -15,12 +16,9 @@ export default (state, action) => {
       };
 
     case ADD_REVIEW:
-      const review = action.payload;
-      review._id = state.reviews.length + 1;
-      review.date = new Date();
       return {
         ...state,
-        reviews: [...state.reviews, review],
+        reviews: [...state.reviews, action.payload],
         isLoading: false
       };
 
