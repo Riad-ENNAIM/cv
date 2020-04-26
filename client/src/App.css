@@ -129,6 +129,7 @@ a {
 /* - Btn - */
 .btn {
   max-width: 200px;
+  font-size: 1.2em;
   padding: 10px;
   border-radius: 5px;
   border: none;
@@ -138,12 +139,17 @@ a {
 .btn-primary {
   background: #21618C;
   color: #fff;
-  font-size: 1.2em;
 }
 
 .btn-center {
   align-self: center;
   justify-self: center;
+}
+
+.btn-disabled {
+background: #EBF5FB;
+color: #21618C;
+cursor: wait;
 }
 
 /* - Loader - */

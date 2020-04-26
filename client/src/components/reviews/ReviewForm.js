@@ -19,13 +19,12 @@ const ReviewForm = () => {
     comment: '',
     rating: 0
   });
-
   const [avatar, setAvatar] = useState({
     name: '',
     background: '#ffffff'
   });
-
   const [isTypingComment, setIsTypingComment] = useState(true);
+  const [isSending, setIsSending] = useState(false);
 
   const onChange = e => setReview({...review, [e.target.name]: e.target.value});
 
@@ -76,7 +75,8 @@ const ReviewForm = () => {
       username: review.username.replace(/\s+/g, " ").trim(), // Remove extrat white spaces
       comment: review.comment.replace(/\n\r?/g, '<br />') // Add line breaks
     });
-    toggleForm();
+    // toggleForm();
+    setIsSending(true);
   };
 
   const closeForm = () => toggleForm();
@@ -136,7 +136,8 @@ const ReviewForm = () => {
         <input
           type="submit"
           value="Commenter"
-          className="btn btn-primary btn-center"
+          className={`btn btn-center ${isSending ? 'btn-disabled' : 'btn-primary'}`}
+          disabled={isSending}
         />
       </div>
     </form>

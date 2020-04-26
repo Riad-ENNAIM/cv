@@ -19,6 +19,7 @@ export default (state, action) => {
       return {
         ...state,
         reviews: [...state.reviews, action.payload],
+        showForm: false,
         isLoading: false
       };
 
