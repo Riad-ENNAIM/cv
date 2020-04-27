@@ -28,7 +28,7 @@ a {
 }
 
 /* ---------- Utils ---------- */
-.page {
+#page {
   display: flex;
   width: 100%;
   min-height: 60vh;
@@ -96,6 +96,13 @@ a {
   margin-right: 5px;
 }
 
+.tag-alert {
+  background: #E74C3C;
+  color: #fff;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+
 .tag-flash {
   color: #999;
   border: #f4c150 solid 1px;
@@ -128,7 +135,7 @@ a {
 
 /* - Btn - */
 .btn {
-  max-width: 200px;
+  /* max-width: 200px; */
   font-size: 1.2em;
   padding: 10px;
   border-radius: 5px;
@@ -695,6 +702,17 @@ ul li.milestone-action span.number span {
   border-bottom: #999 solid 1px;
 }
 
+.review .review-content .tag-alert {
+  font-size: 0.7em;
+}
+
+.review .review-content .rating-alert {
+  padding: 5px;
+  border: #E74C3C solid 2px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
 .review .review-content .toggle-form {
   color: #F1948A;
 }
@@ -712,11 +730,7 @@ ul li.milestone-action span.number span {
   resize: vertical;
 }
 
-
-
-
-
-
+/* ---------- Review Form ---------- */
 #wisdom {
   background: #16A085;
   color: #ABEBC6;
@@ -743,4 +757,76 @@ ul li.milestone-action span.number span {
 
 #main-footer .footer-copyright .owner {
   color: #21618C
+}
+
+/* large */
+@media(min-width: 767px) {
+  #smallScreen {
+    display: none;
+  }
+}
+
+/* medium */
+@media(min-width: 767px) and (max-width: 1060px) {
+  #main-header .main-info,
+  #navbar ul li:first-child,
+  #navbar ul li.timeline-switcher {
+    display: none;
+  }
+
+  .skill {
+    width: 300px;
+    padding: 10px;
+  }
+}
+
+/* Small */
+@media(max-width: 767px) {
+  #main-header,
+  #navbar,
+  #page,
+  #main-footer,
+  #wisdom {
+    display: none;
+  }
+
+  #smallScreen {
+    display: block;
+  }
+
+  #smallScreen .small-screen-header {
+    display: flex;
+    padding: 20px 0;
+    background: #f7fbfd;
+  }
+  
+  #smallScreen .small-screen-header .main-title {
+    flex: 2;
+    padding: 0 50px;
+    text-align: center;
+  }
+  
+  #smallScreen .small-screen-header .main-title img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  #smallScreen .small-screen-header .main-title .links a {
+    color: #21618C;
+    font-size: 1.2em;
+    margin: 0 10px;
+  }
+  
+  #smallScreen .small-screen-header .main-title .links a:hover {
+    transform: scale(1.2);
+  }
+
+  #smallScreen .small-screen-body {
+    text-align: center;
+    padding: 50px;
+    color: #E74C3C;
+  }
 }
