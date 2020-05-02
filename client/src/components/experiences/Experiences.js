@@ -1,33 +1,27 @@
-import React from 'react';
+import React, { useEffect, useContext } from 'react';
 import Experience from './Experience';
+import Loader from '../utils/Loader';
+
+import ProfileContext from '../../context/profile/profileContext';
 
 const Experiences = () => {
-  return (
-    <>
-      <Experience
-        title="Développeur Full-Stack JavaScript"
-        company="Université Mohammed VI Polytechnique (AgriEdge – OCP)"
-        start="mars 2019"
-        location="Ben Guerir - Maroc"
-        isCurrent={true}
-      />
-      <Experience 
-        title="Développeur Full-Stack JavaScript"
-        company="Université Mohammed VI Polytechnique (AgriEdge – OCP)"
-        start="octobre 2019"
-        end="mars 2020"
-        location="Ben Guerir - Maroc"
-        isCurrent={false}
-      />
-      <Experience
-        title="Développeur Full-Stack JavaScript"
-        company="Université Mohammed VI Polytechnique (AgriEdge – OCP)"
-        end="octobre 2019"
-        location="Ben Guerir - Maroc"
-      />
-      <Experience />
-    </>
-  );
+  const profileContext = useContext(ProfileContext);
+  const { experiences, getExperiences, isLoading } = profileContext;
+
+  useEffect(() => {
+    getExperiences();
+    // eslint-disable-next-line
+  }, []);
+
+  if(experiences === null || isLoading){
+    return (
+      <div style={{alignSelf: 'center'}}>
+        <Loader />
+      </div>
+    );
+  }
+
+  return experiences.map(experience => <Experience key={experience._id} experience={experience} />);
 }
 
 export default Experiences;

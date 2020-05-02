@@ -1,21 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const MilestoneAction = ({ title, info, type, date, isCurrent }) => {
+const MilestoneAction = ({ milestone }) => {
+  const displayDate = (date) => {
+    // const engMonthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    const frMonthNames = ["Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+
+    const d = new Date(date);
+
+    if(d.getFullYear() === new Date().getFullYear())
+      return `${d.getDate()} ${frMonthNames[d.getMonth()]}`;
+
+    return `${d.getDate()} ${frMonthNames[d.getMonth()]} ${d.getFullYear()}`;
+  }
+
   return (
-    <li className={`milestone-action ${isCurrent ? 'current-milestone' : ''}`}>
+    <li className={`milestone-action ${milestone.isCurrent ? 'current-milestone' : ''}`}>
       <span className="point"></span>
       <div>
-        <div className="title">{title}</div>
-        <div className="info">{info}</div>
-        <div className="type">{type}</div>
+        <div className="title">{milestone.title}</div>
+        <div className="info">{milestone.info}</div>
+        <div className="type">{milestone.type}</div>
       </div>
       <span className="number">
-        <span>{date}</span>
+        <span>{displayDate(milestone.start)}</span>
       </span>
 
       {
-        isCurrent ?
+        milestone.isCurrent ?
           <div className="tag-flash">En cours</div>
         :
           null
@@ -25,19 +38,7 @@ const MilestoneAction = ({ title, info, type, date, isCurrent }) => {
 }
 
 MilestoneAction.propTypes = {
-  title: PropTypes.string.isRequired,
-  info: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  isCurrent: PropTypes.bool.isRequired
-};
-
-MilestoneAction.defaultProps = {
-  title: 'Titre',
-  info: 'Expérience',
-  type: 'Type',
-  date: 'Date',
-  isCurrent: false
+  milestone: PropTypes.object.isRequired
 };
 
 export default MilestoneAction;

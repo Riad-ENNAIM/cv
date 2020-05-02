@@ -1,22 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const MilestonePeriod = ({ title, info, type, start, end, isCurrent }) => {
+const MilestonePeriod = ({ milestone }) => {
+  const displayDate = (date) => {
+    // const engMonthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    const frMonthNames = ["Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+
+    const d = new Date(date);
+
+    if(d.getFullYear() === new Date().getFullYear())
+      return `${d.getDate()} ${frMonthNames[d.getMonth()]}`;
+
+    return `${d.getDate()} ${frMonthNames[d.getMonth()]} ${d.getFullYear()}`;
+  }
+
   return (
-    <li className={`milestone-period ${isCurrent ? 'current-milestone' : ''}`}>
+    <li className={`milestone-period ${milestone.isCurrent ? 'current-milestone' : ''}`}>
       <span></span>
       <div>
-        <div className="title">{title}</div>
-        <div className="info">{info}</div>
-        <div className="type">{type}</div>
+        <div className="title">{milestone.title}</div>
+        <div className="info">{milestone.info}</div>
+        <div className="type">{milestone.type}</div>
       </div>
       <span className="number">
-        <span>{end}</span>
-        <span>{start}</span>
+        <span>{displayDate(milestone.end)}</span>
+        <span>{displayDate(milestone.start)}</span>
       </span>
 
       {
-        isCurrent ?
+        milestone.isCurrent ?
           <div className="tag-flash">En cours</div>
         :
           null
@@ -26,21 +39,7 @@ const MilestonePeriod = ({ title, info, type, start, end, isCurrent }) => {
 }
 
 MilestonePeriod.propTypes = {
-  title: PropTypes.string.isRequired,
-  info: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  start: PropTypes.string.isRequired,
-  end: PropTypes.string.isRequired,
-  isCurrent: PropTypes.bool.isRequired
-};
-
-MilestonePeriod.defaultProps = {
-  title: 'Titre',
-  info: 'Expérience',
-  type: 'Type',
-  start: 'Debut',
-  end: 'Fin',
-  isCurrent: false
+  milestone: PropTypes.object.isRequired
 };
 
 export default MilestonePeriod;

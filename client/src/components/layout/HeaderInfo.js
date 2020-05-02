@@ -6,8 +6,8 @@ const HeaderInfo = () => {
       <div className="info-group">
         <i className="fas fa-info"></i>
         <p className="description">
-          Développeur full-stack, passionné par la programmation des applications et le développement web, spécialisé principalement dans JavaScript : 
-          React.js &amp; Node.js. Je suis également imprégnée d'un fort désir d'apprendre et d'évoluer dans ma vie quotidienne. 
+          Développeur full-stack, passionné par la programmation des applications et le développement web, spécialisé principalement dans JavaScript: 
+          React.js &amp; Node.js. Je suis également imprégné d'un fort désir d'apprendre et d'évoluer dans ma vie quotidienne. 
         </p>
       </div>
 

@@ -2,22 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Rating from '../utils/Rating';
 
-export const Skill = ({ title, subSkills }) => {
+export const Skill = ({ skill }) => {
   return (
     <div className="skill">
-      <div className="skill-header container">
-        <h3 className="skill-title">{title}</h3>
+      <div className="skill-header container justify-content-space-between">
+        <h3 className="skill-title">{skill.title}</h3>
 
         <Rating />
       </div>
 
-      <div className="skill-content wrapper">
+      <div className="skill-content wrapper justify-content-space-between">
         {
-          subSkills.map(skill => (
-            <div className="skill-item" key={skill.id}>
+          skill.subSkills.map(subSkill => (
+            <div className="skill-item" key={subSkill.id}>
               <i className="fas fa-caret-right"></i>
               <p>
-                {skill.title}
+                {subSkill.title}
               </p>
             </div>
           ))
@@ -28,26 +28,7 @@ export const Skill = ({ title, subSkills }) => {
 }
 
 Skill.propTypes = {
-  title: PropTypes.string.isRequired,
-  subSkills: PropTypes.array.isRequired
-};
-
-Skill.defaultProps = {
-  title: 'Skill Title',
-  subSkills: [
-    {
-      id: 1,
-      title: 'Skill 1'
-    },
-    {
-      id: 2,
-      title: 'Skill 2'
-    },
-    {
-      id: 3,
-      title: 'Skill 3'
-    }
-  ]
+  skill: PropTypes.object.isRequired
 };
 
 export default Skill;

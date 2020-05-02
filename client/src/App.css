@@ -628,22 +628,22 @@ ul li.milestone-action span.number span {
 }
 
 .skill .skill-header {
-  margin: 0;
-  justify-content: space-between;
+  border-bottom: #bbb solid 1px;
 }
 
 .skill .skill-header .skill-title {
+  max-width: 50%;
   font-size: 1.5em;
   color: #21618C;
 }
 
 .skill .skill-content {
-  justify-content: space-between;
+  padding-top: 20px;
 }
 
 .skill .skill-content .skill-item {
   display: flex;
-  width: 40%;
+  width: 50%;
   align-items: baseline;
 }
 

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import Projects from '../projects/Projects';
-import Milestones from '../milestones/Milestones';
+import ProjectMilestones from '../projects/ProjectMilestones';
 
 import NavbarContext from '../../context/navbar/navbarContext';
 
@@ -14,7 +14,7 @@ const ProjectsPage = () => {
   }, []);
 
   if(isTimeline) {
-    return <Milestones />;
+    return <ProjectMilestones />;
   }
 
   return (

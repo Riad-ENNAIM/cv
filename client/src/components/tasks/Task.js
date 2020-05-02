@@ -1,23 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Task = ({ text }) => {
+const Task = ({ task }) => {
   return (
     <div className="task">
       <i className="fas fa-caret-right"></i>
       <p>
-        {text}
+        {task.text}
       </p>
     </div>
   );
 }
 
 Task.propTypes = {
-  text: PropTypes.string.isRequired
-};
-
-Task.defaultProps = {
-  text: 'Nouvelle compétence'
+  task: PropTypes.object.isRequired
 };
 
 export default Task;
