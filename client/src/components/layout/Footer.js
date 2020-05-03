@@ -1,6 +1,10 @@
 import React from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import logo from '../../images/logo.png'
 
 export const Footer = () => {
+  const history = useHistory();
+
   return (
     <>
       <p id="wisdom">
@@ -8,8 +12,8 @@ export const Footer = () => {
       </p>
 
       <div id="main-footer">
-        <span className="footer-logo">Mon CV</span>
-        <p className="footer-copyright">Copyright &copy; 2020, <a href="https://www.linkedin.com/in/riad-ennaim" target="_blank" rel="noopener noreferrer" className="owner">Riad ENNAIM</a>, All Rights Reserved</p>
+        <img src={logo} className="footer-logo" onClick={() => history.push("/")} />
+        <p className="footer-copyright">Copyright &copy; 2020, <Link to="/" className="owner">Riad ENNAIM</Link>, All Rights Reserved</p>
         <span className="footer-lang"><i className="fas fa-globe-africa"></i> Français</span>
       </div>
     </>

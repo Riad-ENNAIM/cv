@@ -189,12 +189,62 @@ const profile = {
         },
         {
           _id: "Tpa2",
-          text: "Implémentation des Hooks & Context API"
+          text: "Implémentation des nouveautés du React 16.13"
         }
       ]
     },
     {
       _id: "P2",
+      isCurrent: false,
+      title: "Wallet: Suivi des dépenses",
+      client: "Autoformation",
+      start: "2020-01-10T17:16:40.606+00:00",
+      technology: "React",
+      tasks: [
+        {
+          _id: "Tpb1",
+          text: "Développement d'une application web de suivi des dépenses"
+        },
+        {
+          _id: "Tpb2",
+          text: "Implémentation des Hooks & Context API"
+        }
+      ]
+    },
+    {
+      _id: "P3",
+      isCurrent: false,
+      title: "App Mobile: Timesheet",
+      client: "Autoformation",
+      start: "2019-03-01T17:16:40.606+00:00",
+      end: "2019-05-20T17:16:40.606+00:00",
+      technology: "React Native",
+      tasks: [
+        {
+          _id: "Tpc1",
+          text: "Développement d'une application mobile de gestion de timesheet"
+        },
+        {
+          _id: "Tpc2",
+          text: "Représentation graphique de l'emplois du temps: tâches réalisées et planifiées"
+        },
+        {
+          _id: "Tpc3",
+          text: "Système de notification et accompagnement de l'utilisateur pour faire son timesheet à temps"
+        }
+      ]
+    },
+    {
+      _id: "P4",
+      isCurrent: false,
+      title: "Todo List",
+      client: "Autoformation",
+      start: "2019-01-20T17:16:40.606+00:00",
+      technology: "React",
+      tasks: []
+    },
+    {
+      _id: "P5",
       isCurrent: false,
       title: "Application P2P de Messagerie Instantanée",
       client: "L’École National des Sciences Appliquées (ENSA)",
@@ -203,17 +253,17 @@ const profile = {
       technology: "Java",
       tasks: [
         {
-          _id: "Tpb1",
+          _id: "Tpe1",
           text: "Conception et développement d'une application distribuée P2P de messagerie instantanée."
         },
         {
-          _id: "Tpb2",
+          _id: "Tpe2",
           text: "Résoudre les problèmes liés à la traversée des NATs."
         }
       ]
     },
     {
-      _id: "P3",
+      _id: "P6",
       isCurrent: false,
       title: "Application Mobile Hybride",
       client: "L’École National des Sciences Appliquées (ENSA)",
@@ -222,21 +272,21 @@ const profile = {
       technology: "Ionic & Spring Boot",
       tasks: [
         {
-          _id: "Tpc1",
+          _id: "Tpf1",
           text: "Chercher pour un produit donné (code barre) le lieu où il est le moins cher."
         },
         {
-          _id: "Tpc2",
+          _id: "Tpf2",
           text: "Créer l'application web et l'API RestFul avec Spring Boot."
         },
         {
-          _id: "Tpc3",
+          _id: "Tpf3",
           text: "Créer l'application mobile avec Ionic & Cordova."
         }
       ]
     },
     {
-      _id: "P4",
+      _id: "P7",
       isCurrent: false,
       title: "Application Client Messagerie",
       client: "L’École National des Sciences Appliquées (ENSA)",
@@ -245,21 +295,21 @@ const profile = {
       technology: "Java",
       tasks: [
         {
-          _id: "Tpd1",
+          _id: "Tpg1",
           text: "Développement d'une application client messagerie avec l'API JavaMail."
         },
         {
-          _id: "Tpd2",
+          _id: "Tpg2",
           text: "Application du design pattern DAO."
         },
         {
-          _id: "Tpd3",
+          _id: "Tpg3",
           text: "Se familiarisé avec l’API JavaMail et les protocoles (POP, SMTP)."
         }
       ]
     },
     {
-      _id: "P5",
+      _id: "P8",
       isCurrent: false,
       title: "Jeu des Dames",
       client: "L’École National des Sciences Appliquées (ENSA)",
@@ -268,19 +318,19 @@ const profile = {
       technology: "C++ & Qt",
       tasks: [
         {
-          _id: "Tpe1",
+          _id: "Tph1",
           text: "Développement d'un jeu des dames en C++ et Qt."
         },
         {
-          _id: "Tpe2",
+          _id: "Tph2",
           text: "Réalisation d'un cahier de charge pour l'application."
         },
         {
-          _id: "Tpe3",
+          _id: "Tph3",
           text: "Travail en groupe."
         },
         {
-          _id: "Tpe4",
+          _id: "Tph4",
           text: "Rédaction des rapports."
         }
       ]

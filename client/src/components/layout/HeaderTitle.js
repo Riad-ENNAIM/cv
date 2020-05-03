@@ -11,8 +11,8 @@ const HeaderTitle = ({ profile }) => {
 
       <div className="links container justify-content-center">
         <a href={profile.links[0].path} target="_blank" rel="noopener noreferrer" title={profile.links[0].name}><i className="fab fa-github-square"></i></a>
-        <a href={profile.links[1].path} target="_blank" rel="noopener noreferrer" title={profile.links[0].name}><i className="fab fa-linkedin"></i></a>
-        <a href={profile.links[2].path} target="_blank" rel="noopener noreferrer" title={profile.links[0].name}><i className="fas fa-globe"></i></a>
+        <a href={profile.links[1].path} target="_blank" rel="noopener noreferrer" title={profile.links[1].name}><i className="fab fa-linkedin"></i></a>
+        <a href={profile.links[2].path} target="_blank" rel="noopener noreferrer" title={profile.links[2].name}><i className="fas fa-address-card"></i></a>
       </div>
     </div>
   );
