@@ -7,10 +7,10 @@ const useFormatDate = (date) => {
 
   const d = new Date(date);
 
-  if(d.getFullYear() === new Date().getFullYear())
-    return `${d.getDate()} ${frMonthNames[d.getMonth()]}`;
+  // if(d.getFullYear() === new Date().getFullYear())
+  //   return frMonthNames[d.getMonth()];
 
-  return `${d.getDate()} ${frMonthNames[d.getMonth()]} ${d.getFullYear()}`;
+  return `${frMonthNames[d.getMonth()]} ${d.getFullYear()}`;
 }
 
 export default useFormatDate;
