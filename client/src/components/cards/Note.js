@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Task = ({ task }) => {
+const Note = ({ note }) => {
   return (
-    <div className="task">
+    <div className="note">
       <i className="fas fa-caret-right"></i>
       <p>
-        {task.text}
+        {note.text}
       </p>
     </div>
   );
 }
 
-Task.propTypes = {
-  task: PropTypes.object.isRequired
+Note.propTypes = {
+  note: PropTypes.object.isRequired
 };
 
-export default Task;
+export default Note;

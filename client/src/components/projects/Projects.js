@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from 'react';
-import Experience from '../experiences/Experience';
+import Card from '../cards/Card';
 import Loader from '../utils/Loader';
 
 import ProfileContext from '../../context/profile/profileContext';
@@ -21,7 +21,18 @@ const Projects = () => {
     );
   }
 
-  return profile.projects.map(experience => <Experience key={experience._id} experience={experience} />);
+  return profile.projects.map(project => {
+    const data = {
+      title: project.title,
+      description: project.client,
+      info: project.technology,
+      start: project.start,
+      end: project.end,
+      isCurrent: project.isCurrent,
+      notes: project.tasks
+    };
+    return <Card key={project._id} data={data} />
+  });
 }
 
 export default Projects;

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import Projects from '../projects/Projects';
 import ProjectMilestones from '../projects/ProjectMilestones';
 
@@ -6,14 +6,8 @@ import NavbarContext from '../../context/navbar/navbarContext';
 
 const ProjectsPage = () => {
   const navbarContext = useContext(NavbarContext);
-  const { isTimeline, setActiveTab } = navbarContext;
 
-  useEffect(() => {
-    setActiveTab('projects');
-    // eslint-disable-next-line
-  }, []);
-
-  if(isTimeline) {
+  if(navbarContext.isTimeline) {
     return <ProjectMilestones />;
   }
 

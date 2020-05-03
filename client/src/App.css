@@ -404,11 +404,11 @@ input:checked + .slider:before {
 }
 
 /* ---------- Experience ---------- */
-.experience {
+.card {
   margin-bottom: 20px;
 }
 
-.experience .job-header {
+.card .card-header {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -418,20 +418,20 @@ input:checked + .slider:before {
   cursor: pointer;
 }
 
-.experience .job-header:hover {
+.card .card-header:hover {
   background: #fcfcfc;
 }
 
-.experience .job-header .job-title {
+.card .card-header .card-title {
   font-size: 1.5em;
 }
 
-.experience .job-description {
+.card .card-body {
   position: relative;
   padding-right: 20px;
 }
 
-.experience .job-description::before {
+.card .card-body::before {
   content: '';
   position: absolute;
   right: 0;
@@ -441,33 +441,33 @@ input:checked + .slider:before {
   background: #21618C;
 }
 
-.experience .job-description i {
+.card .card-body i {
   margin-right: 10px;
 }
 
-.experience .job-description .job-company {
+.card .card-body .card-description {
   font-size: 1.1em;
 }
 
-.experience .job-description .job-date,
-.experience .job-description .job-location {
+.card .card-body .card-date,
+.card .card-body .card-info {
   font-size: 0.8em;
 }
 
-.experience .job-description .tasks {
+.card .card-body .notes {
   margin: 10px;
 }
 
-.experience .job-description .tasks .task {
+.card .card-body .notes .note {
   display: flex;
   align-items: baseline;
 }
 
-.experience .job-description .tasks .task i {
+.card .card-body .notes .note i {
   margin-right: 17px;
 }
 
-.experience .job-description .tasks .task p {
+.card .card-body .notes .note p {
   text-align: justify;
 }
 

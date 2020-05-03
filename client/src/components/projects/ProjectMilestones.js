@@ -27,9 +27,9 @@ const ProjectMilestones = () => {
       {
         profile.projects.map(experience => {
           const milestone = {
-            title: experience.company,
+            title: experience.client,
             info: experience.title,
-            type: experience.location,
+            type: experience.technology,
             start: experience.start,
             isCurrent: experience.isCurrent
           };

@@ -177,11 +177,11 @@ const profile = {
     {
       _id: "P1",
       isCurrent: false,
-      title: "Gestion des contacts - MERN Stack",
-      company: "Autoformation",
+      title: "Gestion des contacts",
+      client: "Autoformation",
       start: "2020-02-01T17:16:40.606+00:00",
       end: "2020-03-30T17:16:40.606+00:00",
-      location: "Marrakech - Maroc",
+      technology: "MERN Stack",
       tasks: [
         {
           _id: "Tpa1",
@@ -196,11 +196,11 @@ const profile = {
     {
       _id: "P2",
       isCurrent: false,
-      title: "Application P2P de Messagerie Instantanée. - Java",
-      company: "L’École National des Sciences Appliquées (ENSA)",
+      title: "Application P2P de Messagerie Instantanée",
+      client: "L’École National des Sciences Appliquées (ENSA)",
       start: "2018-04-01T17:16:40.606+00:00",
       end: "2018-06-30T17:16:40.606+00:00",
-      location: "Marrakech - Maroc",
+      technology: "Java",
       tasks: [
         {
           _id: "Tpb1",
@@ -215,11 +215,11 @@ const profile = {
     {
       _id: "P3",
       isCurrent: false,
-      title: "Application Mobile Hybride - Ionic & Spring Boot",
-      company: "L’École National des Sciences Appliquées (ENSA)",
+      title: "Application Mobile Hybride",
+      client: "L’École National des Sciences Appliquées (ENSA)",
       start: "2017-03-01T17:16:40.606+00:00",
       end: "2017-06-30T17:16:40.606+00:00",
-      location: "Marrakech - Maroc",
+      technology: "Ionic & Spring Boot",
       tasks: [
         {
           _id: "Tpc1",
@@ -238,11 +238,11 @@ const profile = {
     {
       _id: "P4",
       isCurrent: false,
-      title: "Application Client Messagerie - Java",
-      company: "L’École National des Sciences Appliquées (ENSA)",
+      title: "Application Client Messagerie",
+      client: "L’École National des Sciences Appliquées (ENSA)",
       start: "2016-12-01T17:16:40.606+00:00",
       end: "2017-02-28T17:16:40.606+00:00", 
-      location: "Marrakech - Maroc",
+      technology: "Java",
       tasks: [
         {
           _id: "Tpd1",
@@ -261,11 +261,11 @@ const profile = {
     {
       _id: "P5",
       isCurrent: false,
-      title: "Jeu des Dames - C++",
-      company: "L’École National des Sciences Appliquées (ENSA)",
+      title: "Jeu des Dames",
+      client: "L’École National des Sciences Appliquées (ENSA)",
       start: "2016-04-01T17:16:40.606+00:00",
       end: "2016-06-30T17:16:40.606+00:00",
-      location: "Marrakech - Maroc",
+      technology: "C++ & Qt",
       tasks: [
         {
           _id: "Tpe1",

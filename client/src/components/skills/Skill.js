@@ -7,13 +7,13 @@ export const Skill = ({ skill }) => {
       <div className="skill-header container justify-content-space-between">
         <h3 className="skill-title">{skill.title}</h3>
 
-        <i class="fas fa-bars"></i>
+        <i className="fas fa-bars"></i>
       </div>
 
       <div className="skill-content wrapper justify-content-space-between">
         {
           skill.subSkills.map(subSkill => (
-            <div className="skill-item" key={subSkill.id}>
+            <div className="skill-item" key={subSkill._id}>
               <i className="fas fa-caret-right"></i>
               <p>
                 {subSkill.title}

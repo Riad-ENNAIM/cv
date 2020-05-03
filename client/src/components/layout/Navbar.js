@@ -1,29 +1,26 @@
-import React, { useState, useContext, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { useLocation } from "react-router";
+import { NavLink } from 'react-router-dom';
 
 import NavbarContext from '../../context/navbar/navbarContext';
 
 const Navbar = () => {
+  const location = useLocation();
   const navbarContext = useContext(NavbarContext);
-  const { activeTab, isTimeline, toggleTimeline } = navbarContext;
-
-  useEffect(() => {
-    setTab(activeTab);
-  }, [navbarContext, activeTab]);
-
-  const [tab, setTab] = useState(null);
+  const { isTimeline, toggleTimeline } = navbarContext;
 
   return (
     <nav id="navbar">
       <ul>
-        <li><Link to="/search" className={`search ${tab === 'search' ? 'active' : ''}`}><i className="fas fa-search"></i></Link></li>
-        <li><Link to="/" className={tab === null || tab === 'experiences' ? 'active' : ''}>Expérience</Link></li>
-        <li><Link to="/projects" className={tab === 'projects' ? 'active' : ''}>Projets</Link></li>
-        <li><Link to="/skills" className={tab === 'skills' ? 'active' : ''}>Compétence</Link></li>
-        <li><Link to="/training" className={tab === 'training' ? 'active' : ''}>Formation</Link></li>
-        <li><Link to="/reviews" className={tab === 'reviews' ? 'active' : ''}>Commentaires</Link></li>
+        <li><NavLink exact to="/search" className="search" activeClassName="active"><i className="fas fa-search"></i></NavLink></li>
+        <li><NavLink exact to="/" activeClassName="active">Expérience</NavLink></li>
+        <li><NavLink exact to="/projects" activeClassName="active">Projets</NavLink></li>
+        <li><NavLink exact to="/skills" activeClassName="active">Compétence</NavLink></li>
+        <li><NavLink exact to="/training" activeClassName="active">Formation</NavLink></li>
+        <li><NavLink exact to="/reviews" activeClassName="active">Commentaires</NavLink></li>
+        
         {
-          activeTab === 'experiences' || activeTab === 'projects' ?
+          location.pathname === '/' || location.pathname === '/projects' ?
             <li className="timeline-switcher">
               Chronologie
               <label className="switch">
