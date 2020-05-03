@@ -52,7 +52,7 @@ const ReviewForm = () => {
     addReview({
       ...review,
       username: review.username.replace(/\s+/g, " ").trim(), // Remove extrat white spaces
-      comment: review.comment.replace(/\n\r?/g, '<br />') // Add line breaks
+      comment: review.comment.replace(/\(y\)/g, '<i class="like fas fa-thumbs-up" title="(y) = like"></i>').replace(/\n\r?/g, '<br />') // Add line breaks
     });
   };
 
