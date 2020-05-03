@@ -15,7 +15,7 @@ export default () => {
 
   if(profile === null || isLoading){
     return (
-      <div style={{alignSelf: 'center'}}>
+      <div id="smallScreen" style={{alignSelf: 'center'}}>
         <Loader />
       </div>
     );

@@ -445,7 +445,7 @@ const profile = {
         },
         {
           _id: "Se10",
-          title: "Mathématique appliquée"
+          title: "Math appliquée"
         },
         {
           _id: "Se11",

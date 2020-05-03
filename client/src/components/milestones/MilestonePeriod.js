@@ -1,19 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import useFormatDate from '../../hooks/useFormatDate';
 
 const MilestonePeriod = ({ milestone }) => {
-  const displayDate = (date) => {
-    // const engMonthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-    const frMonthNames = ["Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
-
-    const d = new Date(date);
-
-    if(d.getFullYear() === new Date().getFullYear())
-      return `${d.getDate()} ${frMonthNames[d.getMonth()]}`;
-
-    return `${d.getDate()} ${frMonthNames[d.getMonth()]} ${d.getFullYear()}`;
-  }
+  const start = useFormatDate(milestone.start);
+  const end = useFormatDate(milestone.end);
 
   return (
     <li className={`milestone-period ${milestone.isCurrent ? 'current-milestone' : ''}`}>
@@ -24,8 +15,8 @@ const MilestonePeriod = ({ milestone }) => {
         <div className="type">{milestone.type}</div>
       </div>
       <span className="number">
-        <span>{displayDate(milestone.end)}</span>
-        <span>{displayDate(milestone.start)}</span>
+        <span>{end}</span>
+        <span>{start}</span>
       </span>
 
       {

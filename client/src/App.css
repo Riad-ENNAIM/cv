@@ -405,7 +405,7 @@ input:checked + .slider:before {
 
 /* ---------- Experience ---------- */
 .experience {
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 
 .experience .job-header {

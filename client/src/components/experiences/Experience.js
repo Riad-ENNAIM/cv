@@ -1,21 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import useFormatDate from '../../hooks/useFormatDate';
 import Tasks from '../tasks/Tasks';
 
 const Experience = ({ experience }) => {
-
-  const displayDate = (date) => {
-    // const engMonthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-    const frMonthNames = ["Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
-
-    const d = new Date(date);
-
-    if(d.getFullYear() === new Date().getFullYear())
-      return `${d.getDate()} ${frMonthNames[d.getMonth()]}`;
-
-    return `${d.getDate()} ${frMonthNames[d.getMonth()]} ${d.getFullYear()}`;
-  }
+  const start = useFormatDate(experience.start);
+  const end = useFormatDate(experience.end);
 
   return (
     <div className="experience">
@@ -32,8 +22,8 @@ const Experience = ({ experience }) => {
         {
           experience.start || experience.end ?
             <span className="job-date tag">
-              { experience.start && !experience.end ? `Depuis ${displayDate(experience.start)}` : experience.start && experience.end ? displayDate(experience.start) : '' } 
-              { experience.end && experience.start ? ` à ${displayDate(experience.end)}` : experience.end && !experience.start ? displayDate(experience.end) : '' }
+              { experience.start && !experience.end ? `Depuis ${start}` : experience.start && experience.end ? start : '' } 
+              { experience.end && experience.start ? ` à ${end}` : experience.end && !experience.start ? end : '' }
             </span>
           :
             null
