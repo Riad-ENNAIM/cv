@@ -1,38 +1,42 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const HeaderInfo = () => {
+const HeaderInfo = ({ profile }) => {
   return (
     <div className="main-info">
       <div className="info-group">
         <i className="fas fa-info"></i>
         <p className="description">
-          Développeur full-stack, passionné par la programmation des applications et le développement web, spécialisé principalement dans JavaScript: 
-          React.js &amp; Node.js. Je suis également imprégné d'un fort désir d'apprendre et d'évoluer dans ma vie quotidienne. 
+          {profile.description} 
         </p>
       </div>
 
       <div className="info-group">
         <i className="fas fa-map-marker-alt"></i>
         <p>
-          Marrakech, Maroc
+          {profile.location} 
         </p>
       </div>
 
       <div className="info-group">
         <i className="fas fa-envelope"></i>
         <p>
-          riad.ennaim@gmail.com
+          {profile.email} 
         </p>
       </div>
 
       <div className="info-group">
         <i className="fas fa-phone-alt"></i>
         <p>
-          +212694590864
+          {profile.phone} 
         </p>
       </div>
     </div>
   );
 }
+
+HeaderInfo.propTypes = {
+  profile: PropTypes.object.isRequired,
+};
 
 export default HeaderInfo;

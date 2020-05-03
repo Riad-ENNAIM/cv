@@ -7,14 +7,14 @@ import ProfileContext from '../../context/profile/profileContext';
 
 const ExperienceMilestones = () => {
   const profileContext = useContext(ProfileContext);
-  const { experiences, getExperiences, isLoading } = profileContext;
+  const { profile, getProfile, isLoading } = profileContext;
 
   useEffect(() => {
-    getExperiences();
+    getProfile();
     // eslint-disable-next-line
   }, []);
 
-  if(experiences === null || isLoading){
+  if(profile === null || profile.experiences === null || isLoading){
     return (
       <div style={{alignSelf: 'center'}}>
         <Loader />
@@ -25,7 +25,7 @@ const ExperienceMilestones = () => {
   return (
     <ul className="milestone">
       {
-        experiences.map(experience => {
+        profile.experiences.map(experience => {
           const milestone = {
             title: experience.company,
             info: experience.title,

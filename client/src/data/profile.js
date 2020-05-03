@@ -1,9 +1,39 @@
 const profile = {
+  name: "Riad ENNAIM",
+  title: "Développeur Full Stack JavaScript",
+  description: `Développeur full stack, passionné par la programmation des applications et le développement web, spécialisé principalement dans JavaScript: 
+  React.js & Node.js. Je suis également imprégné d'un fort désir d'apprendre et d'évoluer dans ma vie quotidienne.`,
+  location: "Marrakech, Maroc",
+  email: "riad.ennaim@gmail.com",
+  phone: "+212694590864",
+  links: [
+    {
+      name: "GitHub",
+      path: "https://github.com/Riad-ENNAIM/"
+    },
+    {
+      name: "Linkedin",
+      path: "https://www.linkedin.com/in/riad-ennaim/"
+    },
+    {
+      name: "Bio",
+      path: "https://riad-ennaim.github.io/bio/"
+    }
+  ],
   experiences: [
+    {
+      _id: "E0",
+      isCurrent: true,
+      title: "Développeur Front End React",
+      company: "SQLI",
+      start: "2019-04-20T17:16:40.606+00:00",
+      location: "Rabat - Maroc",
+      tasks: []
+    },
     {
       _id: "E1",
       isCurrent: false,
-      title: "Développeur Full-Stack JavaScript",
+      title: "Développeur Full Stack JavaScript",
       company: "Université Mohammed VI Polytechnique (AgriEdge – OCP)",
       start: "2019-10-01T17:16:40.606+00:00",
       end: "2020-03-30T17:16:40.606+00:00",
@@ -18,7 +48,7 @@ const profile = {
     {
       _id: "E2",
       isCurrent: false,
-      title: "Développeur Full-Stack Web & Mobile",
+      title: "Développeur Full Stack Web & Mobile",
       company: "Pulse Digital Maroc",
       start: "2019-01-01T17:16:40.606+00:00",
       end: "2019-09-30T17:16:40.606+00:00",
@@ -375,7 +405,7 @@ const profile = {
     },
     {
       _id: "S5",
-      title: "Frameworks",
+      title: "Autres compétences",
       subSkills: [
         {
           _id: "Se1",
@@ -391,7 +421,7 @@ const profile = {
         },
         {
           _id: "Se4",
-          title: "Gestionnaire de versions : Git"
+          title: "Git"
         },
         {
           _id: "Se5",
@@ -415,14 +445,10 @@ const profile = {
         },
         {
           _id: "Se10",
-          title: "Statistique & Probabilité"
-        },
-        {
-          _id: "Se11",
           title: "Mathématique appliquée"
         },
         {
-          _id: "Se12",
+          _id: "Se11",
           title: "Programmation linéaire"
         }
       ]
@@ -432,7 +458,7 @@ const profile = {
     {
       _id: "T1",
       isCurrent: true,
-      title: "Développement Full-Stack JavaScript WEB & Mobile",
+      title: "Développement Full Stack JavaScript WEB & Mobile",
       school: "Autoformation",
       start: "2019-01-01T17:16:40.606+00:00",
       location: "..."

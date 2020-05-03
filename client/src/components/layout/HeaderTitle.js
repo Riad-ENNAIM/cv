@@ -1,20 +1,25 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import riad from '../../images/riad.jpg';
 
-const HeaderTitle = () => {
+const HeaderTitle = ({ profile }) => {
   return (
     <div className="main-title">
       <img src={riad} alt="Riad ENNAIM" />
-      <h1>Riad ENNAIM</h1>
-      <h2>Développeur Full-Stack JavaScript</h2>
+      <h1>{profile.name}</h1>
+      <h2>{profile.title}</h2>
 
       <div className="links container justify-content-center">
-        <a href="https://github.com/Riad-ENNAIM/" target="_blank" rel="noopener noreferrer" title="GitHub"><i className="fab fa-github-square"></i></a>
-        <a href="https://www.linkedin.com/in/riad-ennaim/" target="_blank" rel="noopener noreferrer" title="Linkedin"><i className="fab fa-linkedin"></i></a>
-        <a href="https://riad-ennaim.github.io/bio/" target="_blank" rel="noopener noreferrer" title="Site Web"><i className="fas fa-globe"></i></a>
+        <a href={profile.links[0].path} target="_blank" rel="noopener noreferrer" title={profile.links[0].name}><i className="fab fa-github-square"></i></a>
+        <a href={profile.links[1].path} target="_blank" rel="noopener noreferrer" title={profile.links[0].name}><i className="fab fa-linkedin"></i></a>
+        <a href={profile.links[2].path} target="_blank" rel="noopener noreferrer" title={profile.links[0].name}><i className="fas fa-globe"></i></a>
       </div>
     </div>
   );
 }
+
+HeaderTitle.propTypes = {
+  profile: PropTypes.object.isRequired,
+};
 
 export default HeaderTitle;

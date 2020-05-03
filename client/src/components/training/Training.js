@@ -7,14 +7,14 @@ import ProfileContext from '../../context/profile/profileContext';
 
 const Training = () => {
   const profileContext = useContext(ProfileContext);
-  const { trainings, getTrainings, isLoading } = profileContext;
+  const { profile, getProfile, isLoading } = profileContext;
 
   useEffect(() => {
-    getTrainings();
+    getProfile();
     // eslint-disable-next-line
   }, []);
 
-  if(trainings === null || isLoading){
+  if(profile === null || profile.trainings === null || isLoading){
     return (
       <div style={{alignSelf: 'center'}}>
         <Loader />
@@ -25,7 +25,7 @@ const Training = () => {
   return (
     <ul className="milestone">
       {
-        trainings.map(training => {
+        profile.trainings.map(training => {
           const milestone = {
             title: training.school,
             info: training.title,

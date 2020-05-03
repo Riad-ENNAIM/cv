@@ -632,9 +632,17 @@ ul li.milestone-action span.number span {
 }
 
 .skill .skill-header .skill-title {
-  max-width: 50%;
   font-size: 1.5em;
   color: #21618C;
+}
+
+.skill .skill-header i {
+  color: #666;
+  padding-top: 6px;
+}
+
+.skill .skill-header i:hover {
+  cursor: pointer;
 }
 
 .skill .skill-content {
@@ -645,10 +653,12 @@ ul li.milestone-action span.number span {
   display: flex;
   width: 50%;
   align-items: baseline;
+  font-size: 0.9em;
 }
 
 .skill .skill-content .skill-item i {
   margin-right: 17px;
+  color: #333;
 }
 
 .skill .skill-content .skill-item p {

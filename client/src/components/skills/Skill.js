@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Rating from '../utils/Rating';
 
 export const Skill = ({ skill }) => {
   return (
@@ -8,7 +7,7 @@ export const Skill = ({ skill }) => {
       <div className="skill-header container justify-content-space-between">
         <h3 className="skill-title">{skill.title}</h3>
 
-        <Rating />
+        <i class="fas fa-bars"></i>
       </div>
 
       <div className="skill-content wrapper justify-content-space-between">

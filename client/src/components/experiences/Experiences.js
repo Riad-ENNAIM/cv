@@ -6,14 +6,14 @@ import ProfileContext from '../../context/profile/profileContext';
 
 const Experiences = () => {
   const profileContext = useContext(ProfileContext);
-  const { experiences, getExperiences, isLoading } = profileContext;
+  const { profile, getProfile, isLoading } = profileContext;
 
   useEffect(() => {
-    getExperiences();
+    getProfile();
     // eslint-disable-next-line
   }, []);
 
-  if(experiences === null || isLoading){
+  if(profile === null || profile.experiences === null || isLoading){
     return (
       <div style={{alignSelf: 'center'}}>
         <Loader />
@@ -21,7 +21,7 @@ const Experiences = () => {
     );
   }
 
-  return experiences.map(experience => <Experience key={experience._id} experience={experience} />);
+  return profile.experiences.map(experience => <Experience key={experience._id} experience={experience} />);
 }
 
 export default Experiences;

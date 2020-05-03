@@ -6,14 +6,14 @@ import ProfileContext from '../../context/profile/profileContext';
 
 const Skills = () => {
   const profileContext = useContext(ProfileContext);
-  const { skills, getSkills, isLoading } = profileContext;
+  const { profile, getProfile, isLoading } = profileContext;
 
   useEffect(() => {
-    getSkills();
+    getProfile();
     // eslint-disable-next-line
   }, []);
 
-  if(skills === null || isLoading){
+  if(profile === null || profile.skills === null || isLoading){
     return (
       <div style={{alignSelf: 'center'}}>
         <Loader />
@@ -21,7 +21,7 @@ const Skills = () => {
     );
   }
 
-  return skills.map(skill => <Skill key={skill._id} skill={skill} />);
+  return profile.skills.map(skill => <Skill key={skill._id} skill={skill} />);
 }
 
 export default Skills;
