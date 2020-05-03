@@ -5,6 +5,7 @@ import reviewReducer from './reviewReducer';
 import {
   ADD_REVIEW,
   GET_REVIEWS,
+  DELETE_REVIEW,
   REVIEW_ERROR,
   TOGGLE_FORM
 } from '../types';
@@ -47,9 +48,33 @@ const ReviewState = props => {
     try {
       const res = await axios.post('/api/reviews', review, config);
 
+      const newReview = res.data;
+      newReview.isDeletable = true;
+
       dispatch({
         type: ADD_REVIEW,
-        payload: res.data
+        payload: newReview
+      });
+
+      setTimeout(() => {
+        getReviews();
+      }, 4000);
+    } catch (err) {
+      dispatch({
+        type: REVIEW_ERROR,
+        payload: err.response.msg
+      });
+    }
+  };
+
+  // Delete Review
+  const deleteReview = async id => {
+    try {
+      await axios.delete(`/api/reviews/${id}`);
+
+      dispatch({
+        type: DELETE_REVIEW,
+        payload: id
       });
     } catch (err) {
       dispatch({
@@ -70,6 +95,7 @@ const ReviewState = props => {
         isLoading: state.isLoading,
         getReviews,
         addReview,
+        deleteReview,
         toggleForm
       }}
     >

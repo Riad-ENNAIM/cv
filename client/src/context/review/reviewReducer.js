@@ -1,6 +1,7 @@
 import {
   ADD_REVIEW,
   GET_REVIEWS,
+  DELETE_REVIEW,
   REVIEW_ERROR,
   TOGGLE_FORM
 } from '../types';
@@ -19,6 +20,15 @@ export default (state, action) => {
       return {
         ...state,
         reviews: [...state.reviews, action.payload],
+        isDeletable: true,
+        showForm: false,
+        isLoading: false
+      };
+
+    case DELETE_REVIEW:
+      return {
+        ...state,
+        reviews: state.reviews.filter(review => review._id !== action.payload),
         showForm: false,
         isLoading: false
       };

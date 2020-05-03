@@ -52,7 +52,7 @@ const ReviewForm = () => {
     addReview({
       ...review,
       username: review.username.replace(/\s+/g, " ").trim(), // Remove extrat white spaces
-      comment: review.comment.replace(/\(y\)/g, '<i class="like fas fa-thumbs-up" title="(y) = like"></i>').replace(/\n\r?/g, '<br />') // Add line breaks
+      comment: review.comment.replace(/\(y\)/g, '<i class="like fas fa-thumbs-up" title="(y) = Like"></i>').replace(/<3/g, '<i class="heart fas fa-heart" title="<3 = Heart"></i>').replace(/\n\r?/g, '<br />') // Add line breaks
     });
   };
 
@@ -101,7 +101,7 @@ const ReviewForm = () => {
                 null
             }
 
-            <div className="toggle-form" onClick={closeForm}>
+            <div className="remove" onClick={closeForm}>
               <i className="fas fa-times"></i>
             </div>
           </div>

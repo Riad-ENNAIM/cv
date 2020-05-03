@@ -51,7 +51,25 @@ router.post(
       console.error(err.message);
       res.status(500).send('Server Error');
     }
-  },
+  }
 );
+
+// @route     DELETE api/reviews/:id
+// @desc      Delete review
+// @access    Public
+router.delete('/:id', async (req, res) => {
+  try {
+    let review = await Review.findById(req.params.id);
+
+    if (!review) return res.status(404).json({ msg: 'Review not found' });
+
+    await Review.findByIdAndRemove(req.params.id);
+
+    res.json({ msg: 'Review removed' });
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+});
 
 module.exports = router;

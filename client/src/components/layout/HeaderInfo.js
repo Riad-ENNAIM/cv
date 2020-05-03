@@ -5,7 +5,7 @@ const HeaderInfo = ({ profile }) => {
   return (
     <div className="main-info">
       <div className="info-group">
-        <i class="fas fa-quote-left"></i>
+        <i className="fas fa-quote-left"></i>
         <p className="description">
           {profile.description} 
         </p>

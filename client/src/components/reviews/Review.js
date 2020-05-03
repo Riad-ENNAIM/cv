@@ -1,10 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import Rating from '../utils/Rating';
 import letterColors from '../../data/letterColors';
 
+import ReviewContext from '../../context/review/reviewContext';
+
 const Review = ({ review }) => {
-  const { username, comment, rating, date } = review;
+  const { _id, username, comment, rating, date, isDeletable } = review;
+
+  const reviewContext = useContext(ReviewContext);
+  const { deleteReview } = reviewContext;
 
   useEffect(() => {
     setAvatarFromUsername();
@@ -92,7 +97,16 @@ const Review = ({ review }) => {
       </div>
 
       <div className="review-content">
-        <Rating rating={rating} />
+        <div className="container justify-content-space-between align-items-center">
+          <Rating rating={rating} />
+
+          {
+            isDeletable &&
+            <div className="remove" onClick={() => deleteReview(_id)}>
+              <i className="fas fa-times"></i>
+            </div>
+          }
+        </div>
         <p dangerouslySetInnerHTML={{__html: comment}} />
       </div>
     </div>

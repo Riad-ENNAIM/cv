@@ -4,6 +4,7 @@ export const TOGGLE_TIMELINE = 'TOGGLE_TIMELINE';
 // Reviews
 export const ADD_REVIEW = 'ADD_REVIEW';
 export const GET_REVIEWS = 'GET_REVIEWS';
+export const DELETE_REVIEW = 'DELETE_REVIEW';
 export const REVIEW_ERROR = 'REVIEW_ERROR';
 export const TOGGLE_FORM = 'TOGGLE_FORM';
 

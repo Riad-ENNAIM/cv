@@ -12,7 +12,7 @@ export const Footer = () => {
       </p>
 
       <div id="main-footer">
-        <img src={logo} className="footer-logo" onClick={() => history.push("/")} />
+        <img src={logo} className="footer-logo" onClick={() => history.push("/")} alt="Riad ENNAIM" />
         <p className="footer-copyright">Copyright &copy; 2020, <Link to="/" className="owner">Riad ENNAIM</Link>, All Rights Reserved</p>
         <span className="footer-lang"><i className="fas fa-globe-africa"></i> Français</span>
       </div>
