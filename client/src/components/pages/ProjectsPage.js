@@ -2,12 +2,12 @@ import React, { useContext } from 'react';
 import Projects from '../projects/Projects';
 import ProjectMilestones from '../projects/ProjectMilestones';
 
-import NavbarContext from '../../context/navbar/navbarContext';
+import ProfileContext from '../../context/profile/profileContext';
 
 const ProjectsPage = () => {
-  const navbarContext = useContext(NavbarContext);
+  const profileContext = useContext(ProfileContext);
 
-  if(navbarContext.isTimeline) {
+  if(profileContext.isTimeline) {
     return <ProjectMilestones />;
   }
 

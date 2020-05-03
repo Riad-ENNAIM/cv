@@ -2,12 +2,12 @@ import React, { useContext } from 'react';
 import Experiences from '../experiences/Experiences';
 import ExperienceMilestones from '../experiences/ExperienceMilestones';
 
-import NavbarContext from '../../context/navbar/navbarContext';
+import ProfileContext from '../../context/profile/profileContext';
 
 const Home = () => {
-  const navbarContext = useContext(NavbarContext);
+  const profileContext = useContext(ProfileContext);
 
-  if(navbarContext.isTimeline) {
+  if(profileContext.isTimeline) {
     return <ExperienceMilestones />;
   }
 

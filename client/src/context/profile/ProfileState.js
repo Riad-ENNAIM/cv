@@ -1,12 +1,13 @@
 import React, { useReducer } from 'react';
 import ProfileContext from './profileContext';
 import profileReducer from './profileReducer';
-import { GET_PROFILE } from '../types';
+import { GET_PROFILE, TOGGLE_TIMELINE } from '../types';
 import profile from '../../data/profile';
 
 const ProfileState = props => {
   const initialState = {
     profile: null,
+    isTimeline: JSON.parse(localStorage.getItem('isTimeline')),
     isLoading: true
   };
 
@@ -19,12 +20,19 @@ const ProfileState = props => {
       payload: profile
     });
   };
+
+  // Toggle Timeline
+  const toggleTimeline = () => {
+    dispatch({ type: TOGGLE_TIMELINE });
+  }
   
   return (
     <ProfileContext.Provider
       value={{
         profile: state.profile,
-        getProfile
+        isTimeline: state.isTimeline,
+        getProfile,
+        toggleTimeline
       }}
     >
       {props.children}

@@ -2,12 +2,12 @@ import React, { useContext } from 'react';
 import { useLocation } from "react-router";
 import { NavLink } from 'react-router-dom';
 
-import NavbarContext from '../../context/navbar/navbarContext';
+import ProfileContext from '../../context/profile/profileContext';
 
 const Navbar = () => {
   const location = useLocation();
-  const navbarContext = useContext(NavbarContext);
-  const { isTimeline, toggleTimeline } = navbarContext;
+  const profileContext = useContext(ProfileContext);
+  const { isTimeline, toggleTimeline } = profileContext;
 
   return (
     <nav id="navbar">
