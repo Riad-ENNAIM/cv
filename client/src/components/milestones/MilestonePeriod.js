@@ -1,10 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import useFormatDate from '../../hooks/useFormatDate';
+import MilestoneAction from './MilestoneAction';
 
 const MilestonePeriod = ({ milestone }) => {
   const start = useFormatDate(milestone.start);
   const end = useFormatDate(milestone.end);
+
+  if(!end) {
+    return <MilestoneAction milestone={milestone} />
+  }
 
   return (
     <li className={`milestone-period ${milestone.isCurrent ? 'current-milestone' : ''}`}>
