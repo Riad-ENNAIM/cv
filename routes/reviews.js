@@ -9,9 +9,7 @@ const Review = require('../models/Review');
 // @access    Public
 router.get('/', async (req, res) => {
   try {
-    const reviews = await Review.find().sort({
-      date: -1,
-    });
+    const reviews = await Review.find().sort({ date: 1 });
     res.json(reviews);
   } catch (err) {
     console.error(err.message);

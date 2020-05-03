@@ -26,7 +26,7 @@ const profile = {
       isCurrent: true,
       title: "Développeur Front End React",
       company: "SQLI",
-      start: "2019-04-20T17:16:40.606+00:00",
+      start: "2020-04-20T17:16:40.606+00:00",
       location: "Rabat - Maroc",
       tasks: []
     },
