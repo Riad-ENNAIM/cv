@@ -1,4 +1,4 @@
-import { GET_PROFILE, TOGGLE_TIMELINE } from '../types';
+import { GET_PROFILE, TOGGLE_TIMELINE, SEARCH_IN_PROFILE } from '../types';
 
 export default (state, action) => {
   switch (action.type) {
@@ -7,6 +7,12 @@ export default (state, action) => {
         ...state,
         profile: action.payload,
         isLoading: false
+      };
+
+    case SEARCH_IN_PROFILE:
+      return {
+        ...state,
+        serchResult: action.payload
       };
 
     case TOGGLE_TIMELINE:

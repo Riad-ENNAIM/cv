@@ -38,7 +38,10 @@ const Card = ({ data }) => {
           }
         </div>
       
-        <Notes notes={data.notes} />
+        {
+          data.notes &&
+          <Notes notes={data.notes} />
+        }
       </div>
     </div>
   );

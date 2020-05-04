@@ -242,15 +242,15 @@ const profile = {
           text: "CSS3"
         },
         {
-          _id: "Se2",
+          _id: "Se3",
           text: "Bootstrap"
         },
         {
-          _id: "Se3",
+          _id: "Se4",
           text: "PHP"
         },
         {
-          _id: "Se4",
+          _id: "Se5",
           text: "Laravel"
         }
       ]

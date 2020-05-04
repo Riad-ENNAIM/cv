@@ -338,8 +338,8 @@ cursor: wait;
 }
 
 /* ---------- Search Link ---------- */
-#navbar ul li a.search:hover,
-#navbar ul li a.search.active {
+#navbar ul li a.search-link:hover,
+#navbar ul li a.search-link.active {
   border: #21618C solid 2px;
   border-radius: 50%;
   padding: 10px;
@@ -348,7 +348,7 @@ cursor: wait;
   background: #EBF5FB;
 }
 
-#navbar ul li a.search::before {
+#navbar ul li a.search-link::before {
   content: none;
 }
 
@@ -616,12 +616,22 @@ ul li.milestone-action span.number span {
 #searchInput {
   width: 70%;
   height: 50px;
+  align-self: center;
   font-size: medium;
   padding: 20px;
-  border-style: solid;
-  border-color: #21618C;
+  border: #21618C solid 3px;
   border-radius: 5px;
   margin: 10px;
+}
+
+#search .search-title {
+  width: 100%;
+  height: 60px;
+  font-size: 1.5em;
+  background: #EBF5FB;
+  color: #333;
+  padding: 10px;
+  margin: 20px 0;
 }
 
 /* ---------- Skills ---------- */

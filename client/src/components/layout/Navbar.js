@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <nav id="navbar">
       <ul>
-        <li><NavLink exact to="/search" className="search" activeClassName="active"><i className="fas fa-search"></i></NavLink></li>
+        <li><NavLink exact to="/search" className="search-link" activeClassName="active"><i className="fas fa-search"></i></NavLink></li>
         <li><NavLink exact to="/" activeClassName="active">Expérience</NavLink></li>
         <li><NavLink exact to="/projects" activeClassName="active">Projets</NavLink></li>
         <li><NavLink exact to="/skills" activeClassName="active">Compétence</NavLink></li>
@@ -21,7 +21,7 @@ const Navbar = () => {
         <li ><a href="/pdf/Riad-ENNAIM.pdf" target="_blank" rel="noopener noreferrer" className="download-pdf">Télécharger PDF</a></li>
         
         {
-          (location.pathname === '/' || location.pathname === '/projects') &&
+          (location.pathname === '/' || location.pathname === '/projects' || location.pathname === '/training') &&
           <li className="timeline-switcher">
             Chronologie
             <label className="switch">

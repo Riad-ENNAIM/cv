@@ -1,6 +1,5 @@
 import React, { useEffect, useContext } from 'react';
-import MilestonePeriod from '../milestones/MilestonePeriod';
-import MilestoneAction from '../milestones/MilestoneAction';
+import Card from '../cards/Card';
 import Loader from '../utils/Loader';
 
 import ProfileContext from '../../context/profile/profileContext';
@@ -22,28 +21,17 @@ const Training = () => {
     );
   }
 
-  return (
-    <ul className="milestone">
-      {
-        profile.trainings.map(training => {
-          const milestone = {
-            title: training.school,
-            info: training.title,
-            type: training.location,
-            start: training.start,
-            isCurrent: training.isCurrent
-          };
-
-          if(training.end){
-            milestone.end = training.end;
-            return <MilestonePeriod key={training._id} milestone={milestone} />
-          }
-
-          return <MilestoneAction key={training._id} milestone={milestone} />
-        })
-      }
-    </ul>
-  );
+  return profile.trainings.map(training => {
+    const data = {
+      title: training.title,
+      description: training.school,
+      info: training.location,
+      start: training.start,
+      end: training.end,
+      isCurrent: training.isCurrent
+    };
+    return <Card key={training._id} data={data} />
+  });
 }
 
 export default Training;
