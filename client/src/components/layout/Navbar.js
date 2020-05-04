@@ -18,6 +18,7 @@ const Navbar = () => {
         <li><NavLink exact to="/skills" activeClassName="active">Compétence</NavLink></li>
         <li><NavLink exact to="/training" activeClassName="active">Formation</NavLink></li>
         <li><NavLink exact to="/reviews" activeClassName="active">Commentaires</NavLink></li>
+        <li ><a href="/pdf/Riad-ENNAIM.pdf" target="_blank" rel="noopener noreferrer" className="download-pdf">Télécharger PDF</a></li>
         
         {
           (location.pathname === '/' || location.pathname === '/projects') &&

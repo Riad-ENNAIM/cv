@@ -352,6 +352,18 @@ cursor: wait;
   content: none;
 }
 
+/* ---------- Download Link ---------- */
+#navbar ul li a.download-pdf {
+  border-radius: 5px;
+  color: #fff;
+  background: #21618C;
+}
+
+#navbar ul li a.download-pdf::before {
+  content: none;
+}
+
+
 /* ---------- Switch ---------- */
 .switch {
   position: relative;
