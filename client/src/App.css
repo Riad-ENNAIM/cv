@@ -299,6 +299,12 @@ cursor: wait;
   list-style: none;
 }
 
+#navbar ul li.separator {
+  width: 1.5px;
+  height: 100%;
+  background: #bbb;
+}
+
 #navbar ul li.timeline-switcher {
   position: absolute;
   top: calc(50% - 22px);
@@ -337,31 +343,26 @@ cursor: wait;
   background: #21618C
 }
 
-/* ---------- Search Link ---------- */
-#navbar ul li a.search-link:hover,
-#navbar ul li a.search-link.active {
-  border: #21618C solid 2px;
+/* ---------- Link ---------- */
+#navbar ul li a.link {
+  border: #bbb solid 2px;
+  color: #999;
   border-radius: 50%;
   padding: 10px;
   margin: 0 23px;
+}
+
+#navbar ul li a.link:hover,
+#navbar ul li a.link.active {
+  border: #21618C solid 2px;
   color: #21618C;
   background: #EBF5FB;
 }
 
-#navbar ul li a.search-link::before {
+#navbar ul li a.link::before {
   content: none;
 }
 
-/* ---------- Download Link ---------- */
-#navbar ul li a.download-pdf {
-  border-radius: 5px;
-  color: #fff;
-  background: #21618C;
-}
-
-#navbar ul li a.download-pdf::before {
-  content: none;
-}
 
 
 /* ---------- Switch ---------- */
@@ -821,7 +822,8 @@ ul li.milestone-action span.number span {
 /* medium */
 @media(min-width: 767px) and (max-width: 1060px) {
   #main-header .main-info,
-  #navbar ul li:first-child,
+  #navbar ul li.list-link,
+  #navbar ul li.separator,
   #navbar ul li.timeline-switcher {
     display: none;
   }

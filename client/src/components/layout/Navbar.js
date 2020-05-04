@@ -12,13 +12,45 @@ const Navbar = () => {
   return (
     <nav id="navbar">
       <ul>
-        <li><NavLink exact to="/search" className="search-link" activeClassName="active"><i className="fas fa-search"></i></NavLink></li>
-        <li><NavLink exact to="/" activeClassName="active">Expérience</NavLink></li>
-        <li><NavLink exact to="/projects" activeClassName="active">Projets</NavLink></li>
-        <li><NavLink exact to="/skills" activeClassName="active">Compétence</NavLink></li>
-        <li><NavLink exact to="/training" activeClassName="active">Formation</NavLink></li>
-        <li><NavLink exact to="/reviews" activeClassName="active">Commentaires</NavLink></li>
-        <li ><a href="/pdf/Riad-ENNAIM.pdf" target="_blank" rel="noopener noreferrer" className="download-pdf">Télécharger PDF</a></li>
+        <li className="list-link">
+          <NavLink exact to="/search" className="link" activeClassName="active">
+            <i className="fas fa-search"></i>
+          </NavLink>
+        </li>
+
+        <li className="list-link">
+          <a href="/pdf/Riad-ENNAIM.pdf" target="_blank" rel="noopener noreferrer" className="link" title="Télécharger PDF">
+          <i class="fas fa-arrow-alt-circle-down"></i>
+          </a>
+        </li>
+
+        <li className="separator"></li>
+
+        <li>
+          <NavLink exact to="/" activeClassName="active">
+            Expérience
+          </NavLink>
+        </li>
+        <li>
+          <NavLink exact to="/projects" activeClassName="active">
+            Projets
+          </NavLink>
+        </li>
+        <li>
+          <NavLink exact to="/skills" activeClassName="active">
+            Compétence
+          </NavLink>
+        </li>
+        <li>
+          <NavLink exact to="/training" activeClassName="active">
+            Formation
+          </NavLink>
+        </li>
+        <li>
+          <NavLink exact to="/reviews" activeClassName="active">
+            Commentaires
+          </NavLink>
+        </li>
         
         {
           (location.pathname === '/' || location.pathname === '/projects' || location.pathname === '/training') &&
