@@ -20,16 +20,14 @@ const Navbar = () => {
         <li><NavLink exact to="/reviews" activeClassName="active">Commentaires</NavLink></li>
         
         {
-          location.pathname === '/' || location.pathname === '/projects' ?
-            <li className="timeline-switcher">
-              Chronologie
-              <label className="switch">
-                <input type="checkbox" checked={isTimeline} onChange={() => toggleTimeline()}/>
-                <span className="slider"></span>
-              </label>
-            </li>
-          :
-            null
+          (location.pathname === '/' || location.pathname === '/projects') &&
+          <li className="timeline-switcher">
+            Chronologie
+            <label className="switch">
+              <input type="checkbox" checked={isTimeline} onChange={() => toggleTimeline()}/>
+              <span className="slider"></span>
+            </label>
+          </li>
         }
       </ul>
     </nav>

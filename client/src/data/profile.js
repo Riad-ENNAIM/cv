@@ -21,15 +21,15 @@ const profile = {
     }
   ],
   experiences: [
-    {
-      _id: "E0",
-      isCurrent: true,
-      title: "Développeur Front End React",
-      company: "SQLI",
-      start: "2020-04-20T17:16:40.606+00:00",
-      location: "Rabat - Maroc",
-      tasks: []
-    },
+    // {
+    //   _id: "E0",
+    //   isCurrent: true,
+    //   title: "Développeur Front End React",
+    //   company: "SQLI",
+    //   start: "2020-04-20T17:16:40.606+00:00",
+    //   location: "Rabat - Maroc",
+    //   tasks: []
+    // },
     {
       _id: "E1",
       isCurrent: false,
@@ -43,6 +43,32 @@ const profile = {
           _id: "Ta1",
           text: "Conception et développement d'une plate-forme de services dans l'agriculture de précision qui offre des solutions conviviales aux agriculteurs, afin d'améliorer leur rentabilité. Nous nous appuyons sur l'utilisation de données collectées via des capteurs, des images satellites ou des images de drones que nous valorisons à l'aide de modèles algorithmiques et de connaissances agronomiques afin de recommander aux agriculteurs de rationaliser les coûts des intrants agricoles."
         }
+      ],
+      technologies: [
+        {
+          _id: "Sa1",
+          text: "JavaScript"
+        },
+        {
+          _id: "Sa2",
+          text: "React"
+        },
+        {
+          _id: "Sa3",
+          text: "Angular"
+        },
+        {
+          _id: "Sa4",
+          text: "Node.js"
+        },
+        {
+          _id: "Sa5",
+          text: "Express.js"
+        },
+        {
+          _id: "Sa6",
+          text: "MongoDB"
+        },
       ]
     },
     {
@@ -56,11 +82,33 @@ const profile = {
       tasks: [
         {
           _id: "Tb1",
-          text: "Développement d'une application de demande des prestations (React Native)."
+          text: "Développement d'une application de demande des prestations."
         },
         {
           _id: "Tb2",
-          text: "Modification de la partie back-office (Laravel - React.js)."
+          text: "Modification de la partie back-office."
+        }
+      ],
+      technologies: [
+        {
+          _id: "Sb1",
+          text: "JavaScript"
+        },
+        {
+          _id: "Sb2",
+          text: "React"
+        },
+        {
+          _id: "Sb3",
+          text: "React Native"
+        },
+        {
+          _id: "Sb4",
+          text: "PHP"
+        },
+        {
+          _id: "Sb5",
+          text: "Laravel"
         }
       ]
     },
@@ -99,7 +147,29 @@ const profile = {
         },
         {
           _id: "Tc7",
-          text: "Maintenance d'un site e-commerce (Laravel) et traitement des retours du client."
+          text: "Maintenance d'un site e-commerce et traitement des retours du client."
+        }
+      ],
+      technologies: [
+        {
+          _id: "Sc1",
+          text: "JavaScript"
+        },
+        {
+          _id: "Sc2",
+          text: "PHP"
+        },
+        {
+          _id: "Sc3",
+          text: "Laravel"
+        },
+        {
+          _id: "Sc4",
+          text: "Symfony"
+        },
+        {
+          _id: "Sc5",
+          text: "MySQL"
         }
       ]
     },
@@ -128,6 +198,24 @@ const profile = {
           _id: "Td4",
           text: "Fournir au client une interface pour prendre un rendez-vous."
         }
+      ],
+      technologies: [
+        {
+          _id: "Sd1",
+          text: "HTML5"
+        },
+        {
+          _id: "Sd2",
+          text: "CSS3"
+        },
+        {
+          _id: "Sd3",
+          text: "PHP"
+        },
+        {
+          _id: "Sd4",
+          text: "Laravel"
+        }
       ]
     },
     {
@@ -142,6 +230,28 @@ const profile = {
         {
           _id: "Te1",
           text: "Conception et développement d'une application web de gestion des projets permet le suivit quotidien des projets et les tâches des développeurs au sein de l'entreprise."
+        }
+      ],
+      technologies: [
+        {
+          _id: "Se1",
+          text: "HTML5"
+        },
+        {
+          _id: "Se2",
+          text: "CSS3"
+        },
+        {
+          _id: "Se2",
+          text: "Bootstrap"
+        },
+        {
+          _id: "Se3",
+          text: "PHP"
+        },
+        {
+          _id: "Se4",
+          text: "Laravel"
         }
       ]
     },
@@ -169,6 +279,24 @@ const profile = {
         {
           _id: "Tf4",
           text: "Intégration avec l’équipe de travail Présentation du travail."
+        }
+      ],
+      technologies: [
+        {
+          _id: "Sf1",
+          text: "HTML5"
+        },
+        {
+          _id: "Sf2",
+          text: "CSS3"
+        },
+        {
+          _id: "Sf3",
+          text: "PHP"
+        },
+        {
+          _id: "Sf4",
+          text: "MySQL"
         }
       ]
     }

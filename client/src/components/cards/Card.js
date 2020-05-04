@@ -18,17 +18,25 @@ const Card = ({ data }) => {
 
       <div className="card-body">
         <span className="card-description">{data.description}</span>
-        <br />
-        {
-          data.start || data.end ?
+
+        <div className="card-body-container">
+          {
+            (start || end) &&
             <span className="card-date tag">
-              { data.start && !data.end ? `Depuis ${start}` : data.start && data.end ? start : '' } 
-              { data.end && data.start ? ` à ${end}` : data.end && !data.start ? end : '' }
+              { start && !end ? `Depuis ${start}` : start && end ? start : '' } 
+              { end && start ? ` à ${end}` : end && !start ? end : '' }
             </span>
-          :
-            null
-        }
-        <span className="card-info tag">{data.info}</span>
+          }
+
+          <span className="card-info tag">{data.info}</span>
+        </div>
+
+        <div className="card-body-container">
+          {
+            data.supplements &&
+            data.supplements.map(supplement => <span key={supplement._id} className="card-info tag">{supplement.text}</span>)
+          }
+        </div>
       
         <Notes notes={data.notes} />
       </div>

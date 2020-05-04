@@ -449,10 +449,15 @@ input:checked + .slider:before {
   font-size: 1.1em;
 }
 
-.card .card-body .card-date,
-.card .card-body .card-info {
+.card .card-body .card-body-container {
+  padding-top: 10px;
+}
+
+.card .card-body .card-body-container .card-date,
+.card .card-body .card-body-container .card-info {
   font-size: 0.8em;
 }
+
 
 .card .card-body .notes {
   margin: 10px;

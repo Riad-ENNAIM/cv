@@ -29,7 +29,8 @@ const Experiences = () => {
       start: experience.start,
       end: experience.end,
       isCurrent: experience.isCurrent,
-      notes: experience.tasks
+      notes: experience.tasks,
+      supplements: experience.technologies
     };
     return <Card key={experience._id} data={data} />
   });

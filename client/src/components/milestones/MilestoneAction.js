@@ -18,10 +18,8 @@ const MilestoneAction = ({ milestone }) => {
       </span>
 
       {
-        milestone.isCurrent ?
-          <div className="tag-flash">En cours</div>
-        :
-          null
+        milestone.isCurrent &&
+        <div className="tag-flash">En cours</div>
       }
     </li>
   );

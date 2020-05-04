@@ -93,12 +93,10 @@ const ReviewForm = () => {
               />
             </div>
             {
-              showAlert && review.rating === 0 ?
-                <span className="tag-alert">
-                  Vous pouvez ajouter une note !
-                </span>
-              :
-                null
+              showAlert && review.rating === 0 &&
+              <span className="tag-alert">
+                Vous pouvez ajouter une note !
+              </span>
             }
 
             <div className="remove" onClick={closeForm}>
