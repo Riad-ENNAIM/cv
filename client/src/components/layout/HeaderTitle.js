@@ -10,9 +10,18 @@ const HeaderTitle = ({ profile }) => {
       <h2>{profile.title}</h2>
 
       <div className="links container justify-content-center">
-        <a href={profile.links[0].path} target="_blank" rel="noopener noreferrer" title={profile.links[0].name}><i className="fab fa-github-square"></i></a>
-        <a href={profile.links[1].path} target="_blank" rel="noopener noreferrer" title={profile.links[1].name}><i className="fab fa-linkedin"></i></a>
-        <a href={profile.links[2].path} target="_blank" rel="noopener noreferrer" title={profile.links[2].name}><i className="fas fa-address-card"></i></a>
+        <a href={profile.links[0].path} target="_blank" rel="noopener noreferrer" title={profile.links[0].name}>
+          <i className="fab fa-github-square"></i>
+        </a>
+        <a href={profile.links[1].path} target="_blank" rel="noopener noreferrer" title={profile.links[1].name}>
+          <i className="fab fa-linkedin"></i>
+        </a>
+        <a href={profile.links[2].path} target="_blank" rel="noopener noreferrer" title={profile.links[2].name}>
+          <i className="fas fa-address-card"></i>
+        </a>
+        <a href="/pdf/Riad-ENNAIM.pdf" target="_blank" rel="noopener noreferrer" title="Télécharger PDF">
+          <i class="fas fa-cloud-download-alt"></i>
+        </a>
       </div>
     </div>
   );
