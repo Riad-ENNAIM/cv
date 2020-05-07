@@ -41,7 +41,11 @@ const profile = {
       tasks: [
         {
           _id: "Ta1",
-          text: "Conception et développement d'une plate-forme de services dans l'agriculture de précision qui offre des solutions conviviales aux agriculteurs, afin d'améliorer leur rentabilité. Nous nous appuyons sur l'utilisation de données collectées via des capteurs, des images satellites ou des images de drones que nous valorisons à l'aide de modèles algorithmiques et de connaissances agronomiques afin de recommander aux agriculteurs de rationaliser les coûts des intrants agricoles."
+          text: "Conception et développement d'une plate-forme de services dans l'agriculture de précision qui offre des solutions conviviales aux agriculteurs, afin d'améliorer leur rentabilité."
+        },
+        {
+          _id: "Ta2",
+          text: "Utilisation de données collectées via des capteurs, des images satellites ou des images de drones que nous valorisons à l'aide de modèles algorithmiques et de connaissances agronomiques afin de recommander aux agriculteurs de rationaliser les coûts des intrants agricoles."
         }
       ],
       technologies: [
@@ -86,6 +90,14 @@ const profile = {
         },
         {
           _id: "Tb2",
+          text: "Authentification avec Facebook."
+        },
+        {
+          _id: "Tb3",
+          text: "Système de notification."
+        },
+        {
+          _id: "Tb4",
           text: "Modification de la partie back-office."
         }
       ],

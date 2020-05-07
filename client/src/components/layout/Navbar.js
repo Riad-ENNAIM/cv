@@ -17,15 +17,6 @@ const Navbar = () => {
             <i className="fas fa-search"></i>
           </NavLink>
         </li>
-
-        {/* <li className="list-link">
-          <a href="/pdf/Riad-ENNAIM.pdf" target="_blank" rel="noopener noreferrer" className="link" title="Télécharger PDF">
-          <i class="fas fa-arrow-alt-circle-down"></i>
-          </a>
-        </li>
-
-        <li className="separator"></li> */}
-
         <li>
           <NavLink exact to="/" activeClassName="active">
             Expérience

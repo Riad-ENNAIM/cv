@@ -6,7 +6,7 @@ import ReviewContext from '../../context/review/reviewContext';
 
 const ReviewForm = () => {
   const reviewContext = useContext(ReviewContext);
-  const { addReview, toggleForm } = reviewContext;
+  const { errors, addReview, toggleForm } = reviewContext;
 
   const formRef = useRef(null);
 
@@ -17,6 +17,7 @@ const ReviewForm = () => {
   const [review, setReview] = useState({
     username: '',
     comment: '',
+    link: '',
     rating: 0
   });
   const [avatar, setAvatar] = useState({
@@ -30,7 +31,11 @@ const ReviewForm = () => {
   const onChange = e => setReview({...review, [e.target.name]: e.target.value});
 
   const updateAvatar = () => {
-    const name = review.username.replace(/[^A-Z a-z]/g, '').replace(/\s+/g, " ").trim().split(' ');
+    const name = review.username
+                .replace(/[^A-Z a-z]/g, '')
+                .replace(/\s+/g, " ")
+                .trim()
+                .split(' ');
     const firstLetter = name[0].slice(0,1);
     const lastLetter = name.length > 1 ? name[1].slice(0,1) : name[0].slice(name[0].length - 1);
 
@@ -49,10 +54,18 @@ const ReviewForm = () => {
     }
 
     setIsSending(true);
+
     addReview({
       ...review,
-      username: review.username.replace(/\s+/g, " ").trim(), // Remove extrat white spaces
-      comment: review.comment.replace(/\(y\)/g, '<i class="like fas fa-thumbs-up" title="(y) = Like"></i>').replace(/<3/g, '<i class="heart fas fa-heart" title="<3 = Heart"></i>').replace(/\n\r?/g, '<br />') // Add line breaks
+      username: review.username
+                .replace(/\s+/g, " ")
+                .trim(), // Remove extrat white spaces
+      comment: review.comment
+              .replace(/\(y\)/g, '<i class="like fas fa-thumbs-up" title="(y) = Like"></i>')
+              .replace(/<3/g, '<i class="heart fas fa-heart" title="<3 = Heart"></i>')
+              .replace(/:-1:/g, '<i class="dislike fas fa-thumbs-down" title="<3 = Dislike"></i>')
+              .replace(/\n\r?/g, '<br />'), // Add line breaks
+      link: review.link.length > 0 ? review.link : 'http://www.riadennaim.com/'
     });
   };
 
@@ -67,24 +80,26 @@ const ReviewForm = () => {
           <span className="review-avatar" style={{background: avatar.background}}>{avatar.name}</span>
           <div>
             <span className="review-date">Maintenant</span>
-            <span className="review-username">
-              <input
-                id="username"
-                type="text"
-                placeholder="Entrer votre nom"
-                name="username"
-                value={review.username}
-                onChange={onChange}
-                onBlur={updateAvatar}
-                title="Entrer un nom valide, juste des lettres !"
-                autoFocus
-                required
-              />
-            </span>
+            <input
+              id="username"
+              type="text"
+              placeholder="Entrer votre nom"
+              name="username"
+              value={review.username}
+              onChange={onChange}
+              onBlur={updateAvatar}
+              title="Entrer un nom valide, juste des lettres !"
+              autoFocus
+              required
+            />
           </div>
         </div>
 
         <div className="review-content">
+          {
+            errors && errors.map(error => <span key={error.param + error.value} className="review-error">{error.msg}</span>)
+          }
+
           <div className="container justify-content-space-between align-items-center">
             <div className={showAlert && review.rating === 0 ? 'rating-alert' : ''}>
               <Rating
@@ -114,6 +129,15 @@ const ReviewForm = () => {
             onFocus={toggleTypingSpinner}
             onBlur={toggleTypingSpinner}
           />
+
+          <input
+            id="link"
+            type="text"
+            placeholder="Entrer un lien: Linkedin, GitHub, Blog, ..."
+            name="link"
+            value={review.link}
+            onChange={onChange}
+          />
         </div>
       </div>
 
@@ -121,8 +145,8 @@ const ReviewForm = () => {
         <input
           type="submit"
           value={`Commenter ${showAlert && review.rating === 0 ? 'avec une note 0/5' : ''}`}
-          className={`btn btn-center ${isSending ? 'btn-disabled' : 'btn-primary'}`}
-          disabled={isSending}
+          className={`btn btn-center ${isSending && !errors ? 'btn-disabled' : 'btn-primary'}`}
+          disabled={isSending && !errors}
         />
       </div>
     </form>

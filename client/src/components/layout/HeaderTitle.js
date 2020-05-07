@@ -20,7 +20,7 @@ const HeaderTitle = ({ profile }) => {
           <i className="fas fa-address-card"></i>
         </a>
         <a href="/pdf/Riad-ENNAIM.pdf" target="_blank" rel="noopener noreferrer" title="Télécharger PDF">
-          <i class="fas fa-cloud-download-alt"></i>
+          <i className="fas fa-cloud-download-alt"></i>
         </a>
       </div>
     </div>

@@ -6,7 +6,7 @@ import letterColors from '../../data/letterColors';
 import ReviewContext from '../../context/review/reviewContext';
 
 const Review = ({ review }) => {
-  const { _id, username, comment, rating, date, isDeletable } = review;
+  const { _id, username, comment, rating, date, isDeletable, link } = review;
 
   const reviewContext = useContext(ReviewContext);
   const { deleteReview } = reviewContext;
@@ -28,7 +28,11 @@ const Review = ({ review }) => {
   const [diffDate, setDiffDate] = useState();
 
   const setAvatarFromUsername = () => {
-    const name = username.replace(/[^A-Z a-z]/g, '').replace(/\s+/g, " ").trim().split(' ');
+    const name = username
+                .replace(/[^A-Z a-z]/g, '')
+                .replace(/\s+/g, " ")
+                .trim()
+                .split(' ');
     const firstLetter = name[0].slice(0,1);
     const lastLetter = name.length > 1 ? name[1].slice(0,1) : name[0].slice(name[0].length - 1);
 
@@ -86,13 +90,22 @@ const Review = ({ review }) => {
     }
   }
 
+  const goToLink = () => {
+    if(link){
+      window.open(link, "_blank")
+    }
+  }
+
   return (
     <div className="review">
       <div className="review-title">
         <span className="review-avatar" style={{background: avatar.background}}>{avatar.name}</span>
         <div>
           <span className="review-date">{diffDate}</span>
-          <span className="review-username">{username}</span>
+          <span className="review-username" onClick={goToLink}>{username}</span>
+          {/* <a href={link} target="_blank" rel="noopener noreferrer" title={link} className="review-username">
+            {username}
+          </a> */}
         </div>
       </div>
 

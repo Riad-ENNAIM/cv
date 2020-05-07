@@ -27,20 +27,24 @@ router.post(
       check('username', 'Name is required')
         .not()
         .isEmpty(),
-    ],
+      check('link', 'Not a valid URL')
+        .isURL()
+    ]
   ],
   async (req, res) => {
     const errors = validationResult(req);
+
     if (!errors.isEmpty()) {
       return res.status(400).json({errors: errors.array()});
     }
 
-    const {username, comment, rating} = req.body;
+    const {username, comment, link, rating} = req.body;
 
     try {
       const newReview = new Review({
         username,
         comment,
+        link,
         rating
       });
 

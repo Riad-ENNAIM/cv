@@ -14,7 +14,8 @@ const ReviewState = props => {
   const initialState = {
     reviews: null,
     showForm: false,
-    isLoading: true
+    isLoading: true,
+    errors: null
   };
 
   const [state, dispatch] = useReducer(reviewReducer, initialState);
@@ -62,7 +63,7 @@ const ReviewState = props => {
     } catch (err) {
       dispatch({
         type: REVIEW_ERROR,
-        payload: err.response.msg
+        payload: err.response.data.errors
       });
     }
   };
@@ -93,6 +94,7 @@ const ReviewState = props => {
         reviews: state.reviews,
         showForm: state.showForm,
         isLoading: state.isLoading,
+        errors: state.errors,
         getReviews,
         addReview,
         deleteReview,
