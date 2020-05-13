@@ -1,4 +1,9 @@
-import { GET_PROFILE, TOGGLE_TIMELINE, SEARCH_IN_PROFILE } from '../types';
+import { 
+  GET_PROFILE,
+  TOGGLE_TIMELINE,
+  SEARCH_IN_PROFILE,
+  TOGGLE_LANGUAGE
+} from '../types';
 
 export default (state, action) => {
   switch (action.type) {
@@ -16,10 +21,15 @@ export default (state, action) => {
       };
 
     case TOGGLE_TIMELINE:
-      localStorage.setItem('isTimeline', JSON.stringify(!state.isTimeline));
       return {
         ...state,
         isTimeline: !state.isTimeline,
+      };
+
+    case TOGGLE_LANGUAGE:
+      return {
+        ...state,
+        language: action.payload,
       };
   
     default:

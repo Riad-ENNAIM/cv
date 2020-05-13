@@ -2,10 +2,13 @@ import React, { useState, useContext, useEffect, useRef } from 'react';
 import Rating from '../utils/Rating';
 import letterColors from '../../data/letterColors';
 
+import ProfileContext from '../../context/profile/profileContext';
 import ReviewContext from '../../context/review/reviewContext';
 
 const ReviewForm = () => {
+  const profileContext = useContext(ProfileContext);
   const reviewContext = useContext(ReviewContext);
+  const { language } = profileContext;
   const { errors, addReview, toggleForm } = reviewContext;
 
   const formRef = useRef(null);
@@ -79,16 +82,16 @@ const ReviewForm = () => {
         <div className="review-title">
           <span className="review-avatar" style={{background: avatar.background}}>{avatar.name}</span>
           <div>
-            <span className="review-date">Maintenant</span>
+            <span className="review-date">{language === 'eng' ? 'Now' : 'Maintenant'}</span>
             <input
               id="username"
               type="text"
-              placeholder="Entrer votre nom"
+              placeholder={language === 'eng' ? 'Enter your name' : 'Entrer votre nom'}
               name="username"
               value={review.username}
               onChange={onChange}
               onBlur={updateAvatar}
-              title="Entrer un nom valide, juste des lettres !"
+              title={language === 'eng' ? 'Enter a valid name, just letters!' : 'Entrer un nom valide, juste des lettres !'}
               autoFocus
               required
             />
@@ -110,7 +113,7 @@ const ReviewForm = () => {
             {
               showAlert && review.rating === 0 &&
               <span className="tag-alert">
-                Vous pouvez ajouter une note !
+                {language === 'eng' ? 'You can add a note!' : 'Vous pouvez ajouter une note !'}
               </span>
             }
 
@@ -133,7 +136,7 @@ const ReviewForm = () => {
           <input
             id="link"
             type="text"
-            placeholder="Entrer un lien: Linkedin, GitHub, Blog, ..."
+            placeholder={language === 'eng' ? 'Enter a link: Linkedin, GitHub, Blog, ...' : 'Entrer un lien: Linkedin, GitHub, Blog, ...'}
             name="link"
             value={review.link}
             onChange={onChange}
@@ -144,7 +147,8 @@ const ReviewForm = () => {
       <div className="container justify-content-center align-items-center">
         <input
           type="submit"
-          value={`Commenter ${showAlert && review.rating === 0 ? 'avec une note 0/5' : ''}`}
+          // value={`Commenter ${showAlert && review.rating === 0 ? 'avec une note 0/5' : ''}`}
+          value={language === 'eng' ? 'Add Review' : 'Commenter'}
           className={`btn btn-center ${isSending && !errors ? 'btn-disabled' : 'btn-primary'}`}
           disabled={isSending && !errors}
         />

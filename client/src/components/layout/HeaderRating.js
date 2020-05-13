@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useContext } from 'react';
 import Rating from '../utils/Rating';
 
+import ProfileContext from '../../context/profile/profileContext';
 import ReviewContext from '../../context/review/reviewContext';
 
 const HeaderRating = () => {
+  const profileContext = useContext(ProfileContext);
   const reviewContext = useContext(ReviewContext);
+  const { language } = profileContext;
   const { reviews, getReviews } = reviewContext;
 
   useEffect(() => {
@@ -33,7 +36,7 @@ const HeaderRating = () => {
     <div className="main-rating">
       <h1>{globalRating.toFixed(1)}</h1>
       <Rating rating={globalRating}/>
-      <span>Évaluation</span>
+      <span>{language === 'eng' ? 'Evaluation' : 'Évaluation'}</span>
     </div>
   );
 }

@@ -7,12 +7,12 @@ import ProfileContext from '../../context/profile/profileContext';
 
 const TrainingMilestones = () => {
   const profileContext = useContext(ProfileContext);
-  const { profile, getProfile, isLoading } = profileContext;
+  const { profile, getProfile, isLoading, language } = profileContext;
 
   useEffect(() => {
     getProfile();
     // eslint-disable-next-line
-  }, []);
+  }, [language]);
 
   if(profile === null || profile.trainings === null || isLoading){
     return (

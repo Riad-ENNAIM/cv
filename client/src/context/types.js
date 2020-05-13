@@ -11,3 +11,4 @@ export const TOGGLE_FORM = 'TOGGLE_FORM';
 // Profile
 export const GET_PROFILE = 'GET_PROFILE';
 export const SEARCH_IN_PROFILE = 'SEARCH_IN_PROFILE';
+export const TOGGLE_LANGUAGE = 'TOGGLE_LANGUAGE';

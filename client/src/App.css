@@ -834,6 +834,17 @@ ul li.milestone-action span.number span {
   cursor: pointer;
 }
 
+#main-footer .footer-lang {
+  width: 90px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#main-footer .footer-lang:hover {
+  background: #f4c150;
+  cursor: pointer;
+}
+
 /* large */
 @media(min-width: 785px) {
   #smallScreen {

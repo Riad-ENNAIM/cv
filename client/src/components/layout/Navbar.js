@@ -7,7 +7,7 @@ import ProfileContext from '../../context/profile/profileContext';
 const Navbar = () => {
   const location = useLocation();
   const profileContext = useContext(ProfileContext);
-  const { isTimeline, toggleTimeline } = profileContext;
+  const { language, isTimeline, toggleTimeline } = profileContext;
 
   return (
     <nav id="navbar">
@@ -19,34 +19,34 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink exact to="/" activeClassName="active">
-            Expérience
+            {language === 'eng' ? 'Experience' : 'Expérience'}
           </NavLink>
         </li>
         <li>
           <NavLink exact to="/projects" activeClassName="active">
-            Projets
+            {language === 'eng' ? 'Projects' : 'Projets'}
           </NavLink>
         </li>
         <li>
           <NavLink exact to="/skills" activeClassName="active">
-            Compétence
+            {language === 'eng' ? 'Skills' : 'Compétence'}
           </NavLink>
         </li>
         <li>
           <NavLink exact to="/training" activeClassName="active">
-            Formation
+            {language === 'eng' ? 'Training' : 'Formation'}
           </NavLink>
         </li>
         <li>
           <NavLink exact to="/reviews" activeClassName="active">
-            Commentaires
+            {language === 'eng' ? 'Reviews' : 'Commentaires'}
           </NavLink>
         </li>
         
         {
           (location.pathname === '/' || location.pathname === '/projects' || location.pathname === '/training') &&
           <li className="timeline-switcher">
-            Chronologie
+            {language === 'eng' ? 'Timeline' : 'Chronologie'}
             <label className="switch">
               <input type="checkbox" checked={isTimeline} onChange={() => toggleTimeline()}/>
               <span className="slider"></span>

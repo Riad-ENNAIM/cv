@@ -1,4 +1,4 @@
-const profile = {
+export const frProfile = {
   name: "Riad ENNAIM",
   title: "Développeur Full Stack JavaScript",
   description: `Développeur full stack, passionné par la programmation des applications et le développement web, spécialisé principalement dans JavaScript: 
@@ -169,18 +169,22 @@ const profile = {
         },
         {
           _id: "Sc2",
-          text: "PHP"
+          text: "jQuery"
         },
         {
           _id: "Sc3",
-          text: "Laravel"
+          text: "PHP"
         },
         {
           _id: "Sc4",
-          text: "Symfony"
+          text: "Laravel"
         },
         {
           _id: "Sc5",
+          text: "Symfony"
+        },
+        {
+          _id: "Sc6",
           text: "MySQL"
         }
       ]
@@ -242,6 +246,14 @@ const profile = {
         {
           _id: "Te1",
           text: "Conception et développement d'une application web de gestion des projets permet le suivit quotidien des projets et les tâches des développeurs au sein de l'entreprise."
+        },
+        {
+          _id: "Te2",
+          text: "Implémentation de la méthodologie scrum."
+        },
+        {
+          _id: "Te3",
+          text: "Un système de points dynamique pour chaque utilisateur, en se basant sur les tâches réalisées et ce qui est planifié."
         }
       ],
       technologies: [
@@ -259,10 +271,18 @@ const profile = {
         },
         {
           _id: "Se4",
-          text: "PHP"
+          text: "JavaScript"
         },
         {
           _id: "Se5",
+          text: "jQuery"
+        },
+        {
+          _id: "Se6",
+          text: "PHP"
+        },
+        {
+          _id: "Se7",
           text: "Laravel"
         }
       ]
@@ -290,7 +310,7 @@ const profile = {
         },
         {
           _id: "Tf4",
-          text: "Intégration avec l’équipe de travail Présentation du travail."
+          text: "Intégration avec l’équipe de travail."
         }
       ],
       technologies: [
@@ -444,7 +464,7 @@ const profile = {
         },
         {
           _id: "Tpg3",
-          text: "Se familiarisé avec l’API JavaMail et les protocoles (POP, SMTP)."
+          text: "Se familiariser avec l’API JavaMail et les protocoles (POP, SMTP)."
         }
       ]
     },
@@ -682,4 +702,707 @@ const profile = {
   ]
 };
 
-export default profile;
+
+export const engProfile = {
+  name: "Riad ENNAIM",
+  title: "Full Stack JavaScript Developer",
+  description: `I am a full stack developer specializing mostly in JavaScript (React.js & Node.js). I am also imbued with a strong desire to learn and 
+  evolve in my daily life.`,
+  location: "Marrakech, Morocco",
+  email: "riad.ennaim@gmail.com",
+  phone: "+212694590864",
+  links: [
+    {
+      name: "GitHub",
+      path: "https://github.com/Riad-ENNAIM/"
+    },
+    {
+      name: "Linkedin",
+      path: "https://www.linkedin.com/in/riad-ennaim/"
+    },
+    {
+      name: "Bio",
+      path: "https://riad-ennaim.github.io/bio/"
+    }
+  ],
+  experiences: [
+    // {
+    //   _id: "E0",
+    //   isCurrent: true,
+    //   title: "Front End Developer",
+    //   company: "SQLI",
+    //   start: "2020-04-20T17:16:40.606+00:00",
+    //   location: "Rabat - Morocco",
+    //   tasks: []
+    // },
+    {
+      _id: "E1",
+      isCurrent: false,
+      title: "Full Stack JavaScript Developer",
+      company: "Mohammed VI Polytechnic University (AgriEdge – OCP)",
+      start: "2019-10-01T17:16:40.606+00:00",
+      end: "2020-03-30T17:16:40.606+00:00",
+      location: "Ben Guerir - Morocco",
+      tasks: [
+        {
+          _id: "Ta1",
+          text: "Design and development of a platform of services in precision agriculture that offers user-friendly solutions to the farmers, especially the smallholders ones, in order to improve their profitability."
+        },
+        {
+          _id: "Ta2",
+          text: "Use of data collected via sensors, satellite images or drone images that we valuate through the use of algorithmic models and agronomic knowledge in order to give recommendations to farmers, via a mobile application, to rationalize costs of the agricultural inputs."
+        }
+      ],
+      technologies: [
+        {
+          _id: "Sa1",
+          text: "JavaScript"
+        },
+        {
+          _id: "Sa2",
+          text: "React"
+        },
+        {
+          _id: "Sa3",
+          text: "Angular"
+        },
+        {
+          _id: "Sa4",
+          text: "Node.js"
+        },
+        {
+          _id: "Sa5",
+          text: "Express.js"
+        },
+        {
+          _id: "Sa6",
+          text: "MongoDB"
+        },
+      ]
+    },
+    {
+      _id: "E2",
+      isCurrent: false,
+      title: "Full Stack Web & Mobile Developer",
+      company: "Pulse Digital",
+      start: "2019-01-01T17:16:40.606+00:00",
+      end: "2019-09-30T17:16:40.606+00:00",
+      location: "Marrakech - Morocco",
+      tasks: [
+        {
+          _id: "Tb1",
+          text: "Development of a service request application."
+        },
+        {
+          _id: "Tb2",
+          text: "Facebook authentication."
+        },
+        {
+          _id: "Tb3",
+          text: "Notification system."
+        },
+        {
+          _id: "Tb4",
+          text: "Modification of the back-office part."
+        }
+      ],
+      technologies: [
+        {
+          _id: "Sb1",
+          text: "JavaScript"
+        },
+        {
+          _id: "Sb2",
+          text: "React"
+        },
+        {
+          _id: "Sb3",
+          text: "React Native"
+        },
+        {
+          _id: "Sb4",
+          text: "PHP"
+        },
+        {
+          _id: "Sb5",
+          text: "Laravel"
+        }
+      ]
+    },
+    {
+      _id: "E3",
+      isCurrent: false,
+      title: "WEB Developer - PHP & JavaScript",
+      company: "Pulse Digital",
+      start: "2017-09-01T17:16:40.606+00:00",
+      end: "2018-12-30T17:16:40.606+00:00",
+      location: "Marrakech - Morocco",
+      tasks: [
+        {
+          _id: "Tc1",
+          text: "Maintenance of a web application: company CRM (Brain - V1)."
+        },
+        {
+          _id: "Tc2",
+          text: "Design and creation of a project management application: re-use of data obtained from CRM."
+        },
+        {
+          _id: "Tc3",
+          text: "Design of the Craft CMS back-office for the creation of the new version of the company's website."
+        },
+        {
+          _id: "Tc4",
+          text: "Design and creation of the second version of CRM (Brain - V2)."
+        },
+        {
+          _id: "Tc5",
+          text: "Support and management of a team of interns."
+        },
+        {
+          _id: "Tc6",
+          text: "Design and development of the back-office part of an e-commerce application with Laravel."
+        },
+        {
+          _id: "Tc7",
+          text: "Maintenance of an e-commerce site and processing of customer returns."
+        }
+      ],
+      technologies: [
+        {
+          _id: "Sc1",
+          text: "JavaScript"
+        },
+        {
+          _id: "Sc2",
+          text: "jQuery"
+        },
+        {
+          _id: "Sc3",
+          text: "PHP"
+        },
+        {
+          _id: "Sc4",
+          text: "Laravel"
+        },
+        {
+          _id: "Sc5",
+          text: "Symfony"
+        },
+        {
+          _id: "Sc6",
+          text: "MySQL"
+        }
+      ]
+    },
+    {
+      _id: "E4",
+      isCurrent: false,
+      title: "WEB Developer - Laravel",
+      company: "Freelance",
+      start: "2017-12-01T17:16:40.606+00:00",
+      end: "2018-04-30T17:16:40.606+00:00",
+      location: "Marrakech - Morocco",
+      tasks: [
+        {
+          _id: "Td1",
+          text: "Design and creation of a web application for online medical appointment management."
+        },
+        {
+          _id: "Td2",
+          text: "Provide a management application (HR & Appointment) to registered firms."
+        },
+        {
+          _id: "Td3",
+          text: "A page open to clients for searching firms, by address or specialty."
+        },
+        {
+          _id: "Td4",
+          text: "Provide the client with an interface for making an appointment."
+        }
+      ],
+      technologies: [
+        {
+          _id: "Sd1",
+          text: "HTML5"
+        },
+        {
+          _id: "Sd2",
+          text: "CSS3"
+        },
+        {
+          _id: "Sd3",
+          text: "PHP"
+        },
+        {
+          _id: "Sd4",
+          text: "Laravel"
+        }
+      ]
+    },
+    {
+      _id: "E5",
+      isCurrent: false,
+      title: "WEB Developer - Laravel (Traineeship)",
+      company: "Pulse Digital",
+      start: "2017-07-01T17:16:40.606+00:00",
+      end: "2017-09-30T17:16:40.606+00:00",
+      location: "Marrakech - Morocco",
+      tasks: [
+        {
+          _id: "Te1",
+          text: "Design and development of a web project management application allows daily monitoring of projects and tasks of developers within the company."
+        },
+        {
+          _id: "Te2",
+          text: "Implementation of the scrum methodology."
+        },
+        {
+          _id: "Te3",
+          text: "A dynamic points system for each user, based on the tasks performed and what is planned."
+        }
+      ],
+      technologies: [
+        {
+          _id: "Se1",
+          text: "HTML5"
+        },
+        {
+          _id: "Se2",
+          text: "CSS3"
+        },
+        {
+          _id: "Se3",
+          text: "Bootstrap"
+        },
+        {
+          _id: "Se4",
+          text: "JavaScript"
+        },
+        {
+          _id: "Se5",
+          text: "jQuery"
+        },
+        {
+          _id: "Se6",
+          text: "PHP"
+        },
+        {
+          _id: "Se7",
+          text: "Laravel"
+        }
+      ]
+    },
+    {
+      _id: "E6",
+      isCurrent: false,
+      title: "WEB Developer- PHP (Traineeship)",
+      company: "OCP S.A",
+      start: "2016-08-01T17:16:40.606+00:00",
+      end: "2016-09-30T17:16:40.606+00:00",
+      location: "Yousoufia - Morocco",
+      tasks: [
+        {
+          _id: "Tf1",
+          text: "Development of a web application for permanence management in PHP."
+        },
+        {
+          _id: "Tf2",
+          text: "Creation of specifications for the application."
+        },
+        {
+          _id: "Tf3",
+          text: "Proposal for a GANTT diagram for respecting time."
+        },
+        {
+          _id: "Tf4",
+          text: "Integration with the work team."
+        }
+      ],
+      technologies: [
+        {
+          _id: "Sf1",
+          text: "HTML5"
+        },
+        {
+          _id: "Sf2",
+          text: "CSS3"
+        },
+        {
+          _id: "Sf3",
+          text: "PHP"
+        },
+        {
+          _id: "Sf4",
+          text: "MySQL"
+        }
+      ]
+    }
+  ],
+  projects: [
+    {
+      _id: "P1",
+      isCurrent: false,
+      title: "Contacts management",
+      client: "Self-taught",
+      start: "2020-02-01T17:16:40.606+00:00",
+      end: "2020-03-30T17:16:40.606+00:00",
+      technology: "MERN Stack",
+      tasks: [
+        {
+          _id: "Tpa1",
+          text: "Design and development of a web application for contact management"
+        },
+        {
+          _id: "Tpa2",
+          text: "Implementation of new React 16.13"
+        }
+      ]
+    },
+    {
+      _id: "P2",
+      isCurrent: false,
+      title: "Wallet: Expense tracking",
+      client: "Self-taught",
+      start: "2020-01-10T17:16:40.606+00:00",
+      technology: "React",
+      tasks: [
+        {
+          _id: "Tpb1",
+          text: "Development of a web application to track expenses"
+        },
+        {
+          _id: "Tpb2",
+          text: "Implementation of Hooks & Context API"
+        }
+      ]
+    },
+    {
+      _id: "P3",
+      isCurrent: false,
+      title: "Mobile App: Timesheet",
+      client: "Self-taught",
+      start: "2019-03-01T17:16:40.606+00:00",
+      end: "2019-05-20T17:16:40.606+00:00",
+      technology: "React Native",
+      tasks: [
+        {
+          _id: "Tpc1",
+          text: "Development of a mobile timesheet management application"
+        },
+        {
+          _id: "Tpc2",
+          text: "Graphical representation of time use: tasks executed and planned"
+        },
+        {
+          _id: "Tpc3",
+          text: "Notification system and user support to make timesheet on time"
+        }
+      ]
+    },
+    {
+      _id: "P4",
+      isCurrent: false,
+      title: "Todo List",
+      client: "Self-taught",
+      start: "2019-01-20T17:16:40.606+00:00",
+      technology: "React",
+      tasks: []
+    },
+    {
+      _id: "P5",
+      isCurrent: false,
+      title: "P2P Instant Messaging Application",
+      client: "National School of Applied Sciences (ENSA)",
+      start: "2018-04-01T17:16:40.606+00:00",
+      end: "2018-06-30T17:16:40.606+00:00",
+      technology: "Java",
+      tasks: [
+        {
+          _id: "Tpe1",
+          text: "Design and development of a distributed P2P instant messaging application."
+        },
+        {
+          _id: "Tpe2",
+          text: "Solve problems related to NAT traversal."
+        }
+      ]
+    },
+    {
+      _id: "P6",
+      isCurrent: false,
+      title: "Mobile Hybrid Application",
+      client: "National School of Applied Sciences (ENSA)",
+      start: "2017-03-01T17:16:40.606+00:00",
+      end: "2017-06-30T17:16:40.606+00:00",
+      technology: "Ionic & Spring Boot",
+      tasks: [
+        {
+          _id: "Tpf1",
+          text: "Find the cheapest place for a given product (barcode)."
+        },
+        {
+          _id: "Tpf2",
+          text: "Create a web application and RestFul API with Spring Boot."
+        },
+        {
+          _id: "Tpf3",
+          text: "Create the mobile app with Ionic & Cordova."
+        }
+      ]
+    },
+    {
+      _id: "P7",
+      isCurrent: false,
+      title: "Messaging Client Application",
+      client: "National School of Applied Sciences (ENSA)",
+      start: "2016-12-01T17:16:40.606+00:00",
+      end: "2017-02-28T17:16:40.606+00:00", 
+      technology: "Java",
+      tasks: [
+        {
+          _id: "Tpg1",
+          text: "Development of a messaging client application with the JavaMail API."
+        },
+        {
+          _id: "Tpg2",
+          text: "Application of the DAO design pattern."
+        },
+        {
+          _id: "Tpg3",
+          text: "Familiar with JavaMail API and protocols (POP, SMTP)."
+        }
+      ]
+    },
+    {
+      _id: "P8",
+      isCurrent: false,
+      title: "Checkers",
+      client: "National School of Applied Sciences (ENSA)",
+      start: "2016-04-01T17:16:40.606+00:00",
+      end: "2016-06-30T17:16:40.606+00:00",
+      technology: "C++ & Qt",
+      tasks: [
+        {
+          _id: "Tph1",
+          text: "Development of a checkers game in C ++ and Qt."
+        },
+        {
+          _id: "Tph2",
+          text: "Creation of specifications for the application."
+        },
+        {
+          _id: "Tph3",
+          text: "Work in group."
+        },
+        {
+          _id: "Tph4",
+          text: "Report writing."
+        }
+      ]
+    }
+  ],
+  skills: [
+    {
+      _id: "S1",
+      title: "Programming languages",
+      subSkills: [
+        {
+          _id: "Sa1",
+          title: "JavaScript"
+        },
+        {
+          _id: "Sa2",
+          title: "PHP"
+        },
+        {
+          _id: "Sa3",
+          title: "Java"
+        },
+        {
+          _id: "Sa4",
+          title: "C/C++"
+        },
+        {
+          _id: "Sa5",
+          title: "Python"
+        }
+      ]
+    },
+    {
+      _id: "S2",
+      title: "Frameworks",
+      subSkills: [
+        {
+          _id: "Sb1",
+          title: "React.js"
+        },
+        {
+          _id: "Sb2",
+          title: "Node.js"
+        },
+        {
+          _id: "Sb3",
+          title: "Angular"
+        },
+        {
+          _id: "Sb4",
+          title: "React Native"
+        },
+        {
+          _id: "Sb5",
+          title: "Ionic"
+        },
+        {
+          _id: "Sb6",
+          title: "Laravel"
+        },
+        {
+          _id: "Sb7",
+          title: "Symfony"
+        },
+        {
+          _id: "Sb8",
+          title: "JEE"
+        },
+        {
+          _id: "Sb9",
+          title: "Spring"
+        },
+        {
+          _id: "Sb10",
+          title: "Spring boot"
+        },
+        {
+          _id: "Sb11",
+          title: "Bootstrap"
+        }
+      ]
+    },
+    {
+      _id: "S3",
+      title: "WEB",
+      subSkills: [
+        {
+          _id: "Sc1",
+          title: "HTML5"
+        },
+        {
+          _id: "Sc2",
+          title: "CSS3"
+        },
+        {
+          _id: "Sc3",
+          title: "SQL"
+        },
+        {
+          _id: "Sc4",
+          title: "NoSQL"
+        }
+      ]
+    },
+    {
+      _id: "S4",
+      title: "Operating systems",
+      subSkills: [
+        {
+          _id: "Sd1",
+          title: "Mac OS"
+        },
+        {
+          _id: "Sd2",
+          title: "Windows"
+        },
+        {
+          _id: "Sd3",
+          title: "Unix / Linux"
+        }
+      ]
+    },
+    {
+      _id: "S5",
+      title: "Other skills",
+      subSkills: [
+        {
+          _id: "Se1",
+          title: "Agile / Scrum"
+        },
+        {
+          _id: "Se2",
+          title: "Algorithmic"
+        },
+        {
+          _id: "Se3",
+          title: "Design patterns"
+        },
+        {
+          _id: "Se4",
+          title: "Git"
+        },
+        {
+          _id: "Se5",
+          title: "Github / Gitlab"
+        },
+        {
+          _id: "Se6",
+          title: "Bush_unix"
+        },
+        {
+          _id: "Se7",
+          title: "SSH"
+        },
+        {
+          _id: "Se8",
+          title: "Distributed systems"
+        },
+        {
+          _id: "Se9",
+          title: "Cryptography"
+        },
+        {
+          _id: "Se10",
+          title: "Applied Math"
+        },
+        {
+          _id: "Se11",
+          title: "Linear programming"
+        }
+      ]
+    },
+  ],
+  trainings: [
+    {
+      _id: "T1",
+      isCurrent: true,
+      title: "Full Stack JavaScript WEB & Mobile Developement",
+      school: "Self-taught",
+      start: "2019-01-01T17:16:40.606+00:00",
+      location: "..."
+    },
+    {
+      _id: "T2",
+      isCurrent: false,
+      title: "State Engineer Cycle in Computer Science",
+      school: "National School of Applied Sciences (ENSA)",
+      start: "2015-09-01T17:16:40.606+00:00",
+      end: "2019-05-30T17:16:40.606+00:00",
+      location: "Marrakech - Morocco"
+    },
+    {
+      _id: "T3",
+      isCurrent: false,
+      title: "Preparatory cycle",
+      school: "National School of Applied Sciences (ENSA)",
+      start: "2012-09-01T17:16:40.606+00:00",
+      end: "2015-06-30T17:16:40.606+00:00",
+      location: "Marrakech - Morocco"
+    },
+    {
+      _id: "T4",
+      isCurrent: false,
+      title: "Baccalaureate in Mathematical Sciences",
+      school: "Jaber Ben Hayan",
+      start: "2012-06-30T17:16:40.606+00:00",
+      location: "Youssoufia - Morocco"
+    }
+  ]
+};

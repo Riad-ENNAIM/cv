@@ -3,10 +3,13 @@ import Review from './Review';
 import ReviewForm from './ReviewForm';
 import Loader from '../utils/Loader';
 
+import ProfileContext from '../../context/profile/profileContext';
 import ReviewContext from '../../context/review/reviewContext';
 
 const Reviews = () => {
+  const profileContext = useContext(ProfileContext);
   const reviewContext = useContext(ReviewContext);
+  const { language } = profileContext;
   const { reviews, showForm, getReviews, toggleForm, isLoading } = reviewContext;
 
   useEffect(() => {
@@ -30,7 +33,7 @@ const Reviews = () => {
         showForm ?
           <ReviewForm />
         :
-          <button className="btn btn-primary btn-center" onClick={() => toggleForm()}>Commenter</button>
+          <button className="btn btn-primary btn-center" onClick={() => toggleForm()}>{language === 'eng' ? 'Add Review' : 'Commenter'}</button>
       }
     </>
   );

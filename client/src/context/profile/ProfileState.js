@@ -1,14 +1,20 @@
 import React, { useReducer } from 'react';
 import ProfileContext from './profileContext';
 import profileReducer from './profileReducer';
-import { GET_PROFILE, TOGGLE_TIMELINE, SEARCH_IN_PROFILE } from '../types';
-import profile from '../../data/profile';
+import {
+  GET_PROFILE,
+  TOGGLE_TIMELINE,
+  SEARCH_IN_PROFILE,
+  TOGGLE_LANGUAGE
+} from '../types';
+import { frProfile, engProfile } from '../../data/profile';
 
 const ProfileState = props => {
   const initialState = {
     profile: null,
     serchResult: null,
     isTimeline: JSON.parse(localStorage.getItem('isTimeline')),
+    language: JSON.parse(localStorage.getItem('language')),
     isLoading: true
   };
 
@@ -16,14 +22,17 @@ const ProfileState = props => {
 
   // Get Profile
   const getProfile = async () => {
+    const profile = state.language === 'eng' ? engProfile : frProfile;
+
     dispatch({
       type: GET_PROFILE,
       payload: profile
     });
-  };
+  }
 
   // Search In Profile
   const searchInProfile = text => {
+    const profile = state.language === 'eng' ? engProfile : frProfile;
     const result = {};
 
     if(text) {
@@ -69,7 +78,20 @@ const ProfileState = props => {
 
   // Toggle Timeline
   const toggleTimeline = () => {
+    localStorage.setItem('isTimeline', JSON.stringify(!state.isTimeline));
+
     dispatch({ type: TOGGLE_TIMELINE });
+  }
+
+  // Toggle Language
+  const toggleLanguage = () => {
+    const lang = state.language === 'eng' ? 'fr' : 'eng';
+    localStorage.setItem('language', JSON.stringify(lang));
+
+    dispatch({ 
+      type: TOGGLE_LANGUAGE,
+      payload: lang
+    });
   }
   
   return (
@@ -78,9 +100,11 @@ const ProfileState = props => {
         profile: state.profile,
         serchResult: state.serchResult,
         isTimeline: state.isTimeline,
+        language: state.language,
         getProfile,
         searchInProfile,
-        toggleTimeline
+        toggleTimeline,
+        toggleLanguage
       }}
     >
       {props.children}

@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import useFormatDate from '../../hooks/useFormatDate';
 import Notes from './Notes';
 
+import ProfileContext from '../../context/profile/profileContext';
+
 const Card = ({ data }) => {
+  const profileContext = useContext(ProfileContext);
+  const { language } = profileContext;
+
   const start = useFormatDate(data.start);
   const end = useFormatDate(data.end);
 
@@ -23,8 +28,8 @@ const Card = ({ data }) => {
           {
             (start || end) &&
             <span className="card-date tag">
-              { start && !end ? `Depuis ${start}` : start && end ? start : '' } 
-              { end && start ? ` à ${end}` : end && !start ? end : '' }
+              { start && !end ? `${language === 'eng' ? 'Since' : 'Depuis'} ${start}` : start && end ? start : '' } 
+              { end && start ? ` ${language === 'eng' ? 'to' : 'à'} ${end}` : end && !start ? end : '' }
             </span>
           }
 
