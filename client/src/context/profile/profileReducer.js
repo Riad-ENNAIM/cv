@@ -29,7 +29,7 @@ export default (state, action) => {
     case TOGGLE_LANGUAGE:
       return {
         ...state,
-        language: action.payload,
+        language: action.payload
       };
   
     default:

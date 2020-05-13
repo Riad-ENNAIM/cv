@@ -4,17 +4,17 @@ import ProfileContext from '../../context/profile/profileContext';
 
 const SearchInput = () => {
   const profileContext = useContext(ProfileContext);
-  const { searchInProfile } = profileContext;
+  const { searchInProfile, language } = profileContext;
 
   useEffect(() => {
     return () => searchInProfile(null);
     // eslint-disable-next-line
-  }, [])
+  }, [language])
 
   return (
     <input 
       id="searchInput"
-      placeholder="Cherchez par technologie, école, entreprise, ..."
+      placeholder={language === 'eng' ? 'Search by technology, school, company, ...' : 'Cherchez par technologie, école, entreprise, ...'}
       onChange={e => searchInProfile(e.target.value)}
     />
   );
