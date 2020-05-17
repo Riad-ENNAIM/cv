@@ -13,6 +13,7 @@ const Header = () => {
 
   useEffect(() => {
     getProfile();
+    if(language) document.title = `Riad ENNAIM | ${language.toUpperCase()}`
     // eslint-disable-next-line
   }, [language]);
 

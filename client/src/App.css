@@ -301,13 +301,17 @@ cursor: wait;
   height: 100%;
   padding: 1px 5px;
   text-align: center;
+  cursor: pointer;
 }
 
 #main-header .main-rating .lang-switcher span.active,
 #main-header .main-rating .lang-switcher span:hover {
   background: #21618C;
   color: #fff;
-  cursor: pointer;
+}
+
+#main-header .main-rating .lang-switcher span.active {
+  cursor: default;
 }
 
 /* ---------- Navbar ---------- */
@@ -326,17 +330,6 @@ cursor: wait;
   width: 100%;
   display: flex;
   list-style: none;
-}
-
-#navbar ul li.timeline-switcher {
-  position: absolute;
-  top: calc(50% - 22px);
-  right: 20px;
-  padding: 10px;
-  background: #EBF5FB;
-  color: #333;
-  font-size: 0.9em;
-  border-radius: 40px;
 }
 
 #navbar ul li a {
@@ -384,7 +377,18 @@ cursor: wait;
 
 
 /* ---------- Switch ---------- */
-.switch {
+#navbar ul li.timeline-switcher {
+  position: absolute;
+  top: calc(50% - 22px);
+  right: 20px;
+  padding: 10px;
+  background: #EBF5FB;
+  color: #333;
+  font-size: 0.9em;
+  border-radius: 40px;
+}
+
+#navbar ul li.timeline-switcher .switch {
   position: relative;
   display: inline-block;
   width: 50px;
@@ -392,13 +396,13 @@ cursor: wait;
   margin-left: 10px;
 }
 
-.switch input {
+#navbar ul li.timeline-switcher .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-.slider {
+#navbar ul li.timeline-switcher .switch .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -410,7 +414,7 @@ cursor: wait;
   border-radius: 34px;
 }
 
-.slider:before {
+#navbar ul li.timeline-switcher .switch .slider:before {
   position: absolute;
   content: '';
   height: 16px;
@@ -422,15 +426,15 @@ cursor: wait;
   transition: .4s;
 }
 
-input:checked + .slider {
+#navbar ul li.timeline-switcher .switch input:checked + .slider {
   background-color: #21618C;
 }
 
-input:focus + .slider {
+#navbar ul li.timeline-switcher .switch input:focus + .slider {
   box-shadow: 0 0 1px #21618C;
 }
 
-input:checked + .slider:before {
+#navbar ul li.timeline-switcher .switch input:checked + .slider:before {
   transform: translateX(26px);
 }
 

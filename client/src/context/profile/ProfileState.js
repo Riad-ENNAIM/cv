@@ -14,7 +14,7 @@ const ProfileState = props => {
     profile: null,
     serchResult: null,
     isTimeline: JSON.parse(localStorage.getItem('isTimeline')),
-    language: JSON.parse(localStorage.getItem('language')),
+    language: JSON.parse(localStorage.getItem('language')) ?? 'fr',
     isLoading: true
   };
 

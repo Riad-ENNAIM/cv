@@ -35,7 +35,7 @@ const HeaderRating = () => {
   }
 
   const changeLang = lang => {
-    if(lang !== language) {
+    if(language && lang !== language) {
       toggleLanguage();
     }
   }
