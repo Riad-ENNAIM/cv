@@ -17,7 +17,8 @@ const Card = ({ data }) => {
       <div className="card-header">
         <h3 className="card-title">{data.title}</h3>
         {
-          data.isCurrent && <span className="tag-flash">En cours</span>
+          data.isCurrent &&
+          <span className="tag-flash">En cours</span>
         }
       </div>
 
@@ -33,7 +34,10 @@ const Card = ({ data }) => {
             </span>
           }
 
-          <span className="card-info tag">{data.info}</span>
+          {
+            data.info &&
+            <span className="card-info tag">{data.info}</span>
+          }
         </div>
 
         <div className="card-body-container">

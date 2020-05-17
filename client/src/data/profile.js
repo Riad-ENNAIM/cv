@@ -200,7 +200,7 @@ export const frProfile = {
       tasks: [
         {
           _id: "Td1",
-          text: "Conception et création d'une application web pour la gestion des rendez-vous médicale en ligne."
+          text: "Conception et création d'une application web pour la gestion des rendez-vous médicaux en ligne."
         },
         {
           _id: "Td2",
@@ -401,7 +401,24 @@ export const frProfile = {
       client: "Autoformation",
       start: "2019-01-20T17:16:40.606+00:00",
       technology: "React",
-      tasks: []
+      tasks: [
+        {
+          _id: "Tpd1",
+          text: "Obtenez des tâches à partir d'une API externe"
+        },
+        {
+          _id: "Tpd2",
+          text: "Compter, chercher et filtrer par état: tous, actifs, terminés"
+        },
+        {
+          _id: "Tpd3",
+          text: "Créer, mettre à jour et supprimer une tâche dans la liste"
+        },
+        {
+          _id: "Tpd4",
+          text: "Implémentation de Redux"
+        }
+      ]
     },
     {
       _id: "P5",
@@ -671,7 +688,7 @@ export const frProfile = {
       title: "Développement Full Stack JavaScript WEB & Mobile",
       school: "Autoformation",
       start: "2019-01-01T17:16:40.606+00:00",
-      location: "..."
+      // location: "..."
     },
     {
       _id: "T2",
@@ -909,11 +926,11 @@ export const engProfile = {
         },
         {
           _id: "Td2",
-          text: "Provide a management application (HR & Appointment) to registered firms."
+          text: "Provide a management application (HR & Appointment) to registered establishments."
         },
         {
           _id: "Td3",
-          text: "A page open to clients for searching firms, by address or specialty."
+          text: "A page open to clients for searching medical establishments, by address or specialty."
         },
         {
           _id: "Td4",
@@ -1106,7 +1123,24 @@ export const engProfile = {
       client: "Self-taught",
       start: "2019-01-20T17:16:40.606+00:00",
       technology: "React",
-      tasks: []
+      tasks: [
+        {
+          _id: "Tpd1",
+          text: "Get tasks from external API"
+        },
+        {
+          _id: "Tpd2",
+          text: "Count, Search and filter by state: all, active, done"
+        },
+        {
+          _id: "Tpd3",
+          text: "Create, update and delete a task in the list"
+        },
+        {
+          _id: "Tpd4",
+          text: "Implementation of Redux"
+        }
+      ]
     },
     {
       _id: "P5",
@@ -1376,7 +1410,7 @@ export const engProfile = {
       title: "Full Stack JavaScript WEB & Mobile Developement",
       school: "Self-taught",
       start: "2019-01-01T17:16:40.606+00:00",
-      location: "..."
+      // location: "..."
     },
     {
       _id: "T2",

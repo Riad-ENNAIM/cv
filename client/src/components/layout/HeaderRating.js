@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import Rating from '../utils/Rating';
 
 import ProfileContext from '../../context/profile/profileContext';
@@ -36,7 +37,7 @@ const HeaderRating = () => {
     <div className="main-rating">
       <h1>{globalRating.toFixed(1)}</h1>
       <Rating rating={globalRating}/>
-      <span>{language === 'eng' ? 'Evaluation' : 'Évaluation'}</span>
+      <Link exact to="/reviews">{language === 'eng' ? 'Evaluation' : 'Évaluation'}</Link>
     </div>
   );
 }

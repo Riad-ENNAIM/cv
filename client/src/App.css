@@ -281,6 +281,10 @@ cursor: wait;
   margin-bottom: 10px;
 }
 
+#main-header .main-rating a:hover {
+  color: #21618C;
+}
+
 /* ---------- Navbar ---------- */
 #navbar {
   display: flex;
@@ -525,6 +529,7 @@ ul.milestone li > div {
 
 ul.milestone li > div .title,
 ul.milestone li > div .type {
+  min-height: 20px;
   font-weight: 600;
   font-size: 12px;
 }
