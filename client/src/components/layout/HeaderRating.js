@@ -8,7 +8,7 @@ import ReviewContext from '../../context/review/reviewContext';
 const HeaderRating = () => {
   const profileContext = useContext(ProfileContext);
   const reviewContext = useContext(ReviewContext);
-  const { language } = profileContext;
+  const { language, toggleLanguage } = profileContext;
   const { reviews, getReviews } = reviewContext;
 
   useEffect(() => {
@@ -33,11 +33,33 @@ const HeaderRating = () => {
       setGlobalRating(note);
     }
   }
+
+  const changeLang = lang => {
+    if(lang !== language) {
+      toggleLanguage();
+    }
+  }
+
   return (
     <div className="main-rating">
       <h1>{globalRating.toFixed(1)}</h1>
       <Rating rating={globalRating}/>
-      <Link exact to="/reviews">{language === 'eng' ? 'Evaluation' : 'Évaluation'}</Link>
+      <Link exact="true" to="/reviews">{language === 'eng' ? 'Evaluation' : 'Évaluation'}</Link>
+
+      <div className="lang-switcher">
+        <span
+          className={language !== 'eng' ? 'active' : ''}
+          onClick={() => changeLang('fr')}
+        >
+          Fr
+        </span>
+        <span
+          className={language === 'eng' ? 'active' : ''}
+          onClick={() => changeLang('eng')}
+        >
+          Eng
+        </span>
+      </div>
     </div>
   );
 }

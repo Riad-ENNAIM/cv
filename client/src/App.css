@@ -264,6 +264,7 @@ cursor: wait;
 
 /* -- */
 #main-header .main-rating {
+  position: relative;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -285,6 +286,30 @@ cursor: wait;
   color: #21618C;
 }
 
+#main-header .main-rating .lang-switcher {
+  position: absolute;
+  bottom: 10px;
+  width: 60px;
+  background: #EBF5FB;
+  color: #333;
+  font-size: 0.8em;
+}
+
+#main-header .main-rating .lang-switcher span {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  padding: 1px 5px;
+  text-align: center;
+}
+
+#main-header .main-rating .lang-switcher span.active,
+#main-header .main-rating .lang-switcher span:hover {
+  background: #21618C;
+  color: #fff;
+  cursor: pointer;
+}
+
 /* ---------- Navbar ---------- */
 #navbar {
   display: flex;
@@ -301,12 +326,6 @@ cursor: wait;
   width: 100%;
   display: flex;
   list-style: none;
-}
-
-#navbar ul li.separator {
-  width: 1.5px;
-  height: 100%;
-  background: #bbb;
 }
 
 #navbar ul li.timeline-switcher {
