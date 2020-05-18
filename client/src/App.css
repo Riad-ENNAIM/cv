@@ -29,11 +29,8 @@ a {
 
 /* ---------- Utils ---------- */
 #page {
-  display: flex;
-  width: 100%;
   min-height: 60vh;
   padding: 20px 20%;
-  justify-content: center;
 }
 
 .container {
@@ -50,6 +47,7 @@ a {
 .wrapper {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .justify-content-center {
@@ -314,12 +312,12 @@ cursor: wait;
   cursor: default;
 }
 
+#main-header .main-rating  .show-more {
+  display: none;
+}
+
 /* ---------- Navbar ---------- */
 #navbar {
-  display: flex;
-  background: #fff;
-  color: #fff;
-  justify-content: space-between;
   border-bottom: #bbb solid 0.3px;
   border-top: #bbb solid 0.3px;
   padding: 20px;
@@ -331,6 +329,7 @@ cursor: wait;
   display: flex;
   list-style: none;
 }
+
 
 #navbar ul li a {
   position: relative;
@@ -373,8 +372,6 @@ cursor: wait;
 #navbar ul li a.search-link::before {
   content: none;
 }
-
-
 
 /* ---------- Switch ---------- */
 #navbar ul li.timeline-switcher {
@@ -484,15 +481,15 @@ cursor: wait;
   font-size: 1.1em;
 }
 
-.card .card-body .card-body-container {
-  padding-top: 10px;
-}
-
-.card .card-body .card-body-container .card-date,
-.card .card-body .card-body-container .card-info {
+.card .card-body .wrapper .card-date,
+.card .card-body .wrapper .card-info {
+  display: inline-flex;
+  height: 25px;
   font-size: 0.8em;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
-
 
 .card .card-body .notes {
   margin: 10px;
@@ -659,6 +656,10 @@ ul li.milestone-action span.number span {
 }
 
 /* ---------- Skills ---------- */
+.justify-skills {
+  justify-content: space-between;
+}
+
 .skill {
   position: relative;
   width: 400px;
@@ -844,6 +845,7 @@ ul li.milestone-action span.number span {
   display: flex;
   padding: 20px;
   justify-content: space-between;
+  align-items: center;
   font-weight: bold;
 }
 
@@ -866,6 +868,7 @@ ul li.milestone-action span.number span {
   width: 90px;
   padding: 5px;
   border-radius: 5px;
+  text-align: center;
 }
 
 #main-footer .footer-lang:hover {
@@ -873,85 +876,151 @@ ul li.milestone-action span.number span {
   cursor: pointer;
 }
 
-/* large */
-@media(min-width: 785px) {
-  #smallScreen {
-    display: none;
-  }
-}
-
-@media(min-width: 1060px) and (max-width: 1334px) {
-  .skill {
-    width: 300px;
-    padding: 10px;
-  }
-}
-
+/* -------------------------------------- */
 /* medium */
-@media(min-width: 785px) and (max-width: 1060px) {
+@media(max-width: 1060px) {
   #main-header .main-info,
-  #navbar ul li:first-child,
   #navbar ul li.timeline-switcher {
     display: none;
   }
 
-  #page {
-    padding: 20px 10px;
+  #main-header {
+    display: block;
+    height: 100vh;
   }
 
-  .skill {
-    width: 300px;
-    padding: 10px;
+  #main-header .main-title,
+  #main-header .main-rating {
+    height: 50%;
+  }
+
+  #main-header .main-title img {
+    width: auto;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  #main-header .main-rating .lang-switcher {
+    bottom: 30px;
+  }
+
+  #main-header .main-rating  .show-more {
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    color: #E74C3C;
+    font-size: 1.8em;
+    -webkit-animation: flachColor 1s infinite;
+    -moz-animation:    flachColor 1s infinite;
+    -o-animation:      flachColor 1s infinite;
+    animation:         flachColor 1s infinite;
+  }
+  
+  @-webkit-keyframes flachColor {
+    0%   { color: #f4c150; }
+    100% { color: #E74C3C; }
+  }
+  @-moz-keyframes flachColor {
+    0%   { color: #f4c150; }
+    100% { color: #E74C3C; }
+  }
+  @-o-keyframes flachColor {
+    0%   { color: #f4c150; }
+    100% { color: #E74C3C; }
+  }
+  @keyframes flachColor {
+    0%   { color: #f4c150; }
+    100% { color: #E74C3C; }
+  }
+
+  #page {
+    padding: 20px 30px;
   }
 }
 
 /* Small */
 @media(max-width: 785px) {
-  #main-header,
-  #navbar,
-  #page,
-  #main-footer,
-  #wisdom {
+  .tag-flash,
+  .review .review-content .tag-alert,
+  #main-footer .footer-copyright span {
     display: none;
   }
 
-  #smallScreen {
-    display: block;
-  }
-
-  #smallScreen .small-screen-header {
-    display: flex;
-    padding: 20px 0;
-    background: #f7fbfd;
+  /* ----- */
+  #navbar ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 10px;
+    column-gap: 5px;
   }
   
-  #smallScreen .small-screen-header .main-title {
-    flex: 2;
-    padding: 0 50px;
+  #navbar ul li a {
+    display: inline-block;
+    width: 100%;
+    color: #333;
+    padding: 5px;
+    margin: 0;
     text-align: center;
   }
   
-  #smallScreen .small-screen-header .main-title img {
-    width: 140px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 20px;
+  #navbar ul li a.active {
+    cursor: default;
   }
   
-  #smallScreen .small-screen-header .main-title .links a {
-    color: #21618C;
-    font-size: 1.2em;
-    margin: 0 10px;
-  }
-  
-  #smallScreen .small-screen-header .main-title .links a:hover {
-    transform: scale(1.2);
+  #navbar ul li a:hover,
+  #navbar ul li a.active,
+  #navbar ul li a.search-link:hover,
+  #navbar ul li a.search-link.active {
+    color: #fff;
+    background: #21618C;
+    margin: 0;
+    padding: 5px;
+    border: none;
+    border-radius: 0;
   }
 
-  #smallScreen .small-screen-body {
-    text-align: center;
-    padding: 50px;
-    color: #E74C3C;
+  #navbar ul li a::before,
+  #navbar ul li a:hover::before,
+  #navbar ul li a.active::before {
+    content: none;
+  }
+  /* ----- */
+  .justify-skills {
+    justify-content: center;
+  }
+  
+  .review .review-title span.review-avatar {
+    height: 40px;
+    width: 40px;
+    font-size: 0.7em;
+  }
+  
+  .review .review-title div {
+    padding-right: 3px;
+  }
+  
+  .review .review-title div .review-date {
+    font-size: 0.5em;
+  }
+  
+  .review .review-title div .review-username {
+    font-size: 0.7em;
+  }
+  
+  .review .review-content {
+    flex: 1;
+  }
+
+  #wisdom,
+  #main-footer {
+    font-size: 0.7em;
+    padding: 5px;
+  }
+
+  #main-footer .footer-logo {
+    width: 20px;
+    height: 20px;
   }
 }

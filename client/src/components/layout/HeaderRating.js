@@ -60,6 +60,10 @@ const HeaderRating = () => {
           Eng
         </span>
       </div>
+
+      <div className="show-more">
+        <i className="fas fa-chevron-down"></i>
+      </div>
     </div>
   );
 }

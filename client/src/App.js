@@ -9,7 +9,6 @@ import ProjectsPage from './components/pages/ProjectsPage';
 import TrainingPage from './components/pages/TrainingPage';
 import ReviewsPage from './components/pages/ReviewsPage';
 import Footer from './components/layout/Footer';
-import SmallScreen from './components/utils/SmallScreen';
 
 import ProfileState from './context/profile/ProfileState';
 import ReviewState from './context/review/ReviewState';
@@ -21,9 +20,8 @@ const App = () => {
     <ProfileState>
       <ReviewState>
         <Router>
-          <SmallScreen />
           <Header />
-          <div id="page">
+          <div id="page" className="container justify-content-center">
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/search" component={SearchPage} />

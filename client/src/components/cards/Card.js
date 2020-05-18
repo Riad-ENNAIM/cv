@@ -25,7 +25,7 @@ const Card = ({ data }) => {
       <div className="card-body">
         <span className="card-description">{data.description}</span>
 
-        <div className="card-body-container">
+        <div className="wrapper">
           {
             (start || end) &&
             <span className="card-date tag">
@@ -40,7 +40,7 @@ const Card = ({ data }) => {
           }
         </div>
 
-        <div className="card-body-container">
+        <div className="container wrapper">
           {
             data.supplements &&
             data.supplements.map(supplement => <span key={supplement._id} className="card-info tag">{supplement.text}</span>)

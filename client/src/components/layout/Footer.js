@@ -21,7 +21,11 @@ export const Footer = () => {
       <div id="main-footer">
         <img src={logo} className="footer-logo" onClick={() => history.push("/")} alt="Riad ENNAIM" />
 
-        <p className="footer-copyright">Copyright &copy; {new Date().getFullYear()}, <Link to="/" className="owner">Riad ENNAIM</Link>, All Rights Reserved</p>
+        <p className="footer-copyright">
+          Copyright &copy; {new Date().getFullYear()}, 
+          <Link to="/" className="owner">Riad ENNAIM</Link>
+          <span>, All Rights Reserved</span>
+        </p>
 
         {
           newLanguage ?
