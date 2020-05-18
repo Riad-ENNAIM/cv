@@ -43,10 +43,9 @@ const ProfileState = props => {
         return (
           tasks.length > 0 ||
           technologies.length > 0 ||
-          experience.title.toLowerCase().includes(text.toLowerCase()) ||
-          experience.company.toLowerCase().includes(text.toLowerCase()) ||
-          experience.location.toLowerCase().includes(text.toLowerCase()) ||
-          experience.location.toLowerCase().includes(text.toLowerCase())
+          (experience.title && experience.title.toLowerCase().includes(text.toLowerCase())) ||
+          (experience.company && experience.company.toLowerCase().includes(text.toLowerCase())) ||
+          (experience.location && experience.location.toLowerCase().includes(text.toLowerCase()))
         );
       });
 
@@ -55,17 +54,17 @@ const ProfileState = props => {
 
         return (
           tasks.length > 0 ||
-          project.title.toLowerCase().includes(text.toLowerCase()) ||
-          project.client.toLowerCase().includes(text.toLowerCase()) ||
-          project.technology.toLowerCase().includes(text.toLowerCase())
+          (project.title && project.title.toLowerCase().includes(text.toLowerCase())) ||
+          (project.client && project.client.toLowerCase().includes(text.toLowerCase())) ||
+          (project.technology && project.technology.toLowerCase().includes(text.toLowerCase()))
         );
       });
 
       result.trainings = profile.trainings.filter(training => {
         return (
-          training.title.toLowerCase().includes(text.toLowerCase()) ||
-          training.school.toLowerCase().includes(text.toLowerCase()) ||
-          training.location.toLowerCase().includes(text.toLowerCase())
+          (training.title && training.title.toLowerCase().includes(text.toLowerCase())) ||
+          (training.school && training.school.toLowerCase().includes(text.toLowerCase())) ||
+          (training.location && training.location.toLowerCase().includes(text.toLowerCase()))
         );
       });
     }

@@ -938,6 +938,10 @@ ul li.milestone-action span.number span {
   #page {
     padding: 20px 30px;
   }
+
+  ul.milestone li {
+    width: 70vw;
+  }
 }
 
 /* Small */
@@ -960,6 +964,7 @@ ul li.milestone-action span.number span {
     display: inline-block;
     width: 100%;
     color: #333;
+    background: #EBF5FB;
     padding: 5px;
     margin: 0;
     text-align: center;
