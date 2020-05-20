@@ -731,14 +731,15 @@ ul li.milestone-action span.number span {
 }
 
 .review .review-title span.review-avatar {
+  display: inline-block;
   height: 50px;
   width: 50px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
   border: #bbb solid 1px;
   border-radius: 50%;
   margin: 2px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .review .review-title div {
@@ -751,8 +752,8 @@ ul li.milestone-action span.number span {
   display: block;
 }
 
-.review .review-title div .review-username:hover {
-  color: #21618C;
+.review .review-title div .review-username {
+  font-weight: 900;
   cursor: pointer;
 }
 
@@ -772,7 +773,7 @@ ul li.milestone-action span.number span {
 }
 
 .review .review-content i.like,
-  .review .review-content i.dislike {
+.review .review-content i.dislike {
   color: #21618C;
 }
 
@@ -781,31 +782,75 @@ ul li.milestone-action span.number span {
 }
 
 /* ---------- Review Form ---------- */
-.review .review-title div input {
-  padding: 5px;
+.review-form {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: #bbb solid 1px;
+}
+
+.review-form .remove {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #F1948A;
+}
+
+.review-form .remove:hover {
+  cursor: pointer;
+  color: #E74C3C;
+  transform: scale(1.2);
+}
+
+.review-form .review-form-title {
+  flex: 1;
+}
+
+.review-form .review-form-title span.review-form-avatar {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  border: #bbb solid 1px;
+  border-radius: 50%;
+  margin: 2px;
+}
+
+.review-form .review-form-title input {
+  padding: 10px;
+  margin-left: 10px;
   border: none;
   border-bottom: #999 solid 1px;
 }
 
-.review .review-content .tag-alert {
+.review-form .review-form-content {
+  flex: 2;
+  text-align: justify;
+}
+
+.review-form .review-form-content .tag-alert {
   font-size: 0.7em;
 }
 
-.review .review-content .rating-alert {
+.review-form .review-form-content .rating-alert {
   padding: 5px;
   border: #E74C3C solid 2px;
   border-radius: 50%;
   margin-bottom: 5px;
 }
 
-.review .review-content textarea {
+.review-form .review-form-content textarea {
   width: 100%;
   font-size: 1em;
   padding: 10px;
   resize: vertical;
 }
 
-.review .review-content input {
+.review-form .review-form-content input {
   width: 100%;
   font-size: 1em;
   padding: 10px;
@@ -813,7 +858,7 @@ ul li.milestone-action span.number span {
   border-bottom: #999 solid 1px;
 }
 
-.review .review-content .review-error {
+.review-form .review-form-content .review-error {
   display: inline-block;
   width: 100%;
   padding: 5px 10px;
@@ -822,7 +867,7 @@ ul li.milestone-action span.number span {
   color: #fff;
 }
 
-.review .review-content .review-error:last-child {
+.review-form .review-form-content .review-error:last-child {
   margin-bottom: 20px;
 }
 
@@ -899,20 +944,14 @@ ul li.milestone-action span.number span {
     0%   { color: #f4c150; }
     100% { color: transparent; }
   }
-
-  #page {
-    padding: 20px 30px;
-  }
-
-  ul.milestone li {
-    width: 70vw;
-  }
 }
 
 /* Small */
-@media(max-width: 785px) {
+@media(max-width: 873px) {
   .tag-flash,
-  .review .review-content .tag-alert {
+  .review-form .review-form-content .tag-alert,
+  .review .review-title span.review-avatar,
+  .review-form .review-form-title span.review-form-avatar {
     display: none;
   }
 
@@ -955,30 +994,37 @@ ul li.milestone-action span.number span {
   #navbar ul li a.active::before {
     content: none;
   }
+
   /* ----- */
   .justify-skills {
     justify-content: center;
   }
-  
-  .review .review-title span.review-avatar {
-    height: 40px;
-    width: 40px;
-    font-size: 0.7em;
+
+  /* ----- */
+  ul.milestone li {
+    width: 40vw;
+  }
+
+  /* ----- */
+  .review,
+  .review-form {
+    display: block;
   }
   
   .review .review-title div {
-    padding-right: 3px;
+    padding: 0 3px;
   }
   
   .review .review-title div .review-date {
-    font-size: 0.5em;
+    order: 2;
   }
   
   .review .review-title div .review-username {
-    font-size: 0.7em;
+    order: 1;
   }
-  
-  .review .review-content {
-    flex: 1;
+
+  .review-form .review-form-title input {
+    margin-left: 0;
+    margin-bottom: 10px;
   }
 }

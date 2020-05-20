@@ -78,27 +78,28 @@ const ReviewForm = () => {
 
   return (
     <form onSubmit={onSubmit} ref={formRef}>
-      <div className="review">
-        <div className="review-title">
-          <span className="review-avatar" style={{background: avatar.background}}>{avatar.name}</span>
-          <div>
-            <span className="review-date">{language === 'eng' ? 'Now' : 'Maintenant'}</span>
-            <input
-              id="username"
-              type="text"
-              placeholder={language === 'eng' ? 'Enter your name' : 'Entrer votre nom'}
-              name="username"
-              value={review.username}
-              onChange={onChange}
-              onBlur={updateAvatar}
-              title={language === 'eng' ? 'Enter a valid name, just letters!' : 'Entrer un nom valide, juste des lettres !'}
-              autoFocus
-              required
-            />
-          </div>
+      <div className="review-form">
+        <div className="remove" onClick={closeForm}>
+          <i className="fas fa-times"></i>
         </div>
 
-        <div className="review-content">
+        <div className="review-form-title">
+          <span className="review-form-avatar" style={{background: avatar.background}}>{avatar.name}</span>
+          <input
+            id="username"
+            type="text"
+            placeholder={language === 'eng' ? 'Enter your name' : 'Entrer votre nom'}
+            name="username"
+            value={review.username}
+            onChange={onChange}
+            onBlur={updateAvatar}
+            title={language === 'eng' ? 'Enter a valid name, just letters!' : 'Entrer un nom valide, juste des lettres !'}
+            autoFocus
+            required
+          />
+        </div>
+
+        <div className="review-form-content">
           {
             errors && errors.map(error => <span key={error.param + error.value} className="review-error">{error.msg}</span>)
           }
@@ -110,16 +111,13 @@ const ReviewForm = () => {
                 onClickStar={value => setReview({ ...review, rating: value + 1 })} rating={review.rating}
               />
             </div>
+
             {
               showAlert && review.rating === 0 &&
               <span className="tag-alert">
                 {language === 'eng' ? 'You can add a note!' : 'Vous pouvez ajouter une note !'}
               </span>
             }
-
-            <div className="remove" onClick={closeForm}>
-              <i className="fas fa-times"></i>
-            </div>
           </div>
 
           <textarea
