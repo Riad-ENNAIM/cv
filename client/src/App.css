@@ -203,9 +203,39 @@ cursor: wait;
 
 /* ---------- Header ---------- */
 #main-header {
+  position: relative;
   display: flex;
   padding: 20px 0;
   background: #f7fbfd;
+}
+
+#main-header .lang-switcher {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  background: #EBF5FB;
+  color: #333;
+  font-size: 0.8em;
+}
+
+#main-header .lang-switcher div {
+  text-align: center;
+  cursor: pointer;
+}
+
+#main-header .lang-switcher div.active,
+#main-header .lang-switcher div:hover {
+  background: #21618C;
+  color: #fff;
+}
+
+#main-header .lang-switcher div.active {
+  cursor: default;
+}
+
+#main-header  .show-more {
+  display: none;
 }
 
 /* -- */
@@ -282,38 +312,6 @@ cursor: wait;
 
 #main-header .main-rating a:hover {
   color: #21618C;
-}
-
-#main-header .main-rating .lang-switcher {
-  position: absolute;
-  bottom: 10px;
-  width: 60px;
-  background: #EBF5FB;
-  color: #333;
-  font-size: 0.8em;
-}
-
-#main-header .main-rating .lang-switcher span {
-  display: inline-block;
-  width: 50%;
-  height: 100%;
-  padding: 1px 5px;
-  text-align: center;
-  cursor: pointer;
-}
-
-#main-header .main-rating .lang-switcher span.active,
-#main-header .main-rating .lang-switcher span:hover {
-  background: #21618C;
-  color: #fff;
-}
-
-#main-header .main-rating .lang-switcher span.active {
-  cursor: default;
-}
-
-#main-header .main-rating  .show-more {
-  display: none;
 }
 
 /* ---------- Navbar ---------- */
@@ -872,14 +870,11 @@ ul li.milestone-action span.number span {
     margin-bottom: 20px;
   }
 
-  #main-header .main-rating .lang-switcher {
-    bottom: 30px;
-  }
-
-  #main-header .main-rating  .show-more {
+  #main-header .show-more {
     display: block;
     position: absolute;
-    bottom: -10px;
+    bottom: 0;
+    left: calc(50% - 10px);
     color: #E74C3C;
     font-size: 1.8em;
     -webkit-animation: flachColor 1s infinite;
@@ -890,19 +885,19 @@ ul li.milestone-action span.number span {
   
   @-webkit-keyframes flachColor {
     0%   { color: #f4c150; }
-    100% { color: #E74C3C; }
+    100% { color: transparent; }
   }
   @-moz-keyframes flachColor {
     0%   { color: #f4c150; }
-    100% { color: #E74C3C; }
+    100% { color: transparent; }
   }
   @-o-keyframes flachColor {
     0%   { color: #f4c150; }
-    100% { color: #E74C3C; }
+    100% { color: transparent; }
   }
   @keyframes flachColor {
     0%   { color: #f4c150; }
-    100% { color: #E74C3C; }
+    100% { color: transparent; }
   }
 
   #page {
