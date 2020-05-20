@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import logo from '../../images/logo.png';
+import { Link } from 'react-router-dom';
 
 import ProfileContext from '../../context/profile/profileContext';
 
@@ -8,43 +7,43 @@ export const Footer = () => {
   const profileContext = useContext(ProfileContext);
   const { language, toggleLanguage } = profileContext;
 
-  const history = useHistory();
-
-  const [newLanguage, setNewLanguage] = useState(false)
+  const [newLanguage, setNewLanguage] = useState(false);
 
   return (
-    <>
-      <p id="wisdom">
-        Don't try to be PERFECT .. <span>Just do your BEST.</span>
+    <div id="main-footer">
+      <a href="mailto:riad.ennaim@gmail.com">
+        { language === 'eng' ? 'Send me a mail for a new collaboration !' : 'Envoyez-moi un mail pour une nouvelle collaboration !' }
+      </a>
+
+      <p>
+        { language === 'eng' ? 'Sourced on ' : 'Source sur ' }
+        <a href="https://github.com/Riad-ENNAIM/cv">GitHub</a>
       </p>
 
-      <div id="main-footer">
-        <img src={logo} className="footer-logo" onClick={() => history.push("/")} alt="Riad ENNAIM" />
+      <p className="footer-copyright">
+        &copy; 
+        <Link to="/"> Riad ENNAIM </Link> 
+        {new Date().getFullYear()}
+      </p>
 
-        <p className="footer-copyright">
-          Copyright &copy; {new Date().getFullYear()}, 
-          <Link to="/" className="owner">Riad ENNAIM</Link>
-          <span>, All Rights Reserved</span>
-        </p>
-
-        {
-          newLanguage ?
-            <div
-              className="footer-lang"
-              onClick={() => toggleLanguage()}
-              onMouseOut={() => setNewLanguage(!newLanguage)}
-            >
-              <i className="fas fa-globe-africa"></i>
-              { language === 'eng' ? ' Français' : ' English' }
-            </div>
-          :
-            <div className="footer-lang" onMouseOver={() => setNewLanguage(!newLanguage)}>
-              <i className="fas fa-globe-africa"></i>
-              { language === 'eng' ? ' English' : ' Français' }
-            </div>
-        }
-      </div>
-    </>
+      {
+        newLanguage ?
+          <span
+            className="footer-lang"
+            onClick={() => toggleLanguage()}
+            onMouseOut={() => setNewLanguage(!newLanguage)}
+            title={ language === 'eng' ? 'Passer au Français' : 'Switch to English' }
+          >
+            <i className="fas fa-globe-africa"></i>
+            { language === 'eng' ? ' Français' : ' English' }
+          </span>
+        :
+          <span className="footer-lang" onMouseOver={() => setNewLanguage(!newLanguage)}>
+            <i className="fas fa-globe-africa"></i>
+            { language === 'eng' ? ' English' : ' Français' }
+          </span>
+      }
+    </div>
   );
 }
 

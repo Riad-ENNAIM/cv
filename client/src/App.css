@@ -451,7 +451,7 @@ cursor: wait;
 }
 
 .card .card-header:hover {
-  background: #fcfcfc;
+  background: #FCFCFC;
 }
 
 .card .card-header .card-title {
@@ -551,11 +551,12 @@ ul.milestone li > div .title,
 ul.milestone li > div .type {
   min-height: 20px;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 0.8em;
 }
 
 ul.milestone li > div .info {
   font-weight: 300;
+  font-size: 1.3em;
 }
 
 ul.milestone li span.number {
@@ -828,53 +829,22 @@ ul li.milestone-action span.number span {
 }
 
 /* ---------- Footer ---------- */
-#wisdom {
-  background: #16A085;
-  color: #ABEBC6;
-  font-size: 30px;
+#main-footer {
   padding: 20px;
   text-align: center;
-}
-
-#wisdom span {
-  color: #fff;
-  font-weight: 900;
-}
-
-#main-footer {
-  display: flex;
-  padding: 20px;
-  justify-content: space-between;
-  align-items: center;
   font-weight: bold;
+  background: #f7fbfd;
+  color: #888;
 }
 
-#main-footer .footer-copyright {
-  color: #999
-}
-
-#main-footer .footer-copyright .owner {
+#main-footer a {
   color: #21618C
 }
 
-#main-footer .footer-logo {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-#main-footer .footer-lang {
-  width: 90px;
-  padding: 5px;
-  border-radius: 5px;
-  text-align: center;
-}
-
 #main-footer .footer-lang:hover {
-  background: #f4c150;
+  color: #21618C;
   cursor: pointer;
-}
+} 
 
 /* -------------------------------------- */
 /* medium */
@@ -947,8 +917,7 @@ ul li.milestone-action span.number span {
 /* Small */
 @media(max-width: 785px) {
   .tag-flash,
-  .review .review-content .tag-alert,
-  #main-footer .footer-copyright span {
+  .review .review-content .tag-alert {
     display: none;
   }
 
@@ -1016,16 +985,5 @@ ul li.milestone-action span.number span {
   
   .review .review-content {
     flex: 1;
-  }
-
-  #wisdom,
-  #main-footer {
-    font-size: 0.7em;
-    padding: 5px;
-  }
-
-  #main-footer .footer-logo {
-    width: 20px;
-    height: 20px;
   }
 }
