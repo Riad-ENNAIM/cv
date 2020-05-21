@@ -10,7 +10,7 @@ export const Skill = ({ skill }) => {
         <i className="fas fa-bars"></i>
       </div>
 
-      <div className="skill-content wrapper justify-content-space-between">
+      <div className="skill-content">
         {
           skill.subSkills.map(subSkill => (
             <div className="skill-item" key={subSkill._id}>

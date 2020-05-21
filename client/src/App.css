@@ -481,12 +481,9 @@ cursor: wait;
 
 .card .card-body .wrapper .card-date,
 .card .card-body .wrapper .card-info {
-  display: inline-flex;
-  height: 25px;
   font-size: 0.8em;
-  justify-content: center;
-  align-items: center;
   margin-top: 10px;
+  padding: 0 5px;
 }
 
 .card .card-body .notes {
@@ -697,12 +694,15 @@ ul li.milestone-action span.number span {
 }
 
 .skill .skill-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding-top: 20px;
 }
 
 .skill .skill-content .skill-item {
   display: flex;
-  width: 50%;
+  flex: 0 50%;
   align-items: baseline;
   font-size: 0.9em;
 }
@@ -710,10 +710,6 @@ ul li.milestone-action span.number span {
 .skill .skill-content .skill-item i {
   margin-right: 17px;
   color: #333;
-}
-
-.skill .skill-content .skill-item p {
-  text-align: justify;
 }
 
 /* ---------- Reviews ---------- */
@@ -829,7 +825,6 @@ ul li.milestone-action span.number span {
 
 .review-form .review-form-content {
   flex: 2;
-  text-align: justify;
 }
 
 .review-form .review-form-content .tag-alert {
@@ -905,6 +900,7 @@ ul li.milestone-action span.number span {
   #main-header .main-title,
   #main-header .main-rating {
     height: 50%;
+    margin: 0;
   }
 
   #main-header .main-title img {
@@ -918,7 +914,7 @@ ul li.milestone-action span.number span {
   #main-header .show-more {
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     left: calc(50% - 10px);
     color: #E74C3C;
     font-size: 1.8em;
@@ -944,11 +940,16 @@ ul li.milestone-action span.number span {
     0%   { color: #f4c150; }
     100% { color: transparent; }
   }
+
+  .skill {
+    width: 300px;
+  }
 }
 
 /* Small */
 @media(max-width: 873px) {
   .tag-flash,
+  .card .card-body::before,
   .review-form .review-form-content .tag-alert,
   .review .review-title span.review-avatar,
   .review-form .review-form-title span.review-form-avatar {
@@ -996,8 +997,21 @@ ul li.milestone-action span.number span {
   }
 
   /* ----- */
+  .card .card-body .notes .note p {
+    text-align: start;
+  }
+
+  /* ----- */
   .justify-skills {
     justify-content: center;
+  }
+
+  .skill .skill-header .skill-title {
+    font-size: 1.2em;
+  }
+
+  .skill .skill-content {
+    display: block;
   }
 
   /* ----- */
@@ -1021,6 +1035,10 @@ ul li.milestone-action span.number span {
   
   .review .review-title div .review-username {
     order: 1;
+  }
+
+  .review .review-content {
+    text-align: start;
   }
 
   .review-form .review-form-title input {
