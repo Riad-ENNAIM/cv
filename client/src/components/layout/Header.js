@@ -9,20 +9,13 @@ import ProfileContext from '../../context/profile/profileContext';
 
 const Header = () => {
   const profileContext = useContext(ProfileContext);
-  const { profile, isLoading, language, getProfile, toggleLanguage } = profileContext;
+  const { profile, isLoading, language, getProfile } = profileContext;
 
   useEffect(() => {
     getProfile();
     if(language) document.title = `Riad ENNAIM | ${language.toUpperCase()}`
     // eslint-disable-next-line
   }, [language]);
-
-
-  const changeLang = lang => {
-    if(language && lang !== language) {
-      toggleLanguage();
-    }
-  }
 
   if(profile === null || isLoading){
     return (
@@ -35,21 +28,6 @@ const Header = () => {
   return (
     <>
       <div id="main-header">
-        <div className="lang-switcher">
-          <div
-            className={language !== 'eng' ? 'active' : ''}
-            onClick={() => changeLang('fr')}
-          >
-            Fr
-          </div>
-          <div
-            className={language === 'eng' ? 'active' : ''}
-            onClick={() => changeLang('eng')}
-          >
-            Eng
-          </div>
-        </div>
-
         <HeaderTitle profile={profile} />
         <HeaderInfo profile={profile} />
         <HeaderRating />

@@ -1,17 +1,56 @@
 import React, { useContext } from 'react';
-import { useLocation } from "react-router";
 import { NavLink } from 'react-router-dom';
 
 import ProfileContext from '../../context/profile/profileContext';
 
 const Navbar = () => {
-  const location = useLocation();
   const profileContext = useContext(ProfileContext);
-  const { language, isTimeline, toggleTimeline } = profileContext;
+  const { language, isTimeline, toggleTimeline, toggleLanguage } = profileContext;
+
+  const changeLang = lang => {
+    if(language && lang !== language) {
+      toggleLanguage();
+    }
+  }
 
   return (
     <nav id="navbar">
       <ul>
+        <li className="dropdown">
+          <a className="dropbtn">
+            <i className="fas fa-cog"></i>
+          </a>
+
+          <div className="dropdown-content">
+            <div className="switcher">
+              <div className="switcher-title">{language === 'eng' ? 'Timeline' : 'Chronologie'}</div>
+              <div className="switcher-body">
+                <label className="switch">
+                  <input type="checkbox" checked={isTimeline} onChange={() => toggleTimeline()}/>
+                  <span className="slider"></span>
+                </label>
+              </div>
+            </div>
+
+            <div className="switcher">
+              <div className="switcher-title">{language === 'eng' ? 'Language' : 'Langue'}</div>
+              <div className="switcher-body">
+                <span
+                  className={`lang ${language !== 'eng' && 'active' }`}
+                  onClick={() => changeLang('fr')}
+                >
+                  Fr
+                </span>
+                <span
+                  className={`lang ${language === 'eng' && 'active' }`}
+                  onClick={() => changeLang('eng')}
+                >
+                  Eng
+                </span>
+              </div>
+            </div>
+          </div>
+        </li>
         <li>
           <NavLink exact to="/search" className="search-link" activeClassName="active">
             <i className="fas fa-search"></i>
@@ -42,17 +81,6 @@ const Navbar = () => {
             {language === 'eng' ? 'Reviews' : 'Commentaires'}
           </NavLink>
         </li>
-        
-        {
-          (location.pathname === '/' || location.pathname === '/projects' || location.pathname === '/training') &&
-          <li className="timeline-switcher">
-            {language === 'eng' ? 'Timeline' : 'Chronologie'}
-            <label className="switch">
-              <input type="checkbox" checked={isTimeline} onChange={() => toggleTimeline()}/>
-              <span className="slider"></span>
-            </label>
-          </li>
-        }
       </ul>
     </nav>
   );

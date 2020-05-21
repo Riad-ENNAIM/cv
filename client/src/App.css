@@ -209,31 +209,6 @@ cursor: wait;
   background: #f7fbfd;
 }
 
-#main-header .lang-switcher {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 30px;
-  background: #EBF5FB;
-  color: #333;
-  font-size: 0.8em;
-}
-
-#main-header .lang-switcher div {
-  text-align: center;
-  cursor: pointer;
-}
-
-#main-header .lang-switcher div.active,
-#main-header .lang-switcher div:hover {
-  background: #21618C;
-  color: #fff;
-}
-
-#main-header .lang-switcher div.active {
-  cursor: default;
-}
-
 #main-header  .show-more {
   display: none;
 }
@@ -356,6 +331,116 @@ cursor: wait;
   background: #21618C
 }
 
+/* ---------- Drop Down Menu ---------- */
+#navbar ul li a.dropbtn:hover {
+  border: #21618C solid 2px;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 0 23px;
+  color: #21618C;
+  background: #EBF5FB;
+}
+
+#navbar ul li a.dropbtn::before {
+  content: none;
+}
+
+#navbar ul li .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #EBF5FB;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+#navbar ul li:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#navbar ul li .dropdown-content .switcher {
+  display: flex;
+  width: 200px;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+#navbar ul li .dropdown-content .switcher .switcher-title,
+#navbar ul li .dropdown-content .switcher .switcher-body {
+  flex: 1;
+}
+
+/* ---------- Switch Timeline ---------- */
+
+#navbar ul li .dropdown-content .switcher .switcher-body .switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+#navbar ul li .dropdown-content .switcher .switcher-body .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#navbar ul li .dropdown-content .switcher .switcher-body .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+#navbar ul li .dropdown-content .switcher .switcher-body .switch .slider:before {
+  position: absolute;
+  content: '';
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+#navbar ul li .dropdown-content .switcher .switcher-body .switch input:checked + .slider {
+  background-color: #21618C;
+}
+
+#navbar ul li .dropdown-content .switcher .switcher-body .switch input:focus + .slider {
+  box-shadow: 0 0 1px #21618C;
+}
+
+#navbar ul li .dropdown-content .switcher .switcher-body .switch input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* ---------- Switch Language ---------- */
+#navbar ul li .dropdown-content .switcher .switcher-body span.lang {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#navbar ul li .dropdown-content .switcher .switcher-body span.active,
+#navbar ul li .dropdown-content .switcher .switcher-body span:hover {
+  background: #21618C;
+  color: #fff;
+}
+
+#navbar ul li .dropdown-content .switcher .switcher-body span.active {
+  cursor: default;
+}
+
 /* ---------- Search Link ---------- */
 #navbar ul li a.search-link:hover,
 #navbar ul li a.search-link.active {
@@ -369,68 +454,6 @@ cursor: wait;
 
 #navbar ul li a.search-link::before {
   content: none;
-}
-
-/* ---------- Switch ---------- */
-#navbar ul li.timeline-switcher {
-  position: absolute;
-  top: calc(50% - 22px);
-  right: 20px;
-  padding: 10px;
-  background: #EBF5FB;
-  color: #333;
-  font-size: 0.9em;
-  border-radius: 40px;
-}
-
-#navbar ul li.timeline-switcher .switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 24px;
-  margin-left: 10px;
-}
-
-#navbar ul li.timeline-switcher .switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-#navbar ul li.timeline-switcher .switch .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: .4s;
-  border-radius: 34px;
-}
-
-#navbar ul li.timeline-switcher .switch .slider:before {
-  position: absolute;
-  content: '';
-  height: 16px;
-  width: 16px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  border-radius: 50%;
-  transition: .4s;
-}
-
-#navbar ul li.timeline-switcher .switch input:checked + .slider {
-  background-color: #21618C;
-}
-
-#navbar ul li.timeline-switcher .switch input:focus + .slider {
-  box-shadow: 0 0 1px #21618C;
-}
-
-#navbar ul li.timeline-switcher .switch input:checked + .slider:before {
-  transform: translateX(26px);
 }
 
 /* ---------- Experience ---------- */
@@ -887,8 +910,7 @@ ul li.milestone-action span.number span {
 /* -------------------------------------- */
 /* medium */
 @media(max-width: 1060px) {
-  #main-header .main-info,
-  #navbar ul li.timeline-switcher {
+  #main-header .main-info {
     display: none;
   }
 
@@ -941,8 +963,8 @@ ul li.milestone-action span.number span {
     100% { color: transparent; }
   }
 
-  .skill {
-    width: 300px;
+  #page {
+    padding: 20px 10%;
   }
 }
 
@@ -967,19 +989,16 @@ ul li.milestone-action span.number span {
   #navbar ul li a {
     display: inline-block;
     width: 100%;
-    color: #333;
     background: #EBF5FB;
     padding: 5px;
     margin: 0;
     text-align: center;
   }
   
-  #navbar ul li a.active {
-    cursor: default;
-  }
-  
   #navbar ul li a:hover,
   #navbar ul li a.active,
+  #navbar ul li a.active,
+  #navbar ul li a.dropbtn:hover,
   #navbar ul li a.search-link:hover,
   #navbar ul li a.search-link.active {
     color: #fff;
@@ -1017,6 +1036,11 @@ ul li.milestone-action span.number span {
   /* ----- */
   ul.milestone li {
     width: 40vw;
+  }
+
+  #searchInput {
+    width: 100%;
+    font-size: 0.8em;
   }
 
   /* ----- */
