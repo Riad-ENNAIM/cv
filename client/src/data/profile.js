@@ -350,6 +350,10 @@ export const frProfile = {
         {
           _id: "Tpa2",
           text: "Implémentation des nouveautés du React 16.13"
+        },
+        {
+          _id: "Tpa3",
+          text: "MERN Stack: MongoDB, Express.js, React, Node.js"
         }
       ]
     },
@@ -1072,6 +1076,10 @@ export const engProfile = {
         {
           _id: "Tpa2",
           text: "Implementation of new React 16.13"
+        },
+        {
+          _id: "Tpa2",
+          text: "MERN Stack: MongoDB, Express.js, React, Node.js"
         }
       ]
     },

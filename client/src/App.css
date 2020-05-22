@@ -12,6 +12,7 @@ html,body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.7em;
   background: #fff;
+  color: #333;
 }
 
 h1 {
@@ -35,7 +36,6 @@ a {
 
 .container {
   display: flex;
-  width: 100%;
 }
 
 .container-column {
@@ -47,7 +47,6 @@ a {
 .wrapper {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
 }
 
 .justify-content-center {
@@ -258,6 +257,7 @@ cursor: wait;
 }
 
 #main-header .main-info .info-group i {
+  width: 20px;
   margin-right: 10px;
 }
 
@@ -293,22 +293,19 @@ cursor: wait;
 #navbar {
   border-bottom: #bbb solid 0.3px;
   border-top: #bbb solid 0.3px;
-  padding: 20px;
+  padding: 20px 15%;
 }
 
 #navbar ul {
   position: relative;
-  width: 100%;
   display: flex;
+  justify-content: space-between;
   list-style: none;
 }
 
-
 #navbar ul li a {
   position: relative;
-  color: #333;
   padding: 15px;
-  margin: 0 20px;
 }
 
 #navbar ul li a.active {
@@ -332,17 +329,18 @@ cursor: wait;
 }
 
 /* ---------- Drop Down Menu ---------- */
-#navbar ul li a.dropbtn:hover {
-  border: #21618C solid 2px;
-  border-radius: 50%;
-  padding: 10px;
-  margin: 0 23px;
-  color: #21618C;
-  background: #EBF5FB;
+#navbar ul li span.dropbtn {
+  position: relative;
+  padding: 15px;
+  cursor: pointer;
 }
 
-#navbar ul li a.dropbtn::before {
-  content: none;
+#navbar ul li span.dropbtn:hover {
+  color: #21618C;
+  background: #EBF5FB;
+  border: #21618C solid 2px;
+  border-radius: 50%;
+  margin: -2px;
 }
 
 #navbar ul li .dropdown-content {
@@ -366,19 +364,20 @@ cursor: wait;
   margin: 5px 0;
 }
 
-#navbar ul li .dropdown-content .switcher .switcher-title,
+#navbar ul li .dropdown-content .switcher .switcher-title {
+  flex: 2;
+}
+
 #navbar ul li .dropdown-content .switcher .switcher-body {
   flex: 1;
 }
 
 /* ---------- Switch Timeline ---------- */
-
 #navbar ul li .dropdown-content .switcher .switcher-body .switch {
   position: relative;
   display: inline-block;
   width: 50px;
   height: 24px;
-  margin-left: 10px;
 }
 
 #navbar ul li .dropdown-content .switcher .switcher-body .switch input {
@@ -427,6 +426,7 @@ cursor: wait;
 #navbar ul li .dropdown-content .switcher .switcher-body span.lang {
   display: inline-block;
   width: 30px;
+  font-size: 0.8em;
   text-align: center;
   cursor: pointer;
 }
@@ -444,12 +444,11 @@ cursor: wait;
 /* ---------- Search Link ---------- */
 #navbar ul li a.search-link:hover,
 #navbar ul li a.search-link.active {
-  border: #21618C solid 2px;
-  border-radius: 50%;
-  padding: 10px;
-  margin: 0 23px;
   color: #21618C;
   background: #EBF5FB;
+  border: #21618C solid 2px;
+  border-radius: 50%;
+  margin: -2px;
 }
 
 #navbar ul li a.search-link::before {
@@ -661,7 +660,7 @@ ul li.milestone-action span.number span {
   padding: 20px;
   border: #21618C solid 3px;
   border-radius: 5px;
-  margin: 10px;
+  /* margin: 10px; */
 }
 
 #search .search-title {
@@ -669,7 +668,6 @@ ul li.milestone-action span.number span {
   height: 60px;
   font-size: 1.5em;
   background: #EBF5FB;
-  color: #333;
   padding: 10px;
   margin: 20px 0;
 }
@@ -732,13 +730,11 @@ ul li.milestone-action span.number span {
 
 .skill .skill-content .skill-item i {
   margin-right: 17px;
-  color: #333;
 }
 
 /* ---------- Reviews ---------- */
 .review {
   display: flex;
-  width: 100%;
   padding-bottom: 10px;
   margin-bottom: 20px;
   border-bottom: #bbb solid 1px;
@@ -804,7 +800,6 @@ ul li.milestone-action span.number span {
 .review-form {
   position: relative;
   display: flex;
-  width: 100%;
   padding-bottom: 10px;
   margin-bottom: 20px;
   border-bottom: #bbb solid 1px;
@@ -969,7 +964,7 @@ ul li.milestone-action span.number span {
 }
 
 /* Small */
-@media(max-width: 873px) {
+@media(max-width: 911px) {
   .tag-flash,
   .card .card-body::before,
   .review-form .review-form-content .tag-alert,
@@ -986,7 +981,8 @@ ul li.milestone-action span.number span {
     column-gap: 5px;
   }
   
-  #navbar ul li a {
+  #navbar ul li a,
+  #navbar ul li span.dropbtn {
     display: inline-block;
     width: 100%;
     background: #EBF5FB;
@@ -998,7 +994,7 @@ ul li.milestone-action span.number span {
   #navbar ul li a:hover,
   #navbar ul li a.active,
   #navbar ul li a.active,
-  #navbar ul li a.dropbtn:hover,
+  #navbar ul li span.dropbtn:hover,
   #navbar ul li a.search-link:hover,
   #navbar ul li a.search-link.active {
     color: #fff;

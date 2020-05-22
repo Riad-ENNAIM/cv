@@ -16,10 +16,10 @@ const Navbar = () => {
   return (
     <nav id="navbar">
       <ul>
-        <li className="dropdown">
-          <a className="dropbtn">
+        <li>
+          <span className="dropbtn">
             <i className="fas fa-cog"></i>
-          </a>
+          </span>
 
           <div className="dropdown-content">
             <div className="switcher">
