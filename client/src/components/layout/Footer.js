@@ -12,11 +12,13 @@ export const Footer = () => {
   return (
     <div id="main-footer">
       <a href="mailto:riad.ennaim@gmail.com">
-        { language === 'eng' ? 'Send me a mail for a new collaboration !' : 'Envoyez-moi un mail pour une nouvelle collaboration !' }
+        { language === 'eng' ? 'Send me a mail for a new collaboration' : 'Envoyez-moi un mail pour une nouvelle collaboration' }
+        &nbsp;&#x1F60E;
       </a>
 
       <p>
-        { language === 'eng' ? 'Sourced on ' : 'Source sur ' }
+        { language === 'eng' ? 'Sourced on' : 'Source sur' }
+        &nbsp;
         <a href="https://github.com/Riad-ENNAIM/cv">GitHub</a>
       </p>
 

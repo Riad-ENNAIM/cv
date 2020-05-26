@@ -102,7 +102,7 @@ a {
 
 .tag-flash {
   color: #999;
-  border: #f4c150 solid 1px;
+  border: #F4C150 solid 1px;
   border-radius: 5px;
   padding: 0 5px;
   -webkit-background-clip: padding-box; /* for Safari */
@@ -114,19 +114,19 @@ a {
 }
 
 @-webkit-keyframes flachBorder {
-  0%   { border: #f4c150 solid 2px; }
+  0%   { border: #F4C150 solid 2px; }
   100% { border: #E74C3C solid 2px; }
 }
 @-moz-keyframes flachBorder {
-  0%   { border: #f4c150 solid 2px; }
+  0%   { border: #F4C150 solid 2px; }
   100% { border: #E74C3C solid 2px; }
 }
 @-o-keyframes flachBorder {
-  0%   { border: #f4c150 solid 2px; }
+  0%   { border: #F4C150 solid 2px; }
   100% { border: #E74C3C solid 2px; }
 }
 @keyframes flachBorder {
-  0%   { border: #f4c150 solid 2px; }
+  0%   { border: #F4C150 solid 2px; }
   100% { border: #E74C3C solid 2px; }
 }
 
@@ -193,10 +193,10 @@ cursor: wait;
 
 /* - Raiting - */
 .rating {
-  color: #f4c150;
+  color: #F4C150;
 }
 
-.rating.active i:hover {
+.rating.active i {
   cursor: pointer;
 }
 
@@ -205,7 +205,7 @@ cursor: wait;
   position: relative;
   display: flex;
   padding: 20px 0;
-  background: #f7fbfd;
+  background: #F7FBFD;
 }
 
 #main-header  .show-more {
@@ -225,6 +225,7 @@ cursor: wait;
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 20px;
+  box-shadow: 1px 2px 20px rgba(33, 97, 140, 0.7);
 }
 
 #main-header .main-title .links a {
@@ -551,7 +552,7 @@ ul.milestone li {
   border-radius: 6px;
   width: 500px;
   box-shadow: 0 0 4px rgba(0, 0, 0, .12), 0 2px 2px rgba(0, 0, 0, .08);
-  background: #f7fbfd;
+  background: #F7FBFD;
 }
 
 ul.milestone li.current-milestone > div.tag-flash {
@@ -708,9 +709,6 @@ ul li.milestone-action span.number span {
 .skill .skill-header i {
   color: #666;
   padding-top: 6px;
-}
-
-.skill .skill-header i:hover {
   cursor: pointer;
 }
 
@@ -889,7 +887,7 @@ ul li.milestone-action span.number span {
   padding: 20px;
   text-align: center;
   font-weight: bold;
-  background: #f7fbfd;
+  background: #F7FBFD;
   color: #888;
 }
 
@@ -942,19 +940,19 @@ ul li.milestone-action span.number span {
   }
   
   @-webkit-keyframes flachColor {
-    0%   { color: #f4c150; }
+    0%   { color: #F4C150; }
     100% { color: transparent; }
   }
   @-moz-keyframes flachColor {
-    0%   { color: #f4c150; }
+    0%   { color: #F4C150; }
     100% { color: transparent; }
   }
   @-o-keyframes flachColor {
-    0%   { color: #f4c150; }
+    0%   { color: #F4C150; }
     100% { color: transparent; }
   }
   @keyframes flachColor {
-    0%   { color: #f4c150; }
+    0%   { color: #F4C150; }
     100% { color: transparent; }
   }
 
