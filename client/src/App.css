@@ -11,6 +11,8 @@
   --btn-primary-color: #FFFFFF;
   --btn-disabled-background: #EBF5FB;
   --btn-disabled-color: #21618C;
+  --checked-color: #21618C;
+  --unchecked-color: #CCCCCC;
   --danger-color: #E74C3C;
   --gold-color: #F4C150;
 }
@@ -110,13 +112,13 @@ a {
 
 .tag-alert {
   background: var(--danger-color);
-  color: #fff;
+  color: #FFFFFF;
   padding: 0 5px;
   border-radius: 5px;
 }
 
 .tag-flash {
-  color: #999;
+  color: #999999;
   border: var(--gold-color) solid 1px;
   border-radius: 5px;
   padding: 0 5px;
@@ -160,14 +162,14 @@ a {
 }
 
 .btn-primary {
-  background: var(--btn-primary-background); /* primary-color */
-  color: var(--btn-primary-color); /* #fff */
+  background: var(--btn-primary-background);
+  color: var(--btn-primary-color);
 }
 
 .btn-disabled {
-background: var(--btn-disabled-background); /* --light-color-degree2 */
-color: var(--btn-disabled-color); /* primary-color */
-cursor: wait;
+  background: var(--btn-disabled-background);
+  color: var(--btn-disabled-color);
+  cursor: wait;
 }
 
 /* - Loader - */
@@ -222,7 +224,7 @@ cursor: wait;
   background: var(--light-color-degree1);
 }
 
-#main-header  .show-more {
+#main-header .show-more {
   display: none;
 }
 
@@ -306,8 +308,8 @@ cursor: wait;
 
 /* ---------- Navbar ---------- */
 #navbar {
-  border-bottom: #bbb solid 0.3px;
-  border-top: #bbb solid 0.3px;
+  border-bottom: #BBBBBB solid 0.3px;
+  border-top: #BBBBBB solid 0.3px;
   padding: 20px 15%;
 }
 
@@ -361,7 +363,7 @@ cursor: wait;
 #navbar ul li .dropdown-content {
   display: none;
   position: absolute;
-  background-color: var(--light-color-degree2);
+  background: var(--light-color-degree2);
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   border-radius: 5px;
   z-index: 1;
@@ -391,7 +393,7 @@ cursor: wait;
 #navbar ul li .dropdown-content .switcher .switcher-body .switch {
   position: relative;
   display: inline-block;
-  width: 50px;
+  width: 60px;
   height: 24px;
 }
 
@@ -408,7 +410,7 @@ cursor: wait;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background: var(--unchecked-color);
   transition: .4s;
   border-radius: 34px;
 }
@@ -420,21 +422,21 @@ cursor: wait;
   width: 16px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background: #FFFFFF;
   border-radius: 50%;
   transition: .4s;
 }
 
 #navbar ul li .dropdown-content .switcher .switcher-body .switch input:checked + .slider {
-  background-color: var(--primary-color);
+  background: var(--checked-color);
 }
 
 #navbar ul li .dropdown-content .switcher .switcher-body .switch input:focus + .slider {
-  box-shadow: 0 0 1px var(--primary-color);
+  box-shadow: 0 0 1px var(--checked-color);
 }
 
 #navbar ul li .dropdown-content .switcher .switcher-body .switch input:checked + .slider:before {
-  transform: translateX(26px);
+  transform: translateX(36px);
 }
 
 /* ---------- Switch Language ---------- */
@@ -443,13 +445,24 @@ cursor: wait;
   width: 30px;
   font-size: 0.8em;
   text-align: center;
+  background: var(--unchecked-color);
   cursor: pointer;
+}
+
+#navbar ul li .dropdown-content .switcher .switcher-body span.lang:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#navbar ul li .dropdown-content .switcher .switcher-body span.lang:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 #navbar ul li .dropdown-content .switcher .switcher-body span.active,
 #navbar ul li .dropdown-content .switcher .switcher-body span:hover {
-  background: var(--primary-color);
-  color: #fff;
+  background: var(--checked-color);
+  color: #FFFFFF;
 }
 
 #navbar ul li .dropdown-content .switcher .switcher-body span.active {
@@ -557,7 +570,6 @@ ul.milestone::before {
 ul.milestone li {
   margin: 20px 30px;
   position: relative;
-  background-color: rgba(255, 255, 255, 0.2);
   padding: 14px;
   border-radius: 6px;
   width: 500px;
@@ -606,8 +618,8 @@ ul li.milestone-period > span::after {
   content: '';
   width: 10px;
   height: 10px;
-  background-color: #fc9a80;
-  border: 1px solid #fff;
+  background: #FC9A80;
+  border: 1px solid #FFFFFF;
   border-radius: 50%;
   position: absolute;
   left: -6px;
@@ -643,8 +655,8 @@ ul li.milestone-action span.point::before {
   content: '';
   width: 10px;
   height: 10px;
-  background-color: #fc9a80;
-  border: 1px solid #fff;
+  background: #FC9A80;
+  border: 1px solid #FFFFFF;
   border-radius: 50%;
   position: absolute;
   top: 45%;
@@ -691,7 +703,7 @@ ul li.milestone-action span.number span {
   position: relative;
   width: 400px;
   padding: 20px;
-  border: #bbb solid 1px;
+  border: #BBBBBB solid 1px;
   margin-bottom: 20px;
   box-shadow: 0 0 4px rgba(0, 0, 0, .12), 0 2px 2px rgba(0, 0, 0, .08);
 }
@@ -707,7 +719,7 @@ ul li.milestone-action span.number span {
 }
 
 .skill .skill-header {
-  border-bottom: #bbb solid 1px;
+  border-bottom: #BBBBBB solid 1px;
 }
 
 .skill .skill-header .skill-title {
@@ -744,7 +756,7 @@ ul li.milestone-action span.number span {
   display: flex;
   padding-bottom: 10px;
   margin-bottom: 20px;
-  border-bottom: #bbb solid 1px;
+  border-bottom: #BBBBBB solid 1px;
 }
 
 .review .review-title {
@@ -759,7 +771,7 @@ ul li.milestone-action span.number span {
   text-align: center;
   vertical-align: middle;
   line-height: 50px;
-  border: #bbb solid 1px;
+  border: #BBBBBB solid 1px;
   border-radius: 50%;
   margin: 2px;
 }
@@ -769,7 +781,7 @@ ul li.milestone-action span.number span {
 }
 
 .review .review-title div .review-date {
-  color: #999;
+  color: #999999;
   font-size: 0.7em;
   display: block;
 }
@@ -809,7 +821,7 @@ ul li.milestone-action span.number span {
   display: flex;
   padding-bottom: 10px;
   margin-bottom: 20px;
-  border-bottom: #bbb solid 1px;
+  border-bottom: #BBBBBB solid 1px;
 }
 
 .review-form .remove {
@@ -836,7 +848,7 @@ ul li.milestone-action span.number span {
   text-align: center;
   vertical-align: middle;
   line-height: 50px;
-  border: #bbb solid 1px;
+  border: #BBBBBB solid 1px;
   border-radius: 50%;
   margin: 2px;
 }
@@ -845,7 +857,7 @@ ul li.milestone-action span.number span {
   padding: 10px;
   margin-left: 10px;
   border: none;
-  border-bottom: #999 solid 1px;
+  border-bottom: #999999 solid 1px;
 }
 
 .review-form .review-form-content {
@@ -854,6 +866,7 @@ ul li.milestone-action span.number span {
 
 .review-form .review-form-content .tag-alert {
   font-size: 0.7em;
+  margin-left: 20px;
 }
 
 .review-form .review-form-content .rating-alert {
@@ -875,7 +888,7 @@ ul li.milestone-action span.number span {
   font-size: 1em;
   padding: 10px;
   border: none;
-  border-bottom: #999 solid 1px;
+  border-bottom: #999999 solid 1px;
 }
 
 .review-form .review-form-content .review-error {
@@ -884,7 +897,7 @@ ul li.milestone-action span.number span {
   padding: 5px 10px;
   margin-bottom: 2px;
   background: var(--danger-color);
-  color: #fff;
+  color: #FFFFFF;
 }
 
 .review-form .review-form-content .review-error:last-child {
@@ -897,7 +910,7 @@ ul li.milestone-action span.number span {
   text-align: center;
   font-weight: bold;
   background: var(--light-color-degree1);
-  color: #888;
+  color: #888888;
 }
 
 #main-footer a {
@@ -1004,7 +1017,7 @@ ul li.milestone-action span.number span {
   #navbar ul li span.dropbtn:hover,
   #navbar ul li a.search-link:hover,
   #navbar ul li a.search-link.active {
-    color: #fff;
+    color: #FFFFFF;
     background: var(--primary-color);
     margin: 0;
     padding: 5px;

@@ -104,7 +104,7 @@ const ReviewForm = () => {
             errors && errors.map(error => <span key={error.param + error.value} className="review-error">{error.msg}</span>)
           }
 
-          <div className="container justify-content-space-between align-items-center">
+          <div className="container align-items-center">
             <div className={showAlert && review.rating === 0 ? 'rating-alert' : ''}>
               <Rating
                 isActive={true}

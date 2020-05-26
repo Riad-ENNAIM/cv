@@ -25,6 +25,8 @@ const Header = () => {
       document.documentElement.style.setProperty('--btn-primary-color', '#D6DBDF');
       document.documentElement.style.setProperty('--btn-disabled-background', '#D6DBDF');
       document.documentElement.style.setProperty('--btn-disabled-color', '#AEB6BF');
+      document.documentElement.style.setProperty('--checked-color', '#17202A');
+      document.documentElement.style.setProperty('--unchecked-color', '#AEB6BF');
     } else {
       document.documentElement.removeAttribute('style');
     }

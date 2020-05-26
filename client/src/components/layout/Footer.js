@@ -20,11 +20,12 @@ export const Footer = () => {
         { language === 'eng' ? 'Sourced on' : 'Source sur' }
         &nbsp;
         <a href="https://github.com/Riad-ENNAIM/cv">GitHub</a>
+        &nbsp;&#x1F389;&nbsp;
       </p>
 
       <p className="footer-copyright">
         &copy; 
-        <Link to="/"> Riad ENNAIM </Link> 
+        <Link to="/"> Riad ENNAIM </Link>
         {new Date().getFullYear()}
       </p>
 
