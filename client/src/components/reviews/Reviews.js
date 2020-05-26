@@ -17,12 +17,8 @@ const Reviews = () => {
     // eslint-disable-next-line
   }, []);
 
-  if(reviews === null || isLoading){
-    return (
-      <div style={{alignSelf: 'center'}}>
-        <Loader />
-      </div>
-    );
+  if(reviews === null || isLoading) {
+    return <Loader />;
   }
 
   return (

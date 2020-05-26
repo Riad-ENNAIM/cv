@@ -5,7 +5,7 @@ import ProfileContext from '../../context/profile/profileContext';
 
 const Navbar = () => {
   const profileContext = useContext(ProfileContext);
-  const { language, isTimeline, toggleTimeline, toggleLanguage } = profileContext;
+  const { isTimeline, isDarkMode, language, toggleTimeline, toggleDarkMode, toggleLanguage } = profileContext;
 
   const changeLang = lang => {
     if(language && lang !== language) {
@@ -27,6 +27,16 @@ const Navbar = () => {
               <div className="switcher-body">
                 <label className="switch">
                   <input type="checkbox" checked={isTimeline} onChange={() => toggleTimeline()}/>
+                  <span className="slider"></span>
+                </label>
+              </div>
+            </div>
+
+            <div className="switcher">
+              <div className="switcher-title">{language === 'eng' ? 'Dark mode' : 'Mode sombre'}</div>
+              <div className="switcher-body">
+                <label className="switch">
+                  <input type="checkbox" checked={isDarkMode} onChange={() => toggleDarkMode()}/>
                   <span className="slider"></span>
                 </label>
               </div>

@@ -14,12 +14,8 @@ const TrainingMilestones = () => {
     // eslint-disable-next-line
   }, [language]);
 
-  if(profile === null || profile.trainings === null || isLoading){
-    return (
-      <div style={{alignSelf: 'center'}}>
-        <Loader />
-      </div>
-    );
+  if(profile === null || profile.trainings === null || isLoading) {
+    return <Loader />;
   }
 
   return (

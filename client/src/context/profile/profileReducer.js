@@ -1,7 +1,8 @@
 import { 
   GET_PROFILE,
-  TOGGLE_TIMELINE,
   SEARCH_IN_PROFILE,
+  TOGGLE_TIMELINE,
+  TOGGLE_DARK_MODE,
   TOGGLE_LANGUAGE
 } from '../types';
 
@@ -26,6 +27,12 @@ export default (state, action) => {
         isTimeline: !state.isTimeline,
       };
 
+    case TOGGLE_DARK_MODE:
+      return {
+        ...state,
+        isDarkMode: !state.isDarkMode,
+      };
+  
     case TOGGLE_LANGUAGE:
       return {
         ...state,

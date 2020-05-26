@@ -3,8 +3,9 @@ import ProfileContext from './profileContext';
 import profileReducer from './profileReducer';
 import {
   GET_PROFILE,
-  TOGGLE_TIMELINE,
   SEARCH_IN_PROFILE,
+  TOGGLE_TIMELINE,
+  TOGGLE_DARK_MODE,
   TOGGLE_LANGUAGE
 } from '../types';
 import { frProfile, engProfile } from '../../data/profile';
@@ -14,6 +15,7 @@ const ProfileState = props => {
     profile: null,
     serchResult: null,
     isTimeline: JSON.parse(localStorage.getItem('isTimeline')),
+    isDarkMode: JSON.parse(localStorage.getItem('isDarkMode')),
     language: JSON.parse(localStorage.getItem('language')) ?? 'fr',
     isLoading: true
   };
@@ -82,6 +84,13 @@ const ProfileState = props => {
     dispatch({ type: TOGGLE_TIMELINE });
   }
 
+  // Toggle Dark Mode
+  const toggleDarkMode = () => {
+    localStorage.setItem('isDarkMode', JSON.stringify(!state.isDarkMode));
+
+    dispatch({ type: TOGGLE_DARK_MODE });
+  }
+
   // Toggle Language
   const toggleLanguage = () => {
     const lang = state.language === 'eng' ? 'fr' : 'eng';
@@ -99,10 +108,12 @@ const ProfileState = props => {
         profile: state.profile,
         serchResult: state.serchResult,
         isTimeline: state.isTimeline,
+        isDarkMode: state.isDarkMode,
         language: state.language,
         getProfile,
         searchInProfile,
         toggleTimeline,
+        toggleDarkMode,
         toggleLanguage
       }}
     >

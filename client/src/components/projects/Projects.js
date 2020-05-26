@@ -13,12 +13,8 @@ const Projects = () => {
     // eslint-disable-next-line
   }, [language]);
 
-  if(profile === null || profile.projects === null || isLoading){
-    return (
-      <div style={{alignSelf: 'center'}}>
-        <Loader />
-      </div>
-    );
+  if(profile === null || profile.projects === null || isLoading) {
+    return <Loader />;
   }
 
   return profile.projects.map(project => {

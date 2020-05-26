@@ -13,12 +13,8 @@ const Skills = () => {
     // eslint-disable-next-line
   }, [language]);
 
-  if(profile === null || profile.skills === null || isLoading){
-    return (
-      <div style={{alignSelf: 'center'}}>
-        <Loader />
-      </div>
-    );
+  if(profile === null || profile.skills === null || isLoading) {
+    return <Loader />;
   }
 
   return profile.skills.map(skill => <Skill key={skill._id} skill={skill} />);

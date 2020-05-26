@@ -14,12 +14,8 @@ const ExperienceMilestones = () => {
     // eslint-disable-next-line
   }, [language]);
 
-  if(profile === null || profile.experiences === null || isLoading){
-    return (
-      <div style={{alignSelf: 'center'}}>
-        <Loader />
-      </div>
-    );
+  if(profile === null || profile.experiences === null || isLoading) {
+    return <Loader />;
   }
 
   return (
