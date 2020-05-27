@@ -308,9 +308,28 @@ a {
 
 /* ---------- Navbar ---------- */
 #navbar {
+  background: var(--background-color);
   border-bottom: #BBBBBB solid 0.3px;
   border-top: #BBBBBB solid 0.3px;
   padding: 20px 15%;
+}
+
+#navbar.navbar-sticky {
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  animation: moveDown 0.5s ease-in-out;
+  z-index: 1;
+}
+
+@keyframes moveDown {
+  from {
+    transform: translateY(-5rem);
+  }
+  to {
+    transform: translateY(0rem);
+  }
 }
 
 #navbar ul {
@@ -985,6 +1004,9 @@ ul li.milestone-action span.number span {
 
 /* Small */
 @media(max-width: 911px) {
+  #navbar.navbar-sticky ul li:first-child,
+  #navbar.navbar-sticky ul li:nth-child(2),
+  #navbar.navbar-sticky ul li:last-child,
   .tag-flash,
   .card .card-body::before,
   .review-form .review-form-content .tag-alert,

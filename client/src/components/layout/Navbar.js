@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useEffect, useState, useContext, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import ProfileContext from '../../context/profile/profileContext';
@@ -7,6 +7,24 @@ const Navbar = () => {
   const profileContext = useContext(ProfileContext);
   const { isTimeline, isDarkMode, language, toggleTimeline, toggleDarkMode, toggleLanguage } = profileContext;
 
+  const [sticky, setSticky] = useState(false);
+
+  const ref = useRef(null);
+
+  const handleScroll = () => {
+    if (ref.current) {
+      setSticky(ref.current.getBoundingClientRect().top <= 0);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', () => handleScroll);
+    };
+  }, []);
+
   const changeLang = lang => {
     if(language && lang !== language) {
       toggleLanguage();
@@ -14,7 +32,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav id="navbar">
+    <nav id="navbar" className={sticky ? 'navbar-sticky' : ''} ref={ref}>
       <ul>
         <li>
           <span className="dropbtn">
