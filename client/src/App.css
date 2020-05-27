@@ -1016,6 +1016,10 @@ ul li.milestone-action span.number span {
   }
 
   /* ----- */
+  #navbar.navbar-sticky  {
+    padding: 5px 10%;
+  }
+
   #navbar ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1061,6 +1065,10 @@ ul li.milestone-action span.number span {
   /* ----- */
   .justify-skills {
     justify-content: center;
+  }
+
+  .skill {
+    width: 80%;
   }
 
   .skill .skill-header .skill-title {
