@@ -936,6 +936,14 @@ ul li.milestone-action span.number span {
   color: var(--primary-color)
 }
 
+#main-footer .footer-links a {
+  margin-right: 10px;
+}
+
+#main-footer .footer-links a:last-child {
+  margin-right: 0;
+}
+
 #main-footer .footer-lang:hover {
   color: var(--primary-color);
   cursor: pointer;
@@ -970,7 +978,7 @@ ul li.milestone-action span.number span {
   #main-header .show-more {
     display: block;
     position: absolute;
-    bottom: 20px;
+    bottom: 50px;
     left: calc(50% - 10px);
     color: var(--danger-color);
     font-size: 1.8em;

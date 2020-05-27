@@ -2,7 +2,7 @@ export const frProfile = {
   name: "Riad ENNAIM",
   title: "Développeur Full Stack JavaScript",
   description: `Développeur full stack, passionné par la programmation des applications et le développement web, spécialisé principalement dans JavaScript: 
-  React.js & Node.js. Je suis également imprégné d'un fort désir d'apprendre et d'évoluer dans ma vie quotidienne.`,
+  React & Node.js. Je suis également imprégné d'un fort désir d'apprendre et d'évoluer dans ma vie quotidienne.`,
   location: "Marrakech, Maroc",
   email: "riad.ennaim@gmail.com",
   phone: "+212694590864",
@@ -550,7 +550,7 @@ export const frProfile = {
       subSkills: [
         {
           _id: "Sb1",
-          title: "React.js"
+          title: "React"
         },
         {
           _id: "Sb2",
@@ -727,7 +727,7 @@ export const frProfile = {
 export const engProfile = {
   name: "Riad ENNAIM",
   title: "Full Stack JavaScript Developer",
-  description: `I am a full stack developer specializing mostly in JavaScript (React.js & Node.js). I am also imbued with a strong desire to learn and 
+  description: `I am a full stack developer specializing mostly in JavaScript (React & Node.js). I am also imbued with a strong desire to learn and 
   evolve in my daily life.`,
   location: "Marrakech, Morocco",
   email: "riad.ennaim@gmail.com",
@@ -1276,7 +1276,7 @@ export const engProfile = {
       subSkills: [
         {
           _id: "Sb1",
-          title: "React.js"
+          title: "React"
         },
         {
           _id: "Sb2",

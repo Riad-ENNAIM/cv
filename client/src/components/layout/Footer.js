@@ -20,7 +20,18 @@ export const Footer = () => {
         { language === 'eng' ? 'Sourced on' : 'Source sur' }
         &nbsp;
         <a href="https://github.com/Riad-ENNAIM/cv">GitHub</a>
-        &nbsp;&#x1F389;&nbsp;
+      </p>
+
+      <p className="footer-links">
+        <a href="https://github.com/Riad-ENNAIM/" target="_blank" rel="noopener noreferrer" title="GitHub">
+          <i className="fab fa-github-square"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/riad-ennaim/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+          <i className="fab fa-linkedin"></i>
+        </a>
+        <a href="https://riad-ennaim.github.io/bio/" target="_blank" rel="noopener noreferrer" title="Bio">
+          <i className="fas fa-address-card"></i>
+        </a>
       </p>
 
       <p className="footer-copyright">
