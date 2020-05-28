@@ -1,20 +1,21 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Reviews from '../reviews/Reviews';
 
-const Home = () => {
+const ReviewsPage = () => {
+  const pageRef = useRef(null)
+
   useEffect(() => {
-    const pageElement = document.getElementById('page');
-    if(pageElement.getBoundingClientRect().top <= 0) {
-      pageElement.scrollIntoView({ behavior: "smooth" });
+    if(pageRef.current.getBoundingClientRect().top <= 0) {
+      pageRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, []);
 
   return (
-    <div className="container-column">
+    <div className="page container-column" ref={pageRef}>
       <Reviews />
     </div>
   );
 }
 
-export default Home;
+export default ReviewsPage;
 

@@ -46,7 +46,7 @@ a {
 }
 
 /* ---------- Utils ---------- */
-#page {
+.page {
   min-height: 60vh;
   padding: 20px 20%;
 }
@@ -718,6 +718,15 @@ ul li.milestone-action span.number span {
   justify-content: space-between;
 }
 
+.skill-level {
+  width: 100%;
+  height: 60px;
+  font-size: 1.5em;
+  background: var(--light-color-degree2);
+  padding: 10px;
+  margin: 20px 0;
+}
+
 .skill {
   position: relative;
   width: 400px;
@@ -1005,7 +1014,7 @@ ul li.milestone-action span.number span {
     100% { color: transparent; }
   }
 
-  #page {
+  .page {
     padding: 20px 10%;
   }
 }

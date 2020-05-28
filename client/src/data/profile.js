@@ -520,166 +520,168 @@ export const frProfile = {
   skills: [
     {
       _id: "S1",
-      title: "Langages de programmation",
+      title: "JavaScript",
+      level: 1,
       subSkills: [
         {
           _id: "Sa1",
-          title: "JavaScript"
+          title: "React"
         },
         {
           _id: "Sa2",
-          title: "PHP"
+          title: "Node.js"
         },
         {
           _id: "Sa3",
-          title: "Java"
+          title: "React Native"
         },
-        {
-          _id: "Sa4",
-          title: "C/C++"
-        },
-        {
-          _id: "Sa5",
-          title: "Python"
-        }
       ]
     },
     {
       _id: "S2",
-      title: "Frameworks",
+      title: "JavaScript",
+      level: 2,
       subSkills: [
         {
           _id: "Sb1",
-          title: "React"
-        },
-        {
-          _id: "Sb2",
-          title: "Node.js"
-        },
-        {
-          _id: "Sb3",
           title: "Angular"
         },
         {
-          _id: "Sb4",
-          title: "React Native"
-        },
-        {
-          _id: "Sb5",
+          _id: "Sb2",
           title: "Ionic"
-        },
-        {
-          _id: "Sb6",
-          title: "Laravel"
-        },
-        {
-          _id: "Sb7",
-          title: "Symfony"
-        },
-        {
-          _id: "Sb8",
-          title: "JEE"
-        },
-        {
-          _id: "Sb9",
-          title: "Spring"
-        },
-        {
-          _id: "Sb10",
-          title: "Spring boot"
-        },
-        {
-          _id: "Sb11",
-          title: "Bootstrap"
         }
       ]
     },
     {
       _id: "S3",
-      title: "WEB",
+      title: "PHP",
+      level: 2,
       subSkills: [
         {
           _id: "Sc1",
-          title: "HTML5"
+          title: "Laravel"
         },
         {
           _id: "Sc2",
-          title: "CSS3"
-        },
-        {
-          _id: "Sc3",
-          title: "SQL"
-        },
-        {
-          _id: "Sc4",
-          title: "NoSQL"
+          title: "Symfony"
         }
       ]
     },
     {
       _id: "S4",
-      title: "Systèmes d’exploitation",
+      title: "Java",
+      level: 2,
       subSkills: [
         {
           _id: "Sd1",
-          title: "Mac OS"
+          title: "JEE"
         },
         {
           _id: "Sd2",
-          title: "Windows"
+          title: "Spring"
         },
         {
           _id: "Sd3",
-          title: "Unix / Linux"
+          title: "Spring boot"
         }
       ]
     },
     {
       _id: "S5",
-      title: "Autres compétences",
+      title: "WEB",
+      level: 1,
       subSkills: [
         {
           _id: "Se1",
-          title: "Agile / Scrum"
+          title: "HTML5"
         },
         {
           _id: "Se2",
-          title: "Algorithmique avancée"
+          title: "CSS3"
         },
         {
           _id: "Se3",
-          title: "Design patterns"
+          title: "SQL"
         },
         {
           _id: "Se4",
+          title: "NoSQL"
+        }
+      ]
+    },
+    {
+      _id: "S6",
+      title: "Systèmes d’exploitation",
+      level: 2,
+      subSkills: [
+        {
+          _id: "Sf1",
+          title: "Mac OS"
+        },
+        {
+          _id: "Sf2",
+          title: "Windows"
+        },
+        {
+          _id: "Sf3",
+          title: "Unix / Linux"
+        }
+      ]
+    },
+    {
+      _id: "S7",
+      title: "Autres compétences",
+      level: 2,
+      subSkills: [
+        {
+          _id: "Sg1",
+          title: "Agile / Scrum"
+        },
+        {
+          _id: "Sg2",
+          title: "Algorithmique avancée"
+        },
+        {
+          _id: "Sg3",
+          title: "Design patterns"
+        },
+        {
+          _id: "Sg4",
           title: "Git"
         },
         {
-          _id: "Se5",
+          _id: "Sg5",
           title: "Github / Gitlab"
-        },
+        }
+      ]
+    },
+    {
+      _id: "S8",
+      title: "Autres compétences",
+      level: 3,
+      subSkills: [
         {
-          _id: "Se6",
+          _id: "Sh1",
           title: "Bush_unix"
         },
         {
-          _id: "Se7",
+          _id: "Sh2",
           title: "SSH"
         },
         {
-          _id: "Se8",
+          _id: "Sh3",
           title: "Systèmes distribués"
         },
         {
-          _id: "Se9",
+          _id: "Sh4",
           title: "Cryptographie"
         },
         {
-          _id: "Se10",
+          _id: "Sh5",
           title: "Math appliquée"
         },
         {
-          _id: "Se11",
+          _id: "Sh6",
           title: "Programmation linéaire"
         }
       ]
@@ -1246,170 +1248,172 @@ export const engProfile = {
   skills: [
     {
       _id: "S1",
-      title: "Programming languages",
+      title: "JavaScript",
+      level: 1,
       subSkills: [
         {
           _id: "Sa1",
-          title: "JavaScript"
+          title: "React"
         },
         {
           _id: "Sa2",
-          title: "PHP"
+          title: "Node.js"
         },
         {
           _id: "Sa3",
-          title: "Java"
+          title: "React Native"
         },
-        {
-          _id: "Sa4",
-          title: "C/C++"
-        },
-        {
-          _id: "Sa5",
-          title: "Python"
-        }
       ]
     },
     {
       _id: "S2",
-      title: "Frameworks",
+      title: "JavaScript",
+      level: 2,
       subSkills: [
         {
           _id: "Sb1",
-          title: "React"
-        },
-        {
-          _id: "Sb2",
-          title: "Node.js"
-        },
-        {
-          _id: "Sb3",
           title: "Angular"
         },
         {
-          _id: "Sb4",
-          title: "React Native"
-        },
-        {
-          _id: "Sb5",
+          _id: "Sb2",
           title: "Ionic"
-        },
-        {
-          _id: "Sb6",
-          title: "Laravel"
-        },
-        {
-          _id: "Sb7",
-          title: "Symfony"
-        },
-        {
-          _id: "Sb8",
-          title: "JEE"
-        },
-        {
-          _id: "Sb9",
-          title: "Spring"
-        },
-        {
-          _id: "Sb10",
-          title: "Spring boot"
-        },
-        {
-          _id: "Sb11",
-          title: "Bootstrap"
         }
       ]
     },
     {
       _id: "S3",
-      title: "WEB",
+      title: "PHP",
+      level: 2,
       subSkills: [
         {
           _id: "Sc1",
-          title: "HTML5"
+          title: "Laravel"
         },
         {
           _id: "Sc2",
-          title: "CSS3"
-        },
-        {
-          _id: "Sc3",
-          title: "SQL"
-        },
-        {
-          _id: "Sc4",
-          title: "NoSQL"
+          title: "Symfony"
         }
       ]
     },
     {
       _id: "S4",
-      title: "Operating systems",
+      title: "Java",
+      level: 2,
       subSkills: [
         {
           _id: "Sd1",
-          title: "Mac OS"
+          title: "JEE"
         },
         {
           _id: "Sd2",
-          title: "Windows"
+          title: "Spring"
         },
         {
           _id: "Sd3",
-          title: "Unix / Linux"
+          title: "Spring boot"
         }
       ]
     },
     {
       _id: "S5",
-      title: "Other skills",
+      title: "WEB",
+      level: 1,
       subSkills: [
         {
           _id: "Se1",
-          title: "Agile / Scrum"
+          title: "HTML5"
         },
         {
           _id: "Se2",
-          title: "Algorithmic"
+          title: "CSS3"
         },
         {
           _id: "Se3",
-          title: "Design patterns"
+          title: "SQL"
         },
         {
           _id: "Se4",
-          title: "Git"
-        },
-        {
-          _id: "Se5",
-          title: "Github / Gitlab"
-        },
-        {
-          _id: "Se6",
-          title: "Bush_unix"
-        },
-        {
-          _id: "Se7",
-          title: "SSH"
-        },
-        {
-          _id: "Se8",
-          title: "Distributed systems"
-        },
-        {
-          _id: "Se9",
-          title: "Cryptography"
-        },
-        {
-          _id: "Se10",
-          title: "Applied Math"
-        },
-        {
-          _id: "Se11",
-          title: "Linear programming"
+          title: "NoSQL"
         }
       ]
     },
+    {
+      _id: "S6",
+      title: "Operating systems",
+      level: 2,
+      subSkills: [
+        {
+          _id: "Sf1",
+          title: "Mac OS"
+        },
+        {
+          _id: "Sf2",
+          title: "Windows"
+        },
+        {
+          _id: "Sf3",
+          title: "Unix / Linux"
+        }
+      ]
+    },
+    {
+      _id: "S7",
+      title: "Other skills",
+      level: 2,
+      subSkills: [
+        {
+          _id: "Sg1",
+          title: "Agile / Scrum"
+        },
+        {
+          _id: "Sg2",
+          title: "Algorithmic"
+        },
+        {
+          _id: "Sg3",
+          title: "Design patterns"
+        },
+        {
+          _id: "Sg4",
+          title: "Git"
+        },
+        {
+          _id: "Sg5",
+          title: "Github / Gitlab"
+        }
+      ]
+    },
+    {
+      _id: "S8",
+      title: "Other skills",
+      level: 3,
+      subSkills: [
+        {
+          _id: "Sh1",
+          title: "Bush_unix"
+        },
+        {
+          _id: "Sh2",
+          title: "SSH"
+        },
+        {
+          _id: "Sh3",
+          title: "Distributed systems"
+        },
+        {
+          _id: "Sh4",
+          title: "Cryptography"
+        },
+        {
+          _id: "Sh5",
+          title: "Applied Math"
+        },
+        {
+          _id: "Sh6",
+          title: "Linear programming"
+        }
+      ]
+    }
   ],
   trainings: [
     {

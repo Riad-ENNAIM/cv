@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import Experiences from '../experiences/Experiences';
 import ExperienceMilestones from '../experiences/ExperienceMilestones';
 
@@ -7,19 +7,24 @@ import ProfileContext from '../../context/profile/profileContext';
 const Home = () => {
   const profileContext = useContext(ProfileContext);
 
+  const pageRef = useRef(null)
+
   useEffect(() => {
-    const pageElement = document.getElementById('page');
-    if(pageElement.getBoundingClientRect().top <= 0) {
-      pageElement.scrollIntoView({ behavior: "smooth" });
+    if(pageRef.current.getBoundingClientRect().top <= 0) {
+      pageRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, []);
 
   if(profileContext.isTimeline) {
-    return <ExperienceMilestones />;
+    return (
+      <div className="page container justify-content-center" ref={pageRef}>
+        <ExperienceMilestones />
+      </div>
+    );
   }
 
   return (
-    <div className="container-column">
+    <div className="page container-column" ref={pageRef}>
       <Experiences />
     </div>
   );

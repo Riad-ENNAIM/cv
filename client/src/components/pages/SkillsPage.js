@@ -1,16 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Skills from '../skills/Skills';
 
 const SkillsPage = () => {
+  const pageRef = useRef(null)
+
   useEffect(() => {
-    const pageElement = document.getElementById('page');
-    if(pageElement.getBoundingClientRect().top <= 0) {
-      pageElement.scrollIntoView({ behavior: "smooth" });
+    if(pageRef.current.getBoundingClientRect().top <= 0) {
+      pageRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, []);
 
   return (
-    <div className="wrapper justify-skills">
+    <div className="page container-column" ref={pageRef}>
       <Skills />
     </div>
   );
