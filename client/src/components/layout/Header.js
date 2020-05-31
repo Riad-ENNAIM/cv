@@ -13,7 +13,8 @@ const Header = () => {
 
   useEffect(() => {
     getProfile();
-    if(language) document.title = `Riad ENNAIM | ${language.toUpperCase()}`;
+    if(language) document.title = `Riad ENNAIM | ${language === 'eng' ? 'Full Stack JavaScript Developer' : 'Développeur Full Stack JavaScript'}`;
+
     if(isDarkMode) {
       document.documentElement.style.setProperty('--background-color', '#1B2631');
       document.documentElement.style.setProperty('--primary-color', '#D6DBDF');
