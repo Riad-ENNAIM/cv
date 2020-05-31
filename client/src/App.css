@@ -45,8 +45,17 @@ a {
   text-decoration: none;
 }
 
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+audio:focus {
+  outline: none;
+}
+
 /* ---------- Utils ---------- */
 .page {
+  position: relative;
   min-height: 60vh;
   padding: 20px 20%;
 }
@@ -203,7 +212,7 @@ a {
 }
 
 .bg-typing-spinner {
-  background: url('./images/typing.gif') no-repeat;
+  background: url('./assets/images/typing.gif') no-repeat;
   background-size: 50px;
 }
 
@@ -213,6 +222,46 @@ a {
 }
 
 .rating.active i {
+  cursor: pointer;
+}
+
+/* - Audio Player - */
+.audio-container {
+  display: flex;
+  position: relative;
+  height: 60px;
+}
+
+.audio-container audio {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+}
+
+.audio-container .audio-command {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  border-radius: 50px;
+  margin-left: -80px;
+  margin-bottom: 10px;
+  background: #D6DBDF;
+  color: #21618C;
+  transition: 0.4s;
+}
+
+.audio-container .audio-command:hover {
+  margin-left: -40px;
+  transition: 0.4s;
+}
+
+.audio-container .audio-command i {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  bottom: 10px;
+  font-size: 30px;
   cursor: pointer;
 }
 
@@ -430,7 +479,7 @@ a {
   right: 0;
   bottom: 0;
   background: var(--unchecked-color);
-  transition: .4s;
+  transition: 0.4s;
   border-radius: 34px;
 }
 
@@ -443,7 +492,7 @@ a {
   bottom: 4px;
   background: #FFFFFF;
   border-radius: 50%;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 #navbar ul li .dropdown-content .switcher .switcher-body .switch input:checked + .slider {
@@ -1028,7 +1077,8 @@ ul li.milestone-action span.number span {
   .card .card-body::before,
   .review-form .review-form-content .tag-alert,
   .review .review-title span.review-avatar,
-  .review-form .review-form-title span.review-form-avatar {
+  .review-form .review-form-title span.review-form-avatar,
+  .audio-container .audio-command {
     display: none;
   }
 

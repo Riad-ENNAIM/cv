@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import riad from '../../images/riad.jpg';
+import riad from '../../assets/images/riad.jpg';
 
 import ProfileContext from '../../context/profile/profileContext';
 

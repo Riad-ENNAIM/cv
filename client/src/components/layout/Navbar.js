@@ -5,7 +5,7 @@ import ProfileContext from '../../context/profile/profileContext';
 
 const Navbar = () => {
   const profileContext = useContext(ProfileContext);
-  const { isTimeline, isDarkMode, language, toggleTimeline, toggleDarkMode, toggleLanguage } = profileContext;
+  const { isTimeline, isDarkMode, isMusic, language, toggleTimeline, toggleDarkMode, toggleMusic, toggleLanguage } = profileContext;
 
   const [sticky, setSticky] = useState(false);
 
@@ -41,6 +41,24 @@ const Navbar = () => {
 
           <div className="dropdown-content">
             <div className="switcher">
+              <div className="switcher-title">{language === 'eng' ? 'Language' : 'Langue'}</div>
+                <div className="switcher-body">
+                  <span
+                    className={`lang ${language !== 'eng' && 'active' }`}
+                    onClick={() => changeLang('fr')}
+                  >
+                    Fr
+                  </span>
+                  <span
+                    className={`lang ${language === 'eng' && 'active' }`}
+                    onClick={() => changeLang('eng')}
+                  >
+                    Eng
+                  </span>
+                </div>
+            </div>
+
+            <div className="switcher">
               <div className="switcher-title">{language === 'eng' ? 'Timeline' : 'Chronologie'}</div>
               <div className="switcher-body">
                 <label className="switch">
@@ -61,20 +79,12 @@ const Navbar = () => {
             </div>
 
             <div className="switcher">
-              <div className="switcher-title">{language === 'eng' ? 'Language' : 'Langue'}</div>
+              <div className="switcher-title">{language === 'eng' ? 'Music' : 'Musique'}</div>
               <div className="switcher-body">
-                <span
-                  className={`lang ${language !== 'eng' && 'active' }`}
-                  onClick={() => changeLang('fr')}
-                >
-                  Fr
-                </span>
-                <span
-                  className={`lang ${language === 'eng' && 'active' }`}
-                  onClick={() => changeLang('eng')}
-                >
-                  Eng
-                </span>
+                <label className="switch">
+                  <input type="checkbox" checked={isMusic} onChange={() => toggleMusic()}/>
+                  <span className="slider"></span>
+                </label>
               </div>
             </div>
           </div>

@@ -6,6 +6,8 @@ import {
   SEARCH_IN_PROFILE,
   TOGGLE_TIMELINE,
   TOGGLE_DARK_MODE,
+  TOGGLE_MUSIC,
+  UPDATE_AUDIO_SETTINGS,
   TOGGLE_LANGUAGE
 } from '../types';
 import { frProfile, engProfile } from '../../data/profile';
@@ -16,6 +18,8 @@ const ProfileState = props => {
     serchResult: null,
     isTimeline: JSON.parse(localStorage.getItem('isTimeline')),
     isDarkMode: JSON.parse(localStorage.getItem('isDarkMode')),
+    isMusic: false,
+    audioSettings: null,
     language: JSON.parse(localStorage.getItem('language')) ?? 'fr',
     isLoading: true
   };
@@ -91,6 +95,17 @@ const ProfileState = props => {
     dispatch({ type: TOGGLE_DARK_MODE });
   }
 
+  // Toggle Music
+  const toggleMusic = () => dispatch({ type: TOGGLE_MUSIC })
+
+  // Update Audio Settings
+  const updateAudioSettings = settings => {
+    dispatch({
+      type: UPDATE_AUDIO_SETTINGS,
+      payload: settings
+    });
+  }
+
   // Toggle Language
   const toggleLanguage = () => {
     const lang = state.language === 'eng' ? 'fr' : 'eng';
@@ -109,11 +124,15 @@ const ProfileState = props => {
         serchResult: state.serchResult,
         isTimeline: state.isTimeline,
         isDarkMode: state.isDarkMode,
+        isMusic: state.isMusic,
+        audioSettings: state.audioSettings,
         language: state.language,
         getProfile,
         searchInProfile,
         toggleTimeline,
         toggleDarkMode,
+        toggleMusic,
+        updateAudioSettings,
         toggleLanguage
       }}
     >

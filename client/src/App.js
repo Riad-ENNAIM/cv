@@ -9,6 +9,7 @@ import ProjectsPage from './components/pages/ProjectsPage';
 import TrainingPage from './components/pages/TrainingPage';
 import ReviewsPage from './components/pages/ReviewsPage';
 import Footer from './components/layout/Footer';
+import AudioContainer from './components/Audio/AudioContainer';
 
 import ProfileState from './context/profile/ProfileState';
 import ReviewState from './context/review/ReviewState';
@@ -29,6 +30,7 @@ const App = () => {
             <Route exact path="/training" component={TrainingPage} />
             <Route exact path="/reviews" component={ReviewsPage} />
           </Switch>
+          <AudioContainer />
           <Footer />
         </Router>
       </ReviewState>
