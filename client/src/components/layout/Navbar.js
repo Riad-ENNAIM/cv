@@ -1,11 +1,12 @@
 import React, { useEffect, useState, useContext, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
+import DropDownList from './DropDownList';
 
 import ProfileContext from '../../context/profile/profileContext';
 
 const Navbar = () => {
   const profileContext = useContext(ProfileContext);
-  const { isTimeline, isDarkMode, isMusic, language, toggleTimeline, toggleDarkMode, toggleMusic, toggleLanguage } = profileContext;
+  const { language } = profileContext;
 
   const [sticky, setSticky] = useState(false);
 
@@ -25,69 +26,11 @@ const Navbar = () => {
     };
   }, []);
 
-  const changeLang = lang => {
-    if(language && lang !== language) {
-      toggleLanguage();
-    }
-  }
-
   return (
     <nav id="navbar" className={sticky ? 'navbar-sticky' : ''} ref={ref}>
       <ul>
         <li>
-          <span className="dropbtn">
-            <i className="fas fa-cog"></i>
-          </span>
-
-          <div className="dropdown-content">
-            <div className="switcher">
-              <div className="switcher-title">{language === 'eng' ? 'Language' : 'Langue'}</div>
-                <div className="switcher-body">
-                  <span
-                    className={`lang ${language !== 'eng' && 'active' }`}
-                    onClick={() => changeLang('fr')}
-                  >
-                    Fr
-                  </span>
-                  <span
-                    className={`lang ${language === 'eng' && 'active' }`}
-                    onClick={() => changeLang('eng')}
-                  >
-                    Eng
-                  </span>
-                </div>
-            </div>
-
-            <div className="switcher">
-              <div className="switcher-title">{language === 'eng' ? 'Timeline' : 'Chronologie'}</div>
-              <div className="switcher-body">
-                <label className="switch">
-                  <input type="checkbox" checked={isTimeline} onChange={() => toggleTimeline()}/>
-                  <span className="slider"></span>
-                </label>
-              </div>
-            </div>
-
-            <div className="switcher">
-              <div className="switcher-title">{language === 'eng' ? 'Dark mode' : 'Mode sombre'}</div>
-              <div className="switcher-body">
-                <label className="switch">
-                  <input type="checkbox" checked={isDarkMode} onChange={() => toggleDarkMode()}/>
-                  <span className="slider"></span>
-                </label>
-              </div>
-            </div>
-
-            <div className="switcher">
-              <div className="switcher-title">{language === 'eng' ? 'Music' : 'Musique'}</div>
-              <div className="switcher-body">
-                <label className="switch">
-                  <input type="checkbox" checked={isMusic} onChange={() => toggleMusic()}/>
-                  <span className="slider"></span>
-                </label>
-              </div>
-            </div>
-          </div>
+          <DropDownList />
         </li>
         <li>
           <NavLink exact to="/search" className="search-link" activeClassName="active">

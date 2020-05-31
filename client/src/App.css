@@ -414,13 +414,13 @@ audio:focus {
 }
 
 /* ---------- Drop Down Menu ---------- */
-#navbar ul li span.dropbtn {
+#navbar ul li span.drop-btn {
   position: relative;
   padding: 15px;
   cursor: pointer;
 }
 
-#navbar ul li span.dropbtn:hover {
+#navbar ul li span.drop-btn:hover {
   color: var(--primary-color);
   background: var(--light-color-degree2);
   border: var(--primary-color) solid 2px;
@@ -1095,7 +1095,7 @@ ul li.milestone-action span.number span {
   }
   
   #navbar ul li a,
-  #navbar ul li span.dropbtn {
+  #navbar ul li span.drop-btn {
     display: inline-block;
     width: 100%;
     background: var(--light-color-degree2);
@@ -1107,7 +1107,7 @@ ul li.milestone-action span.number span {
   #navbar ul li a:hover,
   #navbar ul li a.active,
   #navbar ul li a.active,
-  #navbar ul li span.dropbtn:hover,
+  #navbar ul li span.drop-btn:hover,
   #navbar ul li a.search-link:hover,
   #navbar ul li a.search-link.active {
     color: #FFFFFF;
