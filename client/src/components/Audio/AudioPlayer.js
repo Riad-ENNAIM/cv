@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useRef } from 'react';
 import jazzMp3 from '../../assets/audios/jazzMp3.mp3';
+import jazzOgg from '../../assets/audios/jazzOgg.ogg';
 
 import ProfileContext from '../../context/profile/profileContext';
 
@@ -10,12 +11,11 @@ const AudioPlayer = () => {
   const audioRef = useRef(null);
 
   useEffect(() => {
-    audioRef.current.play();
-    let audioRefTemp = audioRef.current;
+    const audioRefTemp = audioRef.current;
 
-    if(audioRef && audioRef.current && audioSettings) {
-      audioRef.current.currentTime = audioSettings.currentTime ?? 0;
-      audioRef.current.volume = audioSettings.volume ?? 1;
+    if(audioRefTemp && audioSettings) {
+      audioRefTemp.currentTime = audioSettings.currentTime ?? 0;
+      audioRefTemp.volume = audioSettings.volume ?? 1;
     }
 
     return () => {
@@ -30,6 +30,7 @@ const AudioPlayer = () => {
 
   return (
     <audio controls loop autoPlay ref={audioRef}>
+      <source src={jazzOgg} type="audio/ogg" />
       <source src={jazzMp3} type="audio/mpeg" />
         Your browser dose not support the audio element
     </audio>
