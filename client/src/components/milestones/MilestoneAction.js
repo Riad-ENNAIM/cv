@@ -6,8 +6,8 @@ const MilestoneAction = ({ milestone }) => {
   const start = useFormatDate(milestone.start);
 
   return (
-    <li className={`milestone-action ${milestone.isCurrent ? 'current-milestone' : ''}`}>
-      <span className="point"></span>
+    <li className={`milestone-action ${milestone.isCurrent && 'current-milestone'}`}>
+      <span className="point" />
       <div>
         <div className="title">{milestone.title}</div>
         <div className="info">{milestone.info}</div>

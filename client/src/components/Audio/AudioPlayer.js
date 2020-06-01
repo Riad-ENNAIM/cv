@@ -13,7 +13,7 @@ const AudioPlayer = () => {
   useEffect(() => {
     const audioRefTemp = audioRef.current;
 
-    if(audioRefTemp && audioSettings) {
+    if(audioSettings) {
       audioRefTemp.currentTime = audioSettings.currentTime ?? 0;
       audioRefTemp.volume = audioSettings.volume ?? 1;
     }

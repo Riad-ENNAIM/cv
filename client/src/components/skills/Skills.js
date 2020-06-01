@@ -21,7 +21,7 @@ const Skills = () => {
   const [skillLevels, setSkillLevels] = useState([]);
 
   const initializeSkills = () => {
-    if(profile && profile.skills && profile.skills.length > 0) {
+    if(profile?.skills?.length > 0) {
       const maxLevel = profile.skills.reduce((acc, skill) => {
         return skill.level > acc ? skill.level : acc;
       }, 0);

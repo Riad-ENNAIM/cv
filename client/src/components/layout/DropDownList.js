@@ -41,8 +41,8 @@ const DropDownList = () => {
           <div className="switcher-title">{language === 'eng' ? 'Timeline' : 'Chronologie'}</div>
           <div className="switcher-body">
             <label className="switch">
-              <input type="checkbox" checked={isTimeline} onChange={() => toggleTimeline()}/>
-              <span className="slider"></span>
+              <input type="checkbox" checked={isTimeline} onChange={toggleTimeline}/>
+              <span className="slider" />
             </label>
           </div>
         </div>
@@ -51,8 +51,8 @@ const DropDownList = () => {
           <div className="switcher-title">{language === 'eng' ? 'Dark mode' : 'Mode sombre'}</div>
           <div className="switcher-body">
             <label className="switch">
-              <input type="checkbox" checked={isDarkMode} onChange={() => toggleDarkMode()}/>
-              <span className="slider"></span>
+              <input type="checkbox" checked={isDarkMode} onChange={toggleDarkMode}/>
+              <span className="slider" />
             </label>
           </div>
         </div>
@@ -61,8 +61,8 @@ const DropDownList = () => {
           <div className="switcher-title">{language === 'eng' ? 'Music' : 'Musique'}</div>
           <div className="switcher-body">
             <label className="switch">
-              <input type="checkbox" checked={isMusic} onChange={() => toggleMusic()}/>
-              <span className="slider"></span>
+              <input type="checkbox" checked={isMusic} onChange={toggleMusic}/>
+              <span className="slider" />
             </label>
           </div>
         </div>

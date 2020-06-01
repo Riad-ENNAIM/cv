@@ -88,7 +88,7 @@ const Rating = ({ rating, isActive, onClickStar }) => {
   const onClick = index => onClickStar(index);
 
   return (
-    <div className={`rating ${isActive ? 'active' : ''}`} onMouseOut={onMouseOut}>
+    <div className={`rating ${isActive && 'active'}`} onMouseOut={onMouseOut}>
       {
         stars
       }

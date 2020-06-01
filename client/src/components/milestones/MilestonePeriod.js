@@ -12,8 +12,8 @@ const MilestonePeriod = ({ milestone }) => {
   }
 
   return (
-    <li className={`milestone-period ${milestone.isCurrent ? 'current-milestone' : ''}`}>
-      <span></span>
+    <li className={`milestone-period ${milestone.isCurrent && 'current-milestone'}`}>
+      <span />
       <div>
         <div className="title">{milestone.title}</div>
         <div className="info">{milestone.info}</div>

@@ -10,11 +10,11 @@ const Navbar = () => {
 
   const [sticky, setSticky] = useState(false);
 
-  const ref = useRef(null);
+  const navRef = useRef(null);
 
   const handleScroll = () => {
-    if (ref.current) {
-      setSticky(ref.current.getBoundingClientRect().top <= 0);
+    if (navRef.current) {
+      setSticky(navRef.current.getBoundingClientRect().top <= 0);
     }
   };
 
@@ -27,7 +27,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav id="navbar" className={sticky ? 'navbar-sticky' : ''} ref={ref}>
+    <nav id="navbar" className={sticky ? 'navbar-sticky' : ''} ref={navRef}>
       <ul>
         <li>
           <DropDownList />

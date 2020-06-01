@@ -29,7 +29,9 @@ const Reviews = () => {
         showForm ?
           <ReviewForm />
         :
-          <button className="btn btn-primary btn-center" onClick={() => toggleForm()}>{language === 'eng' ? 'Add Review' : 'Commenter'}</button>
+          <button className="btn btn-primary btn-center" onClick={toggleForm}>
+            {language === 'eng' ? 'Add Review' : 'Commenter'}
+          </button>
       }
     </>
   );

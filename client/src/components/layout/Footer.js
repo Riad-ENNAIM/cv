@@ -44,7 +44,7 @@ export const Footer = () => {
         newLanguage ?
           <span
             className="footer-lang"
-            onClick={() => toggleLanguage()}
+            onClick={toggleLanguage}
             onMouseOut={() => setNewLanguage(!newLanguage)}
             title={ language === 'eng' ? 'Passer au Français' : 'Switch to English' }
           >

@@ -4,7 +4,7 @@ import TrainingMilestones from '../training/TrainingMilestones';
 
 import ProfileContext from '../../context/profile/profileContext';
 
-const Timeline = () => {
+const TrainingPage = () => {
   const profileContext = useContext(ProfileContext);
 
   const pageRef = useRef(null)
@@ -30,4 +30,4 @@ const Timeline = () => {
   );
 }
 
-export default Timeline;
+export default TrainingPage;

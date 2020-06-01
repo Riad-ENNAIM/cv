@@ -14,7 +14,8 @@ const AudioContainer = () => {
       </div>
 
       {
-        isMusic && <AudioPlayer />
+        isMusic &&
+        <AudioPlayer />
       }
     </div>
   );

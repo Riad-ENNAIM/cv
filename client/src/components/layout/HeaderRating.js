@@ -24,7 +24,7 @@ const HeaderRating = () => {
   const [globalRating, setGlobalRating] = useState(0);
 
   const updateGlobalRating = () => {
-    if(reviews && reviews.length > 0) {
+    if(reviews?.length > 0) {
       const sum = reviews.reduce((acc, review) => {
         return review.rating ? acc + review.rating : acc;
       }, 0);
