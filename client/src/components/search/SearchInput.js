@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 
 import ProfileContext from '../../context/profile/profileContext';
 
@@ -6,15 +6,18 @@ const SearchInput = () => {
   const profileContext = useContext(ProfileContext);
   const { searchInProfile, language } = profileContext;
 
+  const text = useRef('');
+
   useEffect(() => {
+    searchInProfile(text.current.value);
     return () => searchInProfile(null);
-    // eslint-disable-next-line
-  }, [language])
+  }, [language]);
 
   return (
     <input 
       id="searchInput"
       placeholder={language === 'eng' ? 'Search by technology, school, company, ...' : 'Cherchez par technologie, école, entreprise, ...'}
+      ref={text}
       onChange={e => searchInProfile(e.target.value)}
     />
   );
