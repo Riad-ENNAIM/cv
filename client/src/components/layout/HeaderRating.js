@@ -38,7 +38,7 @@ const HeaderRating = () => {
     <div className="main-rating">
       <h1>{globalRating.toFixed(1)}</h1>
       <Rating rating={globalRating}/>
-      <Link exact="true" to="/reviews">{language === 'eng' ? 'Evaluation' : 'Évaluation'}</Link>
+      <Link exact="true" to="/reviews">{language === 'en' ? 'Evaluation' : 'Évaluation'}</Link>
     </div>
   );
 }

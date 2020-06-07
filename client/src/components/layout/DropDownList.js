@@ -20,17 +20,17 @@ const DropDownList = () => {
 
       <div className="dropdown-content">
         <div className="switcher">
-          <div className="switcher-title">{language === 'eng' ? 'Language' : 'Langue'}</div>
+          <div className="switcher-title">{language === 'en' ? 'Language' : 'Langue'}</div>
             <div className="switcher-body">
               <span
-                className={`lang ${language !== 'eng' && 'active' }`}
+                className={`lang ${language !== 'en' && 'active' }`}
                 onClick={() => changeLang('fr')}
               >
                 Fr
               </span>
               <span
-                className={`lang ${language === 'eng' && 'active' }`}
-                onClick={() => changeLang('eng')}
+                className={`lang ${language === 'en' && 'active' }`}
+                onClick={() => changeLang('en')}
               >
                 Eng
               </span>
@@ -38,7 +38,7 @@ const DropDownList = () => {
         </div>
 
         <div className="switcher">
-          <div className="switcher-title">{language === 'eng' ? 'Timeline' : 'Chronologie'}</div>
+          <div className="switcher-title">{language === 'en' ? 'Timeline' : 'Chronologie'}</div>
           <div className="switcher-body">
             <label className="switch">
               <input type="checkbox" checked={isTimeline} onChange={toggleTimeline}/>
@@ -48,7 +48,7 @@ const DropDownList = () => {
         </div>
 
         <div className="switcher">
-          <div className="switcher-title">{language === 'eng' ? 'Dark mode' : 'Mode sombre'}</div>
+          <div className="switcher-title">{language === 'en' ? 'Dark mode' : 'Mode sombre'}</div>
           <div className="switcher-body">
             <label className="switch">
               <input type="checkbox" checked={isDarkMode} onChange={toggleDarkMode}/>
@@ -58,7 +58,7 @@ const DropDownList = () => {
         </div>
 
         <div className="switcher">
-          <div className="switcher-title">{language === 'eng' ? 'Music' : 'Musique'}</div>
+          <div className="switcher-title">{language === 'en' ? 'Music' : 'Musique'}</div>
           <div className="switcher-body">
             <label className="switch">
               <input type="checkbox" checked={isMusic} onChange={toggleMusic}/>

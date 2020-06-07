@@ -39,27 +39,27 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink exact to="/" activeClassName="active">
-            {language === 'eng' ? 'Experience' : 'Expérience'}
+            {language === 'en' ? 'Experience' : 'Expérience'}
           </NavLink>
         </li>
         <li>
           <NavLink exact to="/projects" activeClassName="active">
-            {language === 'eng' ? 'Projects' : 'Projets'}
+            {language === 'en' ? 'Projects' : 'Projets'}
           </NavLink>
         </li>
         <li>
           <NavLink exact to="/skills" activeClassName="active">
-            {language === 'eng' ? 'Skills' : 'Compétence'}
+            {language === 'en' ? 'Skills' : 'Compétence'}
           </NavLink>
         </li>
         <li>
           <NavLink exact to="/training" activeClassName="active">
-            {language === 'eng' ? 'Training' : 'Formation'}
+            {language === 'en' ? 'Training' : 'Formation'}
           </NavLink>
         </li>
         <li>
           <NavLink exact to="/reviews" activeClassName="active">
-            {language === 'eng' ? 'Reviews' : 'Commentaires'}
+            {language === 'en' ? 'Reviews' : 'Commentaires'}
           </NavLink>
         </li>
       </ul>

@@ -64,7 +64,7 @@ const Review = ({ review }) => {
           if (diffTime < 1000 * 60 * 60 * 24) {
             if (diffTime < 1000 * 60 * 60) {
               if(diffTime < 1000 * 60) {
-                setDiffDate(`${language === 'eng' ? 'Now' : 'Maintenant'}`);
+                setDiffDate(`${language === 'en' ? 'Now' : 'Maintenant'}`);
               } else {
                 // Minutes
                 const numberOfUnits = Math.round(diffTime / (1000 * 60));
@@ -73,22 +73,22 @@ const Review = ({ review }) => {
             } else {
               // Hours
               const numberOfUnits = Math.round(diffTime / (1000 * 60 * 60));
-              setDiffDate(`${numberOfUnits} ${language === 'eng' ? 'hour' : 'heure'}${numberOfUnits > 1 ? 's' : ''}`);
+              setDiffDate(`${numberOfUnits} ${language === 'en' ? 'hour' : 'heure'}${numberOfUnits > 1 ? 's' : ''}`);
             }
           } else {
             // Days
             const numberOfUnits = Math.round(diffTime / (1000 * 60 * 60 * 24));
-            setDiffDate(`${numberOfUnits} ${language === 'eng' ? 'day' : 'jour'}${numberOfUnits > 1 ? 's' : ''}`);
+            setDiffDate(`${numberOfUnits} ${language === 'en' ? 'day' : 'jour'}${numberOfUnits > 1 ? 's' : ''}`);
           }
         } else {
           // Weeks
           const numberOfUnits = Math.round(diffTime / (1000 * 60 * 60 * 24 * 7));
-          setDiffDate(`${numberOfUnits} ${language === 'eng' ? 'week' : 'semaine'}${numberOfUnits > 1 ? 's' : ''}`);
+          setDiffDate(`${numberOfUnits} ${language === 'en' ? 'week' : 'semaine'}${numberOfUnits > 1 ? 's' : ''}`);
         }
       } else {
         // Months
         const numberOfUnits = Math.round(diffTime / (1000 * 60 * 60 * 24 * 30));
-        setDiffDate(`${numberOfUnits} ${language === 'eng' ? 'month' : 'mois'}`);
+        setDiffDate(`${numberOfUnits} ${language === 'en' ? 'month' : 'mois'}`);
       }
     }
   }

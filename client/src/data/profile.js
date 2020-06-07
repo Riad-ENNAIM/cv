@@ -86,7 +86,7 @@ export const frProfile = {
       tasks: [
         {
           _id: "Tb1",
-          text: "Développement d'une application de demande des prestations."
+          text: "Développement d'une application de demande des prestations, pour de petits travaux et services à domicile, permet de trouver rapidement des spécialistes à proximité."
         },
         {
           _id: "Tb2",
@@ -245,7 +245,7 @@ export const frProfile = {
       tasks: [
         {
           _id: "Te1",
-          text: "Conception et développement d'une application web de gestion des projets permet le suivit quotidien des projets et les tâches des développeurs au sein de l'entreprise."
+          text: "Conception et développement d'une application web de gestion des projets permet le suivit quotidien des tâches des développeurs et les projets au sein de l'entreprise."
         },
         {
           _id: "Te2",
@@ -814,7 +814,7 @@ export const engProfile = {
       tasks: [
         {
           _id: "Tb1",
-          text: "Development of a service request application."
+          text: "Development of a service request application, for small jobs and home services, allows you to quickly find specialists nearby."
         },
         {
           _id: "Tb2",

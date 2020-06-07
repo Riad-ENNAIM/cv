@@ -30,7 +30,7 @@ const Reviews = () => {
           <ReviewForm />
         :
           <button className="btn btn-primary btn-center" onClick={toggleForm}>
-            {language === 'eng' ? 'Add Review' : 'Commenter'}
+            {language === 'en' ? 'Add Review' : 'Commenter'}
           </button>
       }
     </>

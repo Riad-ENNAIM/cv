@@ -16,7 +16,7 @@ const SearchInput = () => {
   return (
     <input 
       id="searchInput"
-      placeholder={language === 'eng' ? 'Search by technology, school, company, ...' : 'Cherchez par technologie, école, entreprise, ...'}
+      placeholder={language === 'en' ? 'Search by technology, school, company, ...' : 'Cherchez par technologie, école, entreprise, ...'}
       ref={text}
       onChange={e => searchInProfile(e.target.value)}
     />

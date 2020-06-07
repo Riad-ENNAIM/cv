@@ -13,7 +13,7 @@ export const Search = () => {
       {
         serchResult && serchResult.experiences && serchResult.experiences.length > 0 &&
         <>
-          <div className="search-title container align-items-center justify-content-center">{language === 'eng' ? 'Experiences' : 'Expériences'}</div>
+          <div className="search-title container align-items-center justify-content-center">{language === 'en' ? 'Experiences' : 'Expériences'}</div>
           {
             serchResult.experiences.map(experience => {
               const data = {
@@ -35,7 +35,7 @@ export const Search = () => {
       {
         serchResult && serchResult.projects && serchResult.projects.length > 0 &&
         <>
-          <div className="search-title container align-items-center justify-content-center">{language === 'eng' ? 'Projects' : 'Projets'}</div>
+          <div className="search-title container align-items-center justify-content-center">{language === 'en' ? 'Projects' : 'Projets'}</div>
           {
             serchResult.projects.map(project => {
               const data = {
@@ -56,7 +56,7 @@ export const Search = () => {
       {
         serchResult && serchResult.trainings && serchResult.trainings.length > 0 &&
         <>
-          <div className="search-title container align-items-center justify-content-center">{language === 'eng' ? 'Trainings' : 'Formations'}</div>
+          <div className="search-title container align-items-center justify-content-center">{language === 'en' ? 'Trainings' : 'Formations'}</div>
           {
             serchResult.trainings.map(training => {
               const data = {

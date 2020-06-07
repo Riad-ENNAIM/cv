@@ -11,7 +11,7 @@ const useFormatDate = (date) => {
   const engMonthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   const frMonthNames = ["Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
 
-  const monthNames = language === 'eng' ? engMonthNames : frMonthNames;
+  const monthNames = language === 'en' ? engMonthNames : frMonthNames;
 
   const d = new Date(date);
 

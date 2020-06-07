@@ -12,12 +12,12 @@ export const Footer = () => {
   return (
     <div id="main-footer">
       <a href="mailto:riad.ennaim@gmail.com">
-        { language === 'eng' ? 'Send me a mail for a new collaboration' : 'Envoyez-moi un mail pour une nouvelle collaboration' }
+        { language === 'en' ? 'Send me a mail for a new collaboration' : 'Envoyez-moi un mail pour une nouvelle collaboration' }
         &nbsp;&#x1F60E;
       </a>
 
       <p>
-        { language === 'eng' ? 'Sourced on' : 'Source sur' }
+        { language === 'en' ? 'Sourced on' : 'Source sur' }
         &nbsp;
         <a href="https://github.com/Riad-ENNAIM/cv">GitHub</a>
       </p>
@@ -46,15 +46,15 @@ export const Footer = () => {
             className="footer-lang"
             onClick={toggleLanguage}
             onMouseOut={() => setNewLanguage(!newLanguage)}
-            title={ language === 'eng' ? 'Passer au Français' : 'Switch to English' }
+            title={ language === 'en' ? 'Passer au Français' : 'Switch to English' }
           >
             <i className="fas fa-globe-africa"></i>
-            { language === 'eng' ? ' Français' : ' English' }
+            { language === 'en' ? ' Français' : ' English' }
           </span>
         :
           <span className="footer-lang" onMouseOver={() => setNewLanguage(!newLanguage)}>
             <i className="fas fa-globe-africa"></i>
-            { language === 'eng' ? ' English' : ' Français' }
+            { language === 'en' ? ' English' : ' Français' }
           </span>
       }
     </div>

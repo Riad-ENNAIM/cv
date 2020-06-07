@@ -88,12 +88,12 @@ const ReviewForm = () => {
           <input
             id="username"
             type="text"
-            placeholder={language === 'eng' ? 'Enter your name' : 'Entrer votre nom'}
+            placeholder={language === 'en' ? 'Enter your name' : 'Entrer votre nom'}
             name="username"
             value={review.username}
             onChange={onChange}
             onBlur={updateAvatar}
-            title={language === 'eng' ? 'Enter a valid name, just letters!' : 'Entrer un nom valide, juste des lettres !'}
+            title={language === 'en' ? 'Enter a valid name, just letters!' : 'Entrer un nom valide, juste des lettres !'}
             autoFocus
             required
           />
@@ -115,7 +115,7 @@ const ReviewForm = () => {
             {
               showAlert && review.rating === 0 &&
               <span className="tag-alert">
-                {language === 'eng' ? 'You can add a note!' : 'Vous pouvez ajouter une note !'}
+                {language === 'en' ? 'You can add a note!' : 'Vous pouvez ajouter une note !'}
               </span>
             }
           </div>
@@ -134,7 +134,7 @@ const ReviewForm = () => {
           <input
             id="link"
             type="text"
-            placeholder={language === 'eng' ? 'Enter a link: Linkedin, GitHub, Blog, ...' : 'Entrer un lien: Linkedin, GitHub, Blog, ...'}
+            placeholder={language === 'en' ? 'Enter a link: Linkedin, GitHub, Blog, ...' : 'Entrer un lien: Linkedin, GitHub, Blog, ...'}
             name="link"
             value={review.link}
             onChange={onChange}
@@ -146,7 +146,7 @@ const ReviewForm = () => {
         <input
           type="submit"
           // value={`Commenter ${showAlert && review.rating === 0 ? 'avec une note 0/5' : ''}`}
-          value={language === 'eng' ? 'Add Review' : 'Commenter'}
+          value={language === 'en' ? 'Add Review' : 'Commenter'}
           className={`btn btn-center ${isSending && !errors ? 'btn-disabled' : 'btn-primary'}`}
           disabled={isSending && !errors}
         />

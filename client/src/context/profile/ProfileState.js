@@ -20,7 +20,7 @@ const ProfileState = props => {
     isDarkMode: JSON.parse(localStorage.getItem('isDarkMode')),
     isMusic: false,
     audioSettings: null,
-    language: JSON.parse(localStorage.getItem('language')) ?? 'fr',
+    language: JSON.parse(localStorage.getItem('language')) ?? navigator.language.split('-')[0],
     isLoading: true
   };
 
@@ -28,7 +28,7 @@ const ProfileState = props => {
 
   // Get Profile
   const getProfile = async () => {
-    const profile = state.language === 'eng' ? engProfile : frProfile;
+    const profile = state.language === 'en' ? engProfile : frProfile;
 
     dispatch({
       type: GET_PROFILE,
@@ -38,7 +38,7 @@ const ProfileState = props => {
 
   // Search In Profile
   const searchInProfile = text => {
-    const profile = state.language === 'eng' ? engProfile : frProfile;
+    const profile = state.language === 'en' ? engProfile : frProfile;
     const result = {};
 
     if(text) {
@@ -108,7 +108,7 @@ const ProfileState = props => {
 
   // Toggle Language
   const toggleLanguage = () => {
-    const lang = state.language === 'eng' ? 'fr' : 'eng';
+    const lang = state.language === 'en' ? 'fr' : 'en';
     localStorage.setItem('language', JSON.stringify(lang));
 
     dispatch({ 

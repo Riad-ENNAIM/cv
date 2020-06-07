@@ -29,8 +29,8 @@ const Card = ({ data }) => {
           {
             (start || end) &&
             <span className="card-date tag">
-              { start && !end ? `${language === 'eng' ? 'Since' : 'Depuis'} ${start}` : start && end ? start : '' } 
-              { end && start ? ` ${language === 'eng' ? 'to' : 'à'} ${end}` : end && !start ? end : '' }
+              { start && !end ? `${language === 'en' ? 'Since' : 'Depuis'} ${start}` : start && end ? start : '' } 
+              { end && start ? ` ${language === 'en' ? 'to' : 'à'} ${end}` : end && !start ? end : '' }
             </span>
           }
 

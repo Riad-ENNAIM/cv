@@ -24,7 +24,7 @@ const HeaderTitle = ({ profile }) => {
         <a href={profile.links[2].path} target="_blank" rel="noopener noreferrer" title={profile.links[2].name}>
           <i className="fas fa-address-card"></i>
         </a>
-        <a href="/pdf/Riad-ENNAIM.pdf" target="_blank" rel="noopener noreferrer" title={language === 'eng' ? 'Download PDF' : 'Télécharger PDF'}>
+        <a href="/pdf/Riad-ENNAIM.pdf" target="_blank" rel="noopener noreferrer" title={language === 'en' ? 'Download PDF' : 'Télécharger PDF'}>
           <i className="fas fa-cloud-download-alt"></i>
         </a>
       </div>

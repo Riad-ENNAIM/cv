@@ -49,7 +49,7 @@ const Skills = () => {
     skillLevels.map(skillLevel => (
       <div className="wrapper justify-skills" key={skillLevel.level}>
         <div className="skill-level">
-          {language === 'eng' ? 'Level' : 'Niveau'} {skillLevel.level}
+          {language === 'en' ? 'Level' : 'Niveau'} {skillLevel.level}
         </div>
         {
           skillLevel.skills.map(skill => <Skill key={skill._id} skill={skill} />)
