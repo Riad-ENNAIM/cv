@@ -13,7 +13,13 @@ const Header = () => {
 
   useEffect(() => {
     getProfile();
-    document.title = `Riad ENNAIM | ${(language && language === 'en') ? 'Full Stack JavaScript Developer' : 'Développeur Full Stack JavaScript'}`;
+
+    document.addEventListener("visibilitychange", () => {
+      document.title = document.hidden ?
+          'Riad ENNAIM | 🙋‍♂ 🤗'
+        :
+          document.title = `Riad ENNAIM | ${(language && language === 'en') ? 'Full Stack JavaScript Developer' : 'Développeur Full Stack JavaScript'}`;
+    });
 
     if(isDarkMode) {
       document.documentElement.style.setProperty('--background-color', '#1B2631');
@@ -31,13 +37,6 @@ const Header = () => {
     } else {
       document.documentElement.removeAttribute('style');
     }
-
-    document.addEventListener("visibilitychange", () => {
-      document.title = document.hidden ?
-          'Riad ENNAIM | 🙋‍♂ 🤗'
-        :
-          document.title = `Riad ENNAIM | ${(language && language === 'en') ? 'Full Stack JavaScript Developer' : 'Développeur Full Stack JavaScript'}`;
-    });
 
     // eslint-disable-next-line
   }, [isDarkMode, language]);
