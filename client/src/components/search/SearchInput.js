@@ -11,6 +11,7 @@ const SearchInput = () => {
   useEffect(() => {
     searchInProfile(text.current.value);
     return () => searchInProfile(null);
+    // eslint-disable-next-line
   }, [language]);
 
   return (
