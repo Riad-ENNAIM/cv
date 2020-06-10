@@ -26,7 +26,9 @@ const AudioPlayer = () => {
   
       updateAudioSettings(settings)
     }
-  }, [audioSettings, updateAudioSettings]);
+
+    // eslint-disable-next-line 
+  }, []);
 
   return (
     <audio controls loop autoPlay ref={audioRef}>
