@@ -21,15 +21,20 @@ export const frProfile = {
     }
   ],
   experiences: [
-    // {
-    //   _id: "E0",
-    //   isCurrent: true,
-    //   title: "Développeur Front End React",
-    //   company: "SQLI",
-    //   start: "2020-04-20T17:16:40.606+00:00",
-    //   location: "Rabat - Maroc",
-    //   tasks: []
-    // },
+    {
+      _id: "E0",
+      isCurrent: true,
+      title: "Développeur Front End",
+      company: "SQLI",
+      start: "2020-05-01T17:16:40.606+00:00",
+      location: "Rabat - Maroc",
+      tasks: [
+        {
+          _id: "T1",
+          text: "Environnement technique: JavaScript (ES6+) / React / Redux / Redux Thunk / Axios / Webpack / Babel / NPM / Docker / Git / Bitbucket / Jira"
+        }
+      ]
+    },
     {
       _id: "E1",
       isCurrent: false,
@@ -749,15 +754,20 @@ export const engProfile = {
     }
   ],
   experiences: [
-    // {
-    //   _id: "E0",
-    //   isCurrent: true,
-    //   title: "Front End Developer",
-    //   company: "SQLI",
-    //   start: "2020-04-20T17:16:40.606+00:00",
-    //   location: "Rabat - Morocco",
-    //   tasks: []
-    // },
+    {
+      _id: "E0",
+      isCurrent: true,
+      title: "Front End Developer",
+      company: "SQLI",
+      start: "2020-05-01T17:16:40.606+00:00",
+      location: "Rabat - Morocco",
+      tasks: [
+        {
+          _id: "T1",
+          text: "Technical Environment: JavaScript (ES6+) / React / Redux / Redux Thunk / Axios / Webpack / Babel / NPM / Docker / Git / Bitbucket / Jira"
+        }
+      ]
+    },
     {
       _id: "E1",
       isCurrent: false,
